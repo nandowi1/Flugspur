@@ -1,0 +1,1898 @@
+<meta charset="utf-8">
+<title>Flugspur 3D</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0e161b">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Flugspur 3D">
+<meta name="description" content="Gleitschirmflüge aus IGC- und GPX-Dateien in 3D über Satellitenbild und Gelände analysieren.">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAFwElEQVR42u3dO3LcRhSF4UsUq5S6HEkJy5kYeQcKFMjSJrQEroZL0CZIOnCgHTiiMpcTZ86dKRgVaorGYHr6ee7t/4SiRLIbHw4weLSufnp9Y4RsZWEKCDgIOAg4CDgIOAg4CDgIOAg4CDgIAQcBBwEHAQcBBwEHAQcBBwEHAQch4CDgIOAg4CDgIOAg4CDgIOAg4CAEHAQcBBwEHAQcBBwEHAQcJEquJxzz8/t/8/7h7R8/TzVRV+EXqc2mAJeAOJpqmMpKHBwDTURV4h6HlIlgSrziEDcRQ4kzHO5MuFbiBkcAFu6IOMARjIUjItI4ArNwQWRBBiP11BzzsBCvEC0c07LQJLIgg+KUbg5YaFbIggwqRBQHMpTnZ0EGPuTOOcbKyDicu/uFveLoPNGNZjbGKLRw9JnTzlMZclC9cbSexOEf/yINsCuOdhMneO8qwGD74Wg0WeJ3vV2PuhOOFnPk6JEqp8PvgaP61Dh9atfdPDTHUXdGAjzy72hC2uKoOBHB3hdyMTM+XqSO99bh7A8YV9k5wr+7rDxLCzICVEijD8xL7FnjECOHoxzybCthlI+3RXks7EmMuh+OQsJzyqgy9urlsbD3MAOdcJTgRUb5PNQtj1bXOS79LZEhOIES91aQkTd17m+8nR0qMi6dtIAP+2yOuWScD0+PZvbpt48VfzHB71llrvIyZpFa2sLFXDle3vqwLx72S9m0qCJwEHCELg/XtUFzkNA4ZMvDe23QHCQ6DsHyCFAbNAeZAIdUecSoDZrDR0ahX8KMWaQ8qtfG4RsOGdcydhLFL37rdMaQg9QwHOtoK/oYXh51a2OsjMGHlRY+6Iw4J6T4kJUh8Wmlro+BR5ZaxxQRGSofZekPQRmmc52joo8h5VGlNqRkmNRFsMn7Q02GqV0hreWjc3mU14agDBO8fD5hf2jKMM17K1V8dCuPwtqQlWGyN95m6I+Hp8cVluYtXN27suuUrZMoWB7ZtaFcGA5wBK4QFzLMxfMcJT6alkdebXiRYV4e9gnTH45kmKMnwbJ9NCqPjNrwJcN8PSbouj/cyTB3z5A69eFRhnl8wDjDR/Ujy0XHFKcyzOnT5476w68M8/tqwqU+KpZHem24lmEBFm+R7Q/vMizG+hyJPqqUR2JtBJBhYZZgkOqPGDIs0lv2KT4KyyOlNsLIsGAvUg/vj0gyLNKL1Ik+ssvjbG0Ek2HB3rIf2B/xZFi8JRhSfGSUx35thJRhIdfn6NwfUWVY1MVbzvq4qDx2aiOwDAu8sk+H/ogtw2Iv+9TUhwsZ7+6/gSPHR+KRZfOYMoMMm2HBuLr9of+yyYHFKqOEyBSrCZ56BeZsebyojUkKYy4cVSpEX8ZxYVThMtc6pKc6YJPLcW24kLH551/v3n69ewuOVv0hLuNUYRxkcFgp8rFZHuuX9GVUL4w1Y/53SIUcb/WHp8fbmzfHX33++59NTy5OPMtZzI5j9fGCxf+JOJJRiwU4zMz+ev5z/y/8cvvrbIUBjiQZaj76FMaaayMXbphGW0KnMGiO1Nows8+/v1o3w4uN1AdK58IARyqOVcZ+Gm2nIYUBjvM4Elm022yjCgMceziyWdTakGMLAxwncezIWDdM3q2sxO06vDDAseFjvzBObZsMKBnfashHJHDksyhXktJGQ1iA44ePHRlfPvyXdwWs1hM3A2XMjmN/E2bLqNso4NiezXYT1IdFNhQFGXI4jlm0I6Jw3id4hqGLI2WXKp+4/Z8yasO8u/922BmkZEjguPSQXP2yktr+Co4Kp/TpW1Tt+gE4ilgctln5sYbC8IQjkUX5GT4sPOHIYJF90spxxA2Ocha1zlSQIYSjLosSJbAQwtGUxZAfBA7HW2vz5yJDBYfCTix7tXFeHHR7yFzDgtTHAQsOKzk+YMFhBRY0R1p5wILmoC1oDkLmXBOMgIOAg4CDgIOAg4CDgIOAg4CDEHCQM/kO2iOGPhksoPsAAAAASUVORK5CYII=">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: 3D-Bühne füllt den Bildschirm, Bedienung als schwebende Panels; Kennzahlen und Tabellen darunter beim Scrollen. */
+:root{
+  --bg:#edf1f3; --panel:#ffffff; --fg:#15222a; --muted:#5a6a74; --line:#d2dbe0;
+  --accent:#d9480f; --accent-soft:rgba(217,72,15,.12); --scene:#dde6eb; --grid:#a9b8c1; --grid2:#c6d2d8;
+  --fill:rgba(47,109,179,.14); --therm:rgba(232,89,12,.16); --good:#2f9e44; --bad:#c92a2a; --terrain:rgba(140,104,64,.40);
+  --glass:rgba(255,255,255,.88);
+  --f-display:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
+  --f-body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-data:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0e161b; --panel:#152129; --fg:#e2eaee; --muted:#8c9ea8; --line:#2a3b46;
+  --accent:#ff7a3d; --accent-soft:rgba(255,122,61,.16); --scene:#0b1317; --grid:#344956; --grid2:#1f2e37;
+  --fill:rgba(96,165,250,.14); --therm:rgba(255,122,61,.16); --good:#51cf66; --bad:#ff6b6b; --terrain:rgba(170,135,95,.36);
+  --glass:rgba(21,33,41,.88); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e161b; --panel:#152129; --fg:#e2eaee; --muted:#8c9ea8; --line:#2a3b46;
+  --accent:#ff7a3d; --accent-soft:rgba(255,122,61,.16); --scene:#0b1317; --grid:#344956; --grid2:#1f2e37;
+  --fill:rgba(96,165,250,.14); --therm:rgba(255,122,61,.16); --good:#51cf66; --bad:#ff6b6b; --terrain:rgba(170,135,95,.36);
+  --glass:rgba(21,33,41,.88); color-scheme:dark}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+.vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:14px;line-height:1.35}
+h1,h2{font-family:var(--f-display);font-weight:600;margin:0;text-wrap:balance}
+h1{font-size:1.25rem;line-height:1;white-space:nowrap}
+h2{font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.mono{font-family:var(--f-data);font-variant-numeric:tabular-nums}
+.btn,select{font:500 .85rem var(--f-body);color:var(--fg);background:var(--panel);border:1px solid var(--line);
+  border-radius:5px;padding:3px 9px;cursor:pointer;min-height:32px}
+.btn:hover,select:hover{border-color:var(--muted)}
+.btn:focus-visible,select:focus-visible,input:focus-visible,tr:focus-visible,canvas:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+.btn[aria-pressed="true"],.btn[aria-expanded="true"]{background:color-mix(in srgb,var(--accent) 20%,transparent);border-color:var(--accent);color:var(--fg)}
+select{max-width:min(240px,52vw)}
+.seg{display:flex;background:transparent;border:0;border-radius:5px;overflow:hidden;flex-wrap:wrap;align-items:center}
+.seg .seglbl{font:600 .7rem var(--f-body);color:var(--muted);text-transform:uppercase;letter-spacing:.06em;padding:0 4px 0 6px}
+.seg button{font:500 .82rem var(--f-body);background:none;border:0;border-radius:4px;color:var(--muted);padding:4px 9px;cursor:pointer;min-height:30px}
+.seg button:hover{color:var(--fg)}
+.seg button[aria-pressed="true"]{background:color-mix(in srgb,var(--accent) 20%,transparent);color:var(--fg);box-shadow:inset 0 -2px 0 var(--accent)}
+.seg button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+
+/* ---- Bühne ---- */
+.stage{position:relative;height:100vh;height:calc(100dvh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));min-height:420px;overflow:hidden;background:var(--scene)}
+.stage:fullscreen{height:100vh}
+#view{position:absolute;inset:0}
+#view canvas{display:block;width:100%;height:100%;touch-action:none}
+.labels{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.lbl{position:absolute;left:0;top:0;will-change:transform;transform:translate3d(var(--x,0),var(--y,0),0) translate(-50%,-130%);font:600 .68rem var(--f-body);letter-spacing:.06em;text-transform:uppercase;
+  background:none;color:#fff;border:0;padding:0;white-space:nowrap;text-shadow:0 0 2px #000,0 0 3px #000,0 1px 1px #000}
+.lbl.therm{font-family:var(--f-data);text-transform:none;letter-spacing:0;font-weight:500;opacity:.92}
+.glass{background:var(--glass);border:1px solid var(--line);border-radius:6px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.tl{position:absolute;top:8px;left:max(8px,env(safe-area-inset-left,0px));display:flex;flex-direction:column;gap:6px;align-items:flex-start;max-width:calc(100% - 200px);pointer-events:none}
+.tl>*{pointer-events:auto}
+.topbar{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;padding:5px 8px;max-width:100%}
+.brand{display:flex;align-items:center;gap:6px}
+.brand svg{width:26px;height:17px;color:var(--accent)}
+.status{margin:0;color:var(--muted);font-size:.8rem;max-width:min(520px,100%);padding:3px 8px}
+.status.err{color:var(--bad)}
+.status b{color:var(--fg);font-weight:600}
+.hint{font-size:.75rem;padding:3px 8px;max-width:440px;pointer-events:none}
+.tnote{font-size:.78rem;padding:3px 8px;max-width:380px}
+.tnote.err{border-color:var(--bad)}
+.hud{position:absolute;top:8px;right:max(8px,env(safe-area-inset-right,0px));padding:5px 9px;min-width:165px}
+.hud .row{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.hud .k{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.hud .v{font-family:var(--f-data);font-variant-numeric:tabular-nums;font-size:.85rem}
+.hud .big{font-size:1.2rem;font-weight:500;line-height:1.2}
+
+.bottom{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:6px;pointer-events:none}
+.floats{display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding-left:max(8px,env(safe-area-inset-left,0px));padding-right:max(8px,env(safe-area-inset-right,0px))}
+.floats>*{pointer-events:auto}
+.legend{padding:5px 8px;display:flex;flex-direction:column;gap:2px}
+.legend span{font:600 .68rem var(--f-body);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+#legend{width:170px;height:26px;display:block}
+.dock{pointer-events:auto;padding:0 max(8px,env(safe-area-inset-right,0px)) env(safe-area-inset-bottom,0px) max(8px,env(safe-area-inset-left,0px));display:flex;flex-direction:column;gap:2px;background:transparent}
+.dock .row{padding:0 0 2px}
+.dock .row .btn,.dock .seg button{background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.dock .seg{gap:3px}
+.dock .seg button[aria-pressed="true"]{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 22%,var(--glass))}
+.dock .ctl,.dock #tnow,.dock .seglbl{color:#fff;text-shadow:0 0 2px #000,0 0 3px #000}
+.compass{width:42px;height:42px;padding:0;border-radius:50%;border:1px solid var(--line);background:var(--glass);cursor:pointer;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.compass svg{width:100%;height:100%;display:block}
+.compass circle{fill:none;stroke:var(--line);stroke-width:1}
+.compass .n{fill:var(--accent)}.compass .s{fill:var(--muted)}
+.compass text{font:700 7px var(--f-body);fill:var(--fg);text-anchor:middle}
+.compass:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.thcard{position:absolute;top:66px;left:50%;transform:translateX(-50%);padding:6px 12px;text-align:center;min-width:220px;pointer-events:none;animation:thIn .4s ease-out}
+.thcard .t1{font:600 .68rem var(--f-body);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.thcard .t2{font:500 1.15rem var(--f-data);font-variant-numeric:tabular-nums;color:var(--fg);line-height:1.25}
+.thcard .t2 small{font-size:.8rem;color:var(--good)}
+.thcard .t3{font:500 .8rem var(--f-data);color:var(--muted)}
+@keyframes thIn{from{opacity:0;transform:translate(-50%,-6px)}to{opacity:1;transform:translate(-50%,0)}}
+.dock .row{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center}
+.dock .spacer{flex:1}
+#playBtn{min-width:38px;display:grid;place-items:center}
+#playBtn svg{width:12px;height:12px;fill:currentColor}
+#tnow{font-size:.85rem;min-width:5.6em}
+.ctl{display:flex;align-items:center;gap:5px;font-size:.8rem;color:var(--muted)}
+.ctl select{min-height:30px;padding:2px 6px;font-size:.82rem}
+.chartwrap{position:relative}
+.czoom{position:absolute;top:2px;right:6px;display:flex;gap:3px}
+.czoom button{font:600 .8rem var(--f-data);width:24px;height:22px;padding:0;border:1px solid var(--line);border-radius:4px;background:var(--panel);color:var(--fg);cursor:pointer;opacity:.85}
+.czoom button:hover{opacity:1;border-color:var(--muted)}
+#chart{width:100%;height:62px;display:block;cursor:pointer;touch-action:pan-y}
+.grip{height:12px;margin:-4px 0 -2px;cursor:ns-resize;touch-action:none;display:flex;justify-content:center;align-items:center}
+.grip::before{content:"";width:46px;height:4px;border-radius:2px;background:var(--muted);opacity:.55}
+.grip:hover::before,.grip:focus-visible::before{opacity:1;background:var(--accent)}
+.ptag{position:absolute;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;gap:2px;pointer-events:none}
+.ptag span{font:600 .74rem var(--f-data);background:var(--panel);color:var(--fg);border:1px solid var(--line);border-radius:3px;padding:0 5px;white-space:nowrap}
+.ptag i{width:0;height:0;border-left:9px solid transparent;border-right:9px solid transparent;border-top:15px solid var(--accent);filter:drop-shadow(0 1px 1px rgba(0,0,0,.5))}
+tr.cur{background:var(--accent-soft);outline:2px solid var(--accent);outline-offset:-2px}
+tr.cur td:first-child::after{content:" ◀ jetzt";color:var(--accent);font-weight:600;font-family:var(--f-body)}
+[title]{text-decoration:none}
+.sgroup dt[title],.sgroup dd[title],th[title]{cursor:help}
+.lbl.thin,.lbl.thout{font:700 .84rem var(--f-data);text-transform:none;letter-spacing:0;line-height:1.25;text-align:center;
+  text-shadow:0 0 2px #000,0 0 4px #000,0 0 8px rgba(0,0,0,.7)}
+.lbl.pop{animation:lblPop .8s ease-out}
+@keyframes lblPop{0%{scale:1.9;opacity:0}35%{scale:1.35;opacity:1}100%{scale:1}}
+.lbl.thin{color:#8fd0ff;text-align:left;transform:translate3d(var(--x,0),var(--y,0),0) translate(16px,-50%)}
+.lbl.thout{color:#ff9a9a;text-align:left;transform:translate3d(var(--x,0),var(--y,0),0) translate(16px,-50%)}
+.lbl.thin.lft,.lbl.thout.lft,.lbl.key.lft{text-align:right;transform:translate3d(var(--x,0),var(--y,0),0) translate(calc(-100% - 16px),-50%)}
+.lbl.thin,.lbl.thout{background:rgba(8,12,16,.42);padding:2px 7px;border-radius:7px;backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
+.lbl.thout .r2,.lbl.thout .r3{font-size:.74rem;font-weight:600}
+.lbl.wind{font-family:var(--f-data);text-transform:none;letter-spacing:0;font-weight:600;font-size:.6rem;transform:translate3d(var(--x,0),var(--y,0),0) translate(-50%,-150%)}
+.sgroup .best{color:var(--accent);font-weight:600}
+.sgroup dt.best::before{content:"★ "}
+td.best{background:var(--accent-soft);color:var(--accent);font-weight:600}
+td.best::before{content:"★ "}
+.tnote2{font-size:.72rem;color:var(--muted);font-family:var(--f-body);text-transform:none;letter-spacing:0;font-weight:400;margin-left:6px}
+.lbl.key{transform:translate3d(var(--x,0),var(--y,0),0) translate(16px,-50%);pointer-events:auto;cursor:pointer;text-transform:none;letter-spacing:0;font:700 .84rem var(--f-data);background:rgba(8,12,16,.42);padding:2px 7px;border-radius:7px;text-shadow:0 0 2px #000,0 0 4px #000}
+.lbl.key:hover{text-decoration:underline}
+.scalebar{position:absolute;top:8px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:8px;padding:3px 9px;font-size:.75rem}
+.scalebar .north{font-weight:700}
+.scalebar .bar{height:6px;border:2px solid var(--fg);border-top:0;display:inline-block}
+.attr{font-size:.72rem;color:var(--muted);margin-top:14px;padding-top:8px;border-top:1px solid var(--line)}
+.settings{width:min(340px,100%);max-height:min(60vh,460px);overflow:auto;padding:8px 10px;display:flex;flex-direction:column;gap:7px;margin-left:auto}
+.settings h3{margin:0;font:600 .7rem var(--f-body);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.srow{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:.84rem}
+.srow .seg button{padding:3px 8px;font-size:.78rem;min-height:28px}
+.srow select{min-height:28px;padding:2px 6px;font-size:.82rem}
+.srow input[type=range]{width:100px;accent-color:var(--accent)}
+.drop{position:absolute;inset:0;display:grid;place-items:center;background:color-mix(in srgb,var(--accent) 18%,transparent);
+  border:3px dashed var(--accent);font:600 1.3rem var(--f-display);color:var(--fg);pointer-events:none}
+
+/* ---- Vario-Instrument (POV), bewusst dunkles Instrumentendisplay ---- */
+.vario{width:250px;background:#0f1519;color:#e8f0f3;border:2px solid #2c3a43;border-radius:14px;padding:8px 12px 10px;
+  box-shadow:0 8px 30px rgba(0,0,0,.35);font-family:var(--f-data);font-variant-numeric:tabular-nums;align-self:flex-end;margin:0 auto}
+.vario svg{display:block;width:100%;height:auto}
+.vario .vbig{font-size:2.3rem;font-weight:500;line-height:1;text-align:center;margin-top:2px}
+.vario .vunit{font:600 .7rem var(--f-body);text-align:center;color:#8ea1ab;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+.vario dl{margin:0;display:grid;grid-template-columns:1fr 1fr;gap:4px 12px;border-top:1px solid #2c3a43;padding-top:6px}
+.vario dl div{display:flex;flex-direction:column}
+.vario dt{font:600 .62rem var(--f-body);text-transform:uppercase;letter-spacing:.08em;color:#8ea1ab}
+.vario dd{margin:0;font-size:1rem}
+
+/* ---- Unterhalb der Bühne ---- */
+.below{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:14px 24px;
+  max-width:1500px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.side{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:10px 12px;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px 18px}
+.side .meta{grid-column:1/-1}
+.side .ttl{font:600 1.2rem var(--f-display);word-break:break-word;line-height:1.15}
+.side .sub{color:var(--muted);font-size:.84rem}
+.tag{display:inline-block;font:600 .64rem var(--f-body);text-transform:uppercase;letter-spacing:.07em;color:var(--accent);
+  border:1px solid var(--accent);border-radius:3px;padding:0 4px;margin-top:2px}
+.sgroup{border-top:1px solid var(--line);padding-top:5px}
+.sgroup h3{margin:0 0 2px;font:600 .68rem var(--f-body);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.sgroup dl{margin:0;display:grid;grid-template-columns:1fr auto;gap:1px 8px;font-size:.86rem}
+.sgroup dd{margin:0;text-align:right;font-family:var(--f-data);font-variant-numeric:tabular-nums;font-size:.82rem}
+.tables{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tbox{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:8px 10px;min-width:0}
+.tbox h2{margin-bottom:4px}
+.twrap{overflow:auto;max-height:260px}
+table{border-collapse:collapse;width:100%;font-size:.8rem}
+th{font:600 .66rem var(--f-body);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);text-align:right;padding:2px 6px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--panel);white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+td{padding:3px 6px;text-align:right;font-family:var(--f-data);font-variant-numeric:tabular-nums;border-bottom:1px solid var(--line);white-space:nowrap}
+tbody tr{cursor:pointer}
+tbody tr:hover{background:var(--accent-soft)}
+.empty{color:var(--muted);font-family:var(--f-body)}
+.chip{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:5px;vertical-align:middle}
+footer{color:var(--muted);font-size:.76rem}
+footer p{margin:.2em 0;max-width:120ch}
+
+@media (max-width:900px){.tables{grid-template-columns:1fr}}
+.sm{display:none}
+@media (max-width:620px){
+  .lg{display:none}.sm{display:inline}
+  .tl{max-width:calc(100% - 16px);gap:4px}
+  .topbar{padding:4px 6px;gap:4px 6px}.topbar h1{font-size:1.05rem}.brand svg{width:20px;height:13px}
+  .topbar select{max-width:46vw;font-size:.8rem;min-height:30px}.topbar .btn.primary{font-size:.8rem;padding:3px 8px}
+  .compass{width:34px;height:34px}
+  .status,.tnote{font-size:.72rem;padding:2px 6px;max-width:100%}
+  .legend{padding:3px 6px}.legend span{font-size:.6rem}
+  .dock .row{gap:4px}.dock .btn,.dock .seg button{padding:3px 8px;min-height:30px;font-size:.8rem}
+  .dock .seg .seglbl{display:none}
+  #tnow{min-width:0;font-size:.78rem}
+  .lbl.thin,.lbl.thout,.lbl.key{font-size:.74rem}
+  .hud{top:auto;bottom:auto;display:none}
+  .hint{display:none}
+  #legend{width:120px}
+  .vario{width:200px}
+  .vario .vbig{font-size:1.8rem}
+  .dock .ctl.tempo{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<section class="stage" id="stage" aria-label="3D-Ansicht der Flugspur">
+  <div id="view"></div>
+  <div class="labels" id="labels"><div class="ptag" id="pilotTag" hidden><span id="ptAlt">–</span><i></i></div></div>
+
+  <div class="tl">
+    <div class="topbar glass">
+      <div class="brand"><svg viewBox="0 0 34 22" aria-hidden="true"><path d="M2 9 C9 1, 25 1, 32 9 L29 10 C23 5, 11 5, 5 10 Z" fill="currentColor"/><path d="M5 10 L17 20 L29 10" stroke="currentColor" stroke-width="1" fill="none" opacity=".6"/></svg><h1>Flugspur 3D</h1></div>
+      <select id="flightSel" aria-label="Flug auswählen"></select>
+      <label class="btn primary" for="file"><span class="lg">IGC / GPX laden</span><span class="sm">Laden</span></label>
+      <input type="file" id="file" class="vh" multiple>
+    </div>
+    <button class="compass" id="compass" title="Kompass – antippen richtet die Ansicht nach Norden aus" aria-label="Kompass, Ansicht nach Norden ausrichten">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17.5"/><g id="compRose"><text x="20" y="10.5">N</text><path class="n" d="M20 12 L23.2 20 L16.8 20Z"/><path class="s" d="M20 28 L23.2 20 L16.8 20Z"/></g></svg>
+    </button>
+    <p id="status" class="status glass" role="status"></p>
+    <div class="hint glass" id="hint">Drehen um den Punkt unter dem Zeiger: 1 Finger / linke Maus · Zoomen zum Zeiger: 2 Finger / Mausrad · Verschieben: 2 Finger / rechte Maus · Spur antippen: dorthin springen · <b>Doppeltipp: dorthin fliegen</b></div>
+    <div class="tnote glass" id="tnote" hidden></div>
+  </div>
+
+  <div class="hud glass" id="hud">
+    <div class="row"><span class="k">Zeit</span><span class="v" id="h-time">–</span></div>
+    <div class="row"><span class="k">Höhe</span><span class="v big" id="h-alt">–</span></div>
+    <div class="row"><span class="k" title="Momentanes Steigen oder Sinken, über 8 s gemittelt.">Vario</span><span class="v big" id="h-var">–</span></div>
+    <div class="row"><span class="k" id="h-ld-k" title="Strecke über Grund geteilt durch Höhenverlust, über 30 s.">Gleitzahl</span><span class="v" id="h-ld">–</span></div>
+    <div class="row"><span class="k">Speed</span><span class="v" id="h-spd">–</span></div>
+    <div class="row"><span class="k" title="Höhe über dem Gelände direkt unter dem Piloten (Höhenmodell, ca. 30 m Raster).">Über Grund</span><span class="v" id="h-agl">–</span></div>
+  </div>
+
+  <div class="bottom">
+    <div class="floats">
+      <div class="legend glass"><span id="legendTitle">Steigen m/s</span><canvas id="legend"></canvas></div>
+      <div class="vario" id="vario" hidden aria-label="Variometer">
+        <svg viewBox="0 0 200 112" aria-hidden="true">
+          <path d="M20 100 A80 80 0 0 1 180 100" fill="none" stroke="#25323a" stroke-width="14"/>
+          <path id="vArc" d="" fill="none" stroke="#f59f00" stroke-width="14"/>
+          <g id="vTicks" stroke="#8ea1ab" stroke-width="1.5"></g>
+          <g id="vTickLbl" fill="#8ea1ab" font-size="9" font-family="JetBrains Mono, monospace" text-anchor="middle"></g>
+          <line id="vNeedle" x1="100" y1="100" x2="100" y2="30" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="100" cy="100" r="5" fill="#ffffff"/>
+        </svg>
+        <div class="vbig" id="v-var">0.0</div>
+        <div class="vunit">m/s Vario</div>
+        <dl>
+          <div><dt>Höhe</dt><dd id="v-alt">–</dd></div>
+          <div><dt>Über Grund</dt><dd id="v-agl">–</dd></div>
+          <div><dt>Speed</dt><dd id="v-spd">–</dd></div>
+          <div><dt>Gleitzahl</dt><dd id="v-ld">–</dd></div>
+          <div><dt>Ø 30 s</dt><dd id="v-avg">–</dd></div>
+          <div><dt>Zeit</dt><dd id="v-time">–</dd></div>
+        </dl>
+      </div>
+      <div class="settings glass" id="settings" hidden>
+        <h3>Ansicht</h3>
+        <div class="srow"><span>kk7 Thermikkarte</span><div class="seg" id="setKK7"><button data-v="off">Aus</button><button data-v="thermals">Thermik</button><button data-v="skyways">Skyways</button></div></div>
+        <div class="srow"><span title="Thermik-Schilder (Ø-Steigen, Ausstiegshöhe) sowie Start, Landung, höchster Punkt, stärkstes Steigen/Sinken, max. Speed, weitester Punkt">Infopunkte</span><div class="seg" id="setInfo"><button data-v="1">An</button><button data-v="0">Aus</button></div></div>
+        <div class="srow"><span title="Folgen: schwenkt und zoomt gelegentlich langsam. 360°-Kamera: dreht sich zufällig sehr langsam.">Auto-Kamera</span><div class="seg" id="setAuto"><button data-v="1">An</button><button data-v="0">Aus</button></div></div>
+        <div class="srow"><span>Sonne &amp; Schatten</span><div class="seg" id="setSun"><button data-v="1">An</button><button data-v="0">Aus</button></div></div>
+        <div class="srow"><span>Flugspur</span><div class="seg" id="setTrack"><button data-v="1">Normal</button><button data-v="0.35">Transparent</button><button data-v="0">Aus</button></div></div>
+        <div class="srow"><span>Vorhang unter Spur</span><div class="seg" id="setCurtain"><button data-v="trail">Kurz</button><button data-v="full">Ganz</button><button data-v="off">Aus</button></div></div>
+        <h3>Gleitschirm</h3>
+        <div class="srow"><span>Anzeigen</span><div class="seg" id="setShow"><button data-v="1">An</button><button data-v="0">Aus</button></div></div>
+        <div class="srow"><label for="setColor">Farbe</label><select id="setColor"></select></div>
+        <h3>Daten</h3>
+        <div class="srow"><label for="altSrc">Höhenquelle</label><select id="altSrc"><option value="gps">GPS</option><option value="baro">Baro</option></select></div>
+      </div>
+    </div>
+    <div class="dock">
+      <div class="row">
+        <button class="btn" id="playBtn" aria-label="Abspielen"><svg viewBox="0 0 14 14" id="playIcon"><path d="M2 1 L13 7 L2 13 Z"/></svg></button>
+        <span class="mono" id="tnow">–</span>
+        <label class="ctl tempo" for="speedSel">Tempo
+          <select id="speedSel"><option value="1">1×</option><option value="5">5×</option><option value="10">10×</option><option value="30" selected>30×</option><option value="60">60×</option><option value="120">120×</option><option value="300">300×</option></select>
+        </label>
+        <div class="seg" id="camSeg" role="group" aria-label="Kamera">
+          <button data-v="free">Frei</button><button data-v="follow">Folgen</button><button data-v="insta"><span class="lg">360°-Kamera</span><span class="sm">360°</span></button><button data-v="top"><span class="lg">Draufsicht 2D</span><span class="sm">2D</span></button>
+        </div>
+        <div class="seg" id="trailSeg" role="group" aria-label="Sichtbare Spur beim Abspielen" title="Beim Abspielen nur die letzten 1, 5 oder 10 Minuten oder alles ab dem Start bis zur aktuellen Position zeigen; angehalten ist immer der ganze Flug sichtbar."><span class="seglbl">Spur</span><button data-v="60">1′</button><button data-v="300">5′</button><button data-v="600">10′</button><button data-v="-1" title="Ganzer Flugweg ab Start bis zur aktuellen Position">Ab Start</button></div>
+        <span class="spacer"></span>
+        <button class="btn" id="vReset" aria-label="Übersicht"><span class="lg">Übersicht</span><span class="sm">◎</span></button>
+        <button class="btn" id="setBtn" aria-expanded="false" aria-controls="settings" aria-label="Einstellungen"><span class="lg">Einstellungen</span><span class="sm">⚙</span></button>
+        <button class="btn" id="fsBtn" aria-label="Vollbild"><span class="lg">Vollbild</span><span class="sm">⛶</span></button>
+        <button class="btn" id="detailBtn" aria-label="Details"><span class="lg">Details ↓</span><span class="sm">↓</span></button>
+      </div>
+      <div class="grip" id="grip" role="separator" aria-orientation="horizontal" aria-label="Höhe des Profils ändern" tabindex="0" title="Ziehen ändert die Höhe des Profils"></div>
+      <div class="chartwrap"><canvas id="chart" tabindex="0" aria-label="Höhenprofil, klicken oder ziehen setzt die Position, Mausrad oder zwei Finger zoomen"></canvas>
+        <div class="czoom"><button id="czIn" title="Profil hineinzoomen" aria-label="Profil hineinzoomen">+</button><button id="czOut" title="Profil herauszoomen" aria-label="Profil herauszoomen">−</button><button id="czAll" title="Ganzen Flug zeigen" aria-label="Ganzen Flug zeigen">⤢</button></div></div>
+    </div>
+  </div>
+  <div class="thcard glass" id="thCard" hidden aria-live="polite"></div>
+  <div class="scalebar glass" id="scalebar" hidden><span class="north">N ↑</span><span class="bar" id="sbBar"></span><span id="sbTxt" class="mono"></span></div>
+  <div class="drop" id="drop" hidden>IGC- oder GPX-Dateien hier ablegen</div>
+</section>
+
+<div class="below" id="below">
+  <aside class="side" id="stats" aria-label="Kennzahlen"></aside>
+  <section class="tables">
+    <div class="tbox"><h2>Thermiken <span class="tnote2">★ bester Wert je Spalte</span></h2><div class="twrap"><table id="thermTbl"></table></div></div>
+    <div class="tbox"><h2>Gleitphasen <span class="tnote2">★ bester Wert je Spalte</span></h2><div class="twrap"><table id="glideTbl"></table></div></div>
+  </section>
+  <footer>
+    <p>Alles läuft lokal im Browser, die IGC- und GPX-Dateien werden nirgends hochgeladen. Für die Karten lädt die Seite nur Bild-, Höhen- und Thermikkacheln des Flugraums. Tasten: Leertaste spielt ab, Pfeile springen 5 s, mit Shift 60 s.</p>
+    <p>Markiert in der Spur: höchster Punkt, stärkstes Steigen, stärkstes Sinken, höchste Geschwindigkeit und weitester Punkt vom Start; anklicken springt dorthin. Die Griffleiste über dem Höhenprofil lässt sich ziehen; ein Klick ins Profil springt dorthin und spielt weiter. Kameras: <b>Draufsicht 2D</b> zeigt die Spur von oben mit Massstab (ziehen verschiebt, Mausrad/Pinch zoomt, Doppeltipp zoomt hinein). <b>Frei</b> mit Doppeltipp-Zielpunkt. <b>Folgen</b> fährt mit, ohne sich zu drehen, und schwenkt etwa alle 10 s langsam hinter die Flugrichtung (beim Kreisen nicht). <b>360°-Kamera</b> hängt am Piloten, dreht sich nicht mit und schwankt leicht, mit dem Finger frei drehbar. <b>Pilot</b> zeigt die Sicht aus dem Gurtzeug mit Vario-Instrument; ziehen zum Umschauen, Mausrad oder Pinch zoomt.</p>
+    <p>Vario über 8 s gemittelt. Gleitzahl = Strecke über Grund / Höhenverlust über 30 s, inklusive Wind. Kreisphasen ab 6°/s Drehrate; als Thermik zählen sie ab 25 s und 30 m Höhengewinn. Kreisphasen im selben Schlauch (weniger als 90 s und 500 m auseinander, dazwischen höchstens 80 m Höhenverlust) werden zu einer Thermik zusammengefasst, auch bei Drehrichtungswechsel. Querlage aus Drehrate und mittlerer Geschwindigkeit (tan φ = v·ω/g), Nicken aus Änderungen von Vario und Tempo, mit Pendeldynamik. Sonnenstand aus Datum, Uhrzeit und Ort. Schirmmodell angelehnt an einen 55-Zellen-EN-B-Schirm (Streckung 5,45), Farben frei gewählt. Gelände: Terrain Tiles (AWS Open Data). XC-Wertung nach XContest-Logik: freie Strecke über bis zu 3 Wendepunkte (Faktor 1,0), flaches Dreieck (1,2) und FAI-Dreieck mit jedem Schenkel ≥ 28 % (1,4); Dreiecke gelten als geschlossen, wenn die Lücke höchstens 20 % beträgt, die Lücke wird abgezogen. Berechnet auf einer ausgedünnten Spur, daher ±1–2 % zur offiziellen Wertung. Wind: gemessene Werte von Wetterstationen aus dem Meteostat-Archiv (stündliche Mittelwerte und Spitzenböen) im Umkreis von ca. 25 km um den Flug; gefülltes Dreieck = Mittelwind, Umriss = Böen, Spitze zeigt in die Richtung, in die der Wind weht. Thermikkarte: thermal.kk7.ch, nur für nicht-kommerzielle Nutzung; verwendet wird die Monatskarte des Flugmonats, sonst die Jahreskarte.</p>
+    <p class="attr" id="attr" hidden></p>
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/lines/LineSegmentsGeometry.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/lines/LineGeometry.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/lines/LineMaterial.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/lines/LineSegments2.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/lines/Line2.js"></script>
+<script>
+(function(){
+'use strict';
+const R=6371000, D2R=Math.PI/180, SC=1/100;
+const $=s=>document.querySelector(s);
+const IN_CLAUDE=/claude\.ai|claudeusercontent|anthropic/.test(location.hostname)||(()=>{try{return window.top!==window;}catch(_){return true;}})();
+const state={flights:[],cur:null,curBase:null,mode:'vario',exag:1,altSrc:'gps',idx:0,playing:false,mult:30,cam:'free',simT:0,
+  sat:true,sun:true,curtain:'trail',motion:1,wing:'red',show:true,kk7:'thermals',yawS:0,focus:null,dyn:{b:0,bv:0,p:0,pv:0},lastCurtainT:NaN,
+  lastUser:-1e9,wind:'off',trailWin:300,thVis:null,keyUntil:{},shot:null,lead:null,windSize:1,trackOp:1,route:false,showTherm:true,showKeys:true,autoCam:true,cv:null,tour:null,instaRate:0,instaWant:0,nextInsta:0,hl:null,curTh:-2,curGl:-2,nextZoom:0,zoomA:null,nextSwing:0,swing:null,povLook:{y:0,p:0},fov:{pov:72,insta:88}};
+/* ---------- IGC Parser ---------- */
+function parseGPX(text,name){
+  let doc;try{doc=new DOMParser().parseFromString(text,'application/xml');}catch(_){doc=null;}
+  if(!doc||doc.getElementsByTagName('parsererror').length)throw new Error(name+': GPX-Datei ist kein gültiges XML');
+  const byTag=(el,tag)=>{const r=el.getElementsByTagName(tag);return r.length?r:el.getElementsByTagNameNS('*',tag);};
+  let pts=[...byTag(doc,'trkpt')];if(!pts.length)pts=[...byTag(doc,'rtept')];
+  const raw=[];let noTime=0;
+  for(const p of pts){
+    const lat=parseFloat(p.getAttribute('lat')),lon=parseFloat(p.getAttribute('lon'));
+    if(!isFinite(lat)||!isFinite(lon))continue;
+    const te=byTag(p,'time')[0],ee=byTag(p,'ele')[0];
+    const t=te?Date.parse(te.textContent.trim())/1000:NaN;if(!isFinite(t)){noTime++;continue;}
+    const ele=ee?parseFloat(ee.textContent):NaN;
+    raw.push({t,lat,lon,palt:0,galt:isFinite(ele)?ele:0});
+  }
+  if(!raw.length&&noTime)throw new Error(name+': GPX ohne Zeitstempel, Steigen und Gleitzahl lassen sich so nicht berechnen');
+  raw.sort((a,b)=>a.t-b.t);
+  const clean=raw.filter((p,i)=>i===0||p.t>raw[i-1].t);
+  if(clean.length<30)throw new Error(name+': zu wenige Trackpunkte mit Zeit gefunden');
+  if(!clean.some(p=>p.galt!==0))throw new Error(name+': GPX enthält keine Höhenangaben (ele)');
+  const nm=byTag(doc,'name')[0];
+  return {name,pilot:'',glider:'',site:nm?nm.textContent.trim():'',hasDate:true,raw:clean,gpx:true};
+}
+function readText(file){
+  if(file.text)return file.text();
+  return new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result);r.onerror=()=>rej(r.error);r.readAsText(file);});
+}
+function parseAny(text,name){
+  const head=text.slice(0,2000).replace(/^\uFEFF/,'').trimStart();
+  if(/^<\?xml|<gpx[\s>]/i.test(head)||/\.gpx$/i.test(name))return parseGPX(text,name);
+  if(/^A[A-Z0-9]{3}/m.test(head)||/^B\d{6}\d{7}[NS]/m.test(text)||/\.igc$/i.test(name))return parseIGC(text,name);
+  throw new Error(name+': weder IGC noch GPX erkannt');
+}
+function parseIGC(text,name){
+  const lines=text.split(/\r?\n/);
+  let base=0,hasDate=false,pilot='',glider='',site='';
+  const raw=[];let day=0,lastSec=-1;
+  const hval=L=>L.includes(':')?L.slice(L.indexOf(':')+1).trim():L.slice(5).trim();
+  const bre=/^B(\d{2})(\d{2})(\d{2})(\d{2})(\d{5})([NS])(\d{3})(\d{5})([EW])([AV])([-\d]{5})([-\d]{5})/;
+  for(const L of lines){
+    if(L.startsWith('HFDTE')||L.startsWith('HODTE')){
+      const m=L.slice(5).match(/(\d{2})(\d{2})(\d{2})/);
+      if(m){const y=+m[3];base=Date.UTC(y<80?2000+y:1900+y,+m[2]-1,+m[1])/1000;hasDate=true;}
+    }else if(L.startsWith('HFPLT')){pilot=hval(L).replace(/^PILOT(INCHARGE)?/i,'').trim();}
+    else if(L.startsWith('HFGTY')){glider=hval(L).replace(/^GLIDERTYPE/i,'').trim();}
+    else if(L.startsWith('HFSIT')){site=hval(L).trim();}
+    else if(L.charCodeAt(0)===66){
+      const m=bre.exec(L);if(!m)continue;
+      const sec=+m[1]*3600+ +m[2]*60+ +m[3];
+      if(lastSec>=0&&sec<lastSec-3600)day+=86400;
+      lastSec=sec;
+      let lat=+m[4]+ +m[5]/60000;if(m[6]==='S')lat=-lat;
+      let lon=+m[7]+ +m[8]/60000;if(m[9]==='W')lon=-lon;
+      if(lat===0&&lon===0)continue;
+      const t=base+sec+day;
+      if(raw.length&&t<=raw[raw.length-1].t)continue;
+      raw.push({t,lat,lon,palt:parseInt(m[11],10)||0,galt:parseInt(m[12],10)||0});
+    }
+  }
+  if(raw.length<30)throw new Error(name+': keine ausreichenden Positionsdaten (B-Datensätze) gefunden');
+  return {name,pilot,glider,site,hasDate,raw};
+}
+
+/* ---------- Analyse ---------- */
+function windowIdx(t,h){
+  const n=t.length,a=new Int32Array(n),b=new Int32Array(n);let lo=0,hi=0;
+  for(let i=0;i<n;i++){while(t[lo]<t[i]-h)lo++;if(hi<i)hi=i;while(hi+1<n&&t[hi+1]<=t[i]+h)hi++;a[i]=lo;b[i]=hi;}
+  return [a,b];
+}
+function project(raw){
+  const lat0=raw[0].lat,lon0=raw[0].lon,cl=Math.cos(lat0*D2R),n=raw.length;
+  const X=new Float64Array(n),Y=new Float64Array(n),cd=new Float64Array(n);
+  for(let i=0;i<n;i++){X[i]=(raw[i].lon-lon0)*D2R*R*cl;Y[i]=(raw[i].lat-lat0)*D2R*R;
+    if(i)cd[i]=cd[i-1]+Math.hypot(X[i]-X[i-1],Y[i]-Y[i-1]);}
+  return {X,Y,cd,lat0,lon0,cl};
+}
+function analyze(fl,src){
+  let raw=fl.raw;
+  {const t=Float64Array.from(raw,p=>p.t),{cd}=project(raw),[a,b]=windowIdx(t,10),n=raw.length;
+   const fast=i=>{const dt=t[b[i]]-t[a[i]];return dt>0&&(cd[b[i]]-cd[a[i]])/dt>3.5;};
+   let s0=-1,s1=-1;for(let i=0;i<n;i++)if(fast(i)){s0=i;break;}
+   for(let i=n-1;i>=0;i--)if(fast(i)){s1=i;break;}
+   if(s0>=0&&s1-s0>30){let i0=s0,i1=s1;while(i0>0&&t[i0]>t[s0]-10)i0--;while(i1<n-1&&t[i1]<t[s1]+10)i1++;raw=raw.slice(i0,i1+1);}}
+  const n=raw.length;
+  const hasG=raw.some(p=>p.galt!==0),hasP=raw.some(p=>p.palt!==0);
+  let useG=src==='gps'?hasG:!hasP;if(!hasG&&!hasP)useG=true;
+  const t=Float64Array.from(raw,p=>p.t);
+  const alt=Float64Array.from(raw,p=>useG?p.galt:p.palt);
+  const lat=Float64Array.from(raw,p=>p.lat),lon=Float64Array.from(raw,p=>p.lon);
+  const {X,Y,cd,lat0,lon0,cl}=project(raw);
+  const vario=new Float64Array(n),speed=new Float64Array(n),glide=new Float64Array(n),turn=new Float64Array(n);
+  let [a,b]=windowIdx(t,4);
+  for(let i=0;i<n;i++){const dt=t[b[i]]-t[a[i]];vario[i]=dt>0?(alt[b[i]]-alt[a[i]])/dt:0;}
+  [a,b]=windowIdx(t,5);
+  for(let i=0;i<n;i++){const dt=t[b[i]]-t[a[i]];speed[i]=dt>0?(cd[b[i]]-cd[a[i]])/dt*3.6:0;}
+  [a,b]=windowIdx(t,15);
+  for(let i=0;i<n;i++){const dt=t[b[i]]-t[a[i]],loss=alt[a[i]]-alt[b[i]];
+    glide[i]=(dt>0&&loss/dt>0.15)?Math.min((cd[b[i]]-cd[a[i]])/loss,60):NaN;}
+  const H=new Float64Array(n);{let prev=0,acc=0,have=false;
+   for(let i=1;i<n;i++){const dx=X[i]-X[i-1],dy=Y[i]-Y[i-1];
+     if(dx*dx+dy*dy>0.25){const h=Math.atan2(dx,dy);if(have){let d=h-prev;while(d>Math.PI)d-=2*Math.PI;while(d<-Math.PI)d+=2*Math.PI;acc+=d;}have=true;prev=h;}
+     H[i]=acc;}}
+  [a,b]=windowIdx(t,5);
+  for(let i=0;i<n;i++){const dt=t[b[i]]-t[a[i]];turn[i]=dt>0?(H[b[i]]-H[a[i]])/dt/D2R:0;}
+  const yaw=new Float64Array(n),bank=new Float64Array(n),dvar=new Float64Array(n),acc=new Float64Array(n);
+  {const [a2,b2]=windowIdx(t,2),[a15,b15]=windowIdx(t,15),[a3,b3]=windowIdx(t,1.5);
+   for(let i=0;i<n;i++){const dx=X[b2[i]]-X[a2[i]],dy=Y[b2[i]]-Y[a2[i]];
+     yaw[i]=(dx*dx+dy*dy>1)?Math.atan2(-dx,dy):(i?yaw[i-1]:0);
+     const dt=t[b2[i]]-t[a2[i]],w=dt>0?(H[b2[i]]-H[a2[i]])/dt:0;
+     const d15=t[b15[i]]-t[a15[i]],v=Math.max(6,d15>0?(cd[b15[i]]-cd[a15[i]])/d15:0); // Mittel über einen Kreis ≈ Fluggeschwindigkeit
+     bank[i]=Math.max(-1.25,Math.min(1.25,Math.atan(v*w/9.81)));
+     const d3=t[b3[i]]-t[a3[i]];dvar[i]=d3>0?(vario[b3[i]]-vario[a3[i]])/d3:0;acc[i]=d3>0?(speed[b3[i]]-speed[a3[i]])/3.6/d3:0;}}
+  let segs=[];{let s=-1;for(let i=0;i<n;i++){const c=Math.abs(turn[i])>6;if(c&&s<0)s=i;if((!c||i===n-1)&&s>=0){segs.push([s,c?i:i-1]);s=-1;}}}
+  const merged=[];for(const sg of segs){const L=merged[merged.length-1];if(L&&t[sg[0]]-t[L[1]]<12)L[1]=sg[1];else merged.push(sg.slice());}
+  // Kreisphasen, die zum selben Thermikschlauch gehören (z. B. Drehrichtungswechsel, kurzes Nachzentrieren), zusammenfassen:
+  // Lücke unter 90 s, weniger als 500 m auseinander und dazwischen höchstens 80 m Höhenverlust
+  const cand=merged.filter(([s,e])=>t[e]-t[s]>=20),joined=[];
+  for(const sg of cand){const L=joined[joined.length-1];
+    if(L){let minA=Infinity;for(let i=L[1];i<=sg[0];i++)minA=Math.min(minA,alt[i]);
+      if(t[sg[0]]-t[L[1]]<90&&Math.hypot(X[sg[0]]-X[L[1]],Y[sg[0]]-Y[L[1]])<500&&alt[L[1]]-minA<80){L[1]=sg[1];continue;}}
+    joined.push(sg.slice());}
+  // nur echte Thermiken: mind. 25 s und mind. 30 m Höhengewinn (ein paar Kreise ohne Gewinn zählen nicht)
+  const thermals=joined.filter(([s,e])=>t[e]-t[s]>=25&&alt[e]-alt[s]>=30).map(([s,e])=>{
+    let top=-1e9,ti=s,tr=0,tl=0,mv=-1e9;for(let i=s;i<=e;i++){if(alt[i]>top){top=alt[i];ti=i;}if(turn[i]>6)tr++;else if(turn[i]<-6)tl++;if(vario[i]>mv)mv=vario[i];}
+    const dur=t[e]-t[s],gain=alt[e]-alt[s],mix=Math.min(tr,tl)>0.2*(tr+tl);
+    return {s,e,dur,gain,climb:gain/dur,top,ti,dir:mix?'L+R':(tr>=tl?'R':'L'),maxV:mv};});
+  const bounds=[0];thermals.forEach(th=>{bounds.push(th.s,th.e);});bounds.push(n-1);
+  const glides=[];
+  for(let k=0;k<bounds.length;k+=2){const s=bounds[k],e=bounds[k+1];if(e<=s)continue;
+    const dur=t[e]-t[s],loss=alt[s]-alt[e],dist=cd[e]-cd[s];
+    if(dur>=60&&loss>=30)glides.push({s,e,dur,loss,dist,ld:dist/loss,sink:loss/dur,spd:dist/dur*3.6});}
+  let maxA=-1e9,minA=1e9,maxAi=0,maxV=-1e9,minV=1e9,maxS=0,maxD=0,maxVi=0,minVi=0,maxSi=0,maxDi=0;
+  for(let i=0;i<n;i++){if(alt[i]>maxA){maxA=alt[i];maxAi=i;}if(alt[i]<minA)minA=alt[i];
+    if(vario[i]>maxV){maxV=vario[i];maxVi=i;}if(vario[i]<minV){minV=vario[i];minVi=i;}if(speed[i]>maxS){maxS=speed[i];maxSi=i;}
+    const d=Math.hypot(X[i],Y[i]);if(d>maxD){maxD=d;maxDi=i;}}
+  let cum=0;{const [sa,sb]=windowIdx(t,5);let prev=null;
+   for(let i=0;i<n;i++){const m=(alt[sa[i]]+alt[sb[i]])/2;if(prev!==null&&m>prev)cum+=m-prev;prev=m;}}
+  // grober Flugweg: Spur alle 10 s, Kreisphasen als gerade Linie
+  let path=0;{const inTh=new Uint8Array(n);thermals.forEach(th=>{for(let i=th.s+1;i<th.e;i++)inTh[i]=1;});
+    let last=0;for(let i=1;i<n;i++){if(inTh[i])continue;const edge=i===n-1||inTh[i+1]||inTh[i-1];
+      if(edge||t[i]-t[last]>=10){path+=Math.hypot(X[i]-X[last],Y[i]-Y[last]);last=i;}}}
+  const xc=computeXC(X,Y);
+  const dur=t[n-1]-t[0];
+  const climbTh=thermals.filter(th=>th.gain>0);
+  const thGain=climbTh.reduce((s,x)=>s+x.gain,0),thTime=climbTh.reduce((s,x)=>s+x.dur,0);
+  const circTime=thermals.reduce((s,x)=>s+x.dur,0);
+  const gDist=glides.reduce((s,x)=>s+x.dist,0),gLoss=glides.reduce((s,x)=>s+x.loss,0);
+  const stats={dur,t0:t[0],t1:t[n-1],startAlt:alt[0],landAlt:alt[n-1],maxA,minA,maxAi,maxV,minV,maxS,maxVi,minVi,maxSi,maxDi,
+    avgS:cd[n-1]/dur*3.6,track:cd[n-1],straight:Math.hypot(X[n-1],Y[n-1]),maxD,cum,
+    nTherm:climbTh.length,avgClimb:thTime?thGain/thTime:NaN,bestClimb:climbTh.length?Math.max(...climbTh.map(x=>x.climb)):NaN,
+    path,xc,circPct:dur?circTime/dur*100:0,avgLD:gLoss?gDist/gLoss:NaN,bestLD:glides.length?Math.max(...glides.map(x=>x.ld)):NaN,useG};
+  return Object.assign({},fl,{n,t,alt,lat,lon,X,Y,cd,lat0,lon0,cl,vario,speed,glide,turn,yaw,bank,dvar,acc,thermals,glides,stats});
+}
+
+/* ---------- XC-Optimierung (freie Strecke, flaches und FAI-Dreieck) ---------- */
+function computeXC(X,Y){
+  const n=X.length,D=(a,b)=>Math.hypot(X[a]-X[b],Y[a]-Y[b]);
+  const sample=N=>{const idx=[],step=Math.max(1,Math.floor(n/N));for(let i=0;i<n;i+=step)idx.push(i);if(idx[idx.length-1]!==n-1)idx.push(n-1);return idx;};
+  // freie Strecke: Start + bis 3 Wendepunkte + Ende (dynamische Programmierung über 4 Schenkel)
+  let I=sample(700),m=I.length,prev=new Float64Array(m);const from=[];
+  for(let k=0;k<4;k++){const cur=new Float64Array(m),fr=new Int32Array(m);let bv=-1,bi=0;
+    for(let j=0;j<m;j++){if(prev[j]>bv){bv=prev[j];bi=j;} // Kandidat ohne Abstand (i=j)
+      let best=prev[j],arg=j;for(let i=0;i<j;i++){const v=prev[i]+D(I[i],I[j]);if(v>best){best=v;arg=i;}}cur[j]=best;fr[j]=arg;}
+    from.push(fr);prev=cur;}
+  let end=0;for(let j=1;j<m;j++)if(prev[j]>prev[end])end=j;
+  const fpts=[end];for(let k=3;k>=0;k--)fpts.unshift(from[k][fpts[0]]);
+  const free={d:prev[end],pts:[...new Set(fpts)].map(j=>I[j])};
+  // Dreiecke
+  I=sample(240);m=I.length;
+  const Dm=new Float32Array(m*m);for(let a=0;a<m;a++)for(let b=a;b<m;b++){const v=D(I[a],I[b]);Dm[a*m+b]=v;Dm[b*m+a]=v;}
+  const G=new Float32Array(m*m),GS=new Int32Array(m*m),GE=new Int32Array(m*m); // kleinste Lücke zwischen Punkt vor a und Punkt nach c
+  for(let a=0;a<m;a++)for(let c=m-1;c>=a;c--){let g=Dm[a*m+c],gs=a,ge=c;
+    if(a>0&&G[(a-1)*m+c]<g){g=G[(a-1)*m+c];gs=GS[(a-1)*m+c];ge=GE[(a-1)*m+c];}
+    if(c<m-1&&G[a*m+c+1]<g){g=G[a*m+c+1];gs=GS[a*m+c+1];ge=GE[a*m+c+1];}
+    G[a*m+c]=g;GS[a*m+c]=gs;GE[a*m+c]=ge;}
+  let flat={d:0},fai={d:0};
+  for(let a=0;a<m;a++)for(let b=a+1;b<m;b++){const dab=Dm[a*m+b];for(let c=b+1;c<m;c++){
+    const dbc=Dm[b*m+c],dca=Dm[c*m+a],per=dab+dbc+dca,gap=G[a*m+c];if(gap>0.2*per)continue;const sc=per-gap;
+    if(sc>flat.d)flat={d:sc,per,gap,pts:[I[a],I[b],I[c]],cl:[I[GS[a*m+c]],I[GE[a*m+c]]]};
+    if(sc>fai.d&&Math.min(dab,dbc,dca)>=0.28*per)fai={d:sc,per,gap,pts:[I[a],I[b],I[c]],cl:[I[GS[a*m+c]],I[GE[a*m+c]]]};}}
+  const opts=[{key:'free',name:'Freie Strecke',f:1.0,...free},{key:'flat',name:'Flaches Dreieck',f:1.2,...flat},{key:'fai',name:'FAI-Dreieck',f:1.4,...fai}];
+  opts.forEach(o=>o.pts_=o.d>0?o.d/1000*o.f:0);
+  const best=opts.reduce((a,b)=>b.pts_>a.pts_?b:a);
+  return {opts,best};
+}
+
+/* ---------- Gelände + Satellitenbild ---------- */
+const IMAGERY=[
+  {url:(z,x,y)=>'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/'+z+'/'+y+'/'+x,max:18,attr:'Satellitenbild © Esri, Maxar, Earthstar Geographics'},
+  {url:(z,x,y)=>'https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2020_3857/default/g/'+z+'/'+y+'/'+x+'.jpg',max:15,attr:'Sentinel-2 cloudless 2020 © EOX IT Services, Copernicus'}
+];
+const SWISSIMG={url:(z,x,y)=>'https://wmts.geo.admin.ch/1.0.0/ch.swisstopo.swissimage/default/current/3857/'+z+'/'+x+'/'+y+'.jpeg',max:19,attr:'Luftbild © swisstopo (SWISSIMAGE)'};
+const inCH=b=>{const la=(b.n+b.s)/2,lo=(b.e+b.w)/2;return la>45.8&&la<47.85&&lo>5.9&&lo<10.55;};
+const DEM_URL=(z,x,y)=>'https://s3.amazonaws.com/elevation-tiles-prod/terrarium/'+z+'/'+x+'/'+y+'.png';
+const DEM_ATTR='Gelände: Terrain Tiles, AWS Open Data';
+const lon2px=(lon,z)=>(lon+180)/360*256*Math.pow(2,z);
+const lat2px=(lat,z)=>{const s=Math.sin(lat*D2R);return (0.5-Math.log((1+s)/(1-s))/(4*Math.PI))*256*Math.pow(2,z);};
+async function pool(tasks,n){let i=0;const run=async()=>{while(i<tasks.length){const t=tasks[i++];try{await t();}catch(_){}}};await Promise.all(Array.from({length:Math.min(n,tasks.length)},run));}
+async function loadImgRetry(url,tries=3){for(let k=0;k<tries;k++){try{return await loadImg(k?url+(url.includes('?')?'&':'?')+'retry='+k:url);}catch(e){if(k===tries-1)throw e;await new Promise(r=>setTimeout(r,600*(k+1)));}}}
+function loadImg(url){return new Promise((res,rej)=>{const im=new Image();im.crossOrigin='anonymous';
+  const to=setTimeout(()=>rej(new Error('timeout')),20000);
+  im.onload=()=>{clearTimeout(to);res(im);};im.onerror=()=>{clearTimeout(to);rej(new Error('load'));};im.src=url;});}
+function tileRange(b,z){return {x0:Math.floor(lon2px(b.w,z)/256),x1:Math.floor(lon2px(b.e,z)/256),y0:Math.floor(lat2px(b.n,z)/256),y1:Math.floor(lat2px(b.s,z)/256)};}
+function pickZoom(b,maxTiles,maxZ){for(let z=maxZ;z>=1;z--){const r=tileRange(b,z);if(r.x1-r.x0+1<=maxTiles&&r.y1-r.y0+1<=maxTiles)return z;}return 1;}
+async function stitch(b,z,urlFn){
+  const r=tileRange(b,z),cv=document.createElement('canvas');
+  cv.width=(r.x1-r.x0+1)*256;cv.height=(r.y1-r.y0+1)*256;const c=cv.getContext('2d');
+  // erst eine Kachel testen, damit ein gesperrter Dienst schnell erkannt wird
+  const first=await loadImg(urlFn(z,r.x0,r.y0));c.drawImage(first,0,0);
+  const jobs=[];
+  for(let x=r.x0;x<=r.x1;x++)for(let y=r.y0;y<=r.y1;y++){if(x===r.x0&&y===r.y0)continue;
+    jobs.push(()=>loadImgRetry(urlFn(z,x,y)).then(im=>c.drawImage(im,(x-r.x0)*256,(y-r.y0)*256)));}
+  await pool(jobs,8);
+  return {cv,c,z,ox:r.x0*256,oy:r.y0*256};
+}
+const terrainCache=new Map();
+function terrainFor(base,f){
+  if(!terrainCache.has(base))terrainCache.set(base,loadTerrain(f).then(T=>(terrainCache.set(base,T),T)).catch(err=>{const T={error:err.message||String(err)};terrainCache.set(base,T);return T;}));
+  return terrainCache.get(base);
+}
+async function loadTerrain(f){
+  let n=-90,s=90,e=-180,w=180;for(let i=0;i<f.n;i++){n=Math.max(n,f.lat[i]);s=Math.min(s,f.lat[i]);e=Math.max(e,f.lon[i]);w=Math.min(w,f.lon[i]);}
+  const extM=Math.max((n-s)*D2R*R,(e-w)*D2R*R*f.cl),pad=Math.max(14000,extM*0.8);
+  const dLat=pad/(R*D2R),dLon=pad/(R*D2R*f.cl);
+  const b={n:n+dLat,s:s-dLat,e:e+dLon,w:w-dLon};
+  // Höhenmodell
+  const zd=pickZoom(b,10,12);
+  let dem;try{dem=await stitch(b,zd,DEM_URL);}catch(_){throw new Error('blocked');}
+  let px;try{px=dem.c.getImageData(0,0,dem.cv.width,dem.cv.height).data;}catch(_){throw new Error('blocked');}
+  const W=dem.cv.width,HH=dem.cv.height,el=new Float32Array(W*HH);
+  for(let i=0;i<W*HH;i++)el[i]=px[i*4+3]===0?NaN:px[i*4]*256+px[i*4+1]+px[i*4+2]/256-32768;
+  const elevAt=(la,lo)=>{
+    let x=lon2px(lo,zd)-dem.ox-0.5,y=lat2px(la,zd)-dem.oy-0.5;
+    x=Math.max(0,Math.min(W-1.001,x));y=Math.max(0,Math.min(HH-1.001,y));
+    const x0=Math.floor(x),y0=Math.floor(y),fx=x-x0,fy=y-y0,i=y0*W+x0;
+    const v=el[i]*(1-fx)*(1-fy)+el[i+1]*fx*(1-fy)+el[i+W]*(1-fx)*fy+el[i+W+1]*fx*fy;return v;};
+  // Satellitenbild
+  let img=null,attr='';
+  for(const p of IMAGERY){try{const zi=pickZoom(b,14,p.max);img=await stitch(b,zi,p.url);attr=p.attr;break;}catch(_){}}
+  // Detailbild um den Flugweg (in der Schweiz SWISSIMAGE von swisstopo, sonst Esri) mit deutlich höherer Auflösung
+  let det=null;{
+    const dp=Math.max(1500,extM*0.06),dLa=dp/(R*D2R),dLo=dp/(R*D2R*f.cl),ib={n:n+dLa,s:s-dLa,e:e+dLo,w:w-dLo};
+    for(const p of (inCH(ib)?[SWISSIMG,IMAGERY[0]]:[IMAGERY[0]])){try{const zi=pickZoom(ib,24,p.max);const di=await stitch(ib,zi,p.url);
+      const t2=new THREE.CanvasTexture(di.cv);t2.anisotropy=renderer.capabilities.getMaxAnisotropy();t2.minFilter=THREE.LinearMipmapLinearFilter;
+      const DW=di.cv.width,DH=di.cv.height;det={b:ib,tex:t2,cv:di.cv,z:di.z,ox:di.ox,oy:di.oy,attr:p.attr,uvAt:(la,lo)=>[(lon2px(lo,di.z)-di.ox)/DW,1-(lat2px(la,di.z)-di.oy)/DH]};break;}catch(_){}}}
+  if(det&&det.attr!==attr)attr=det.attr+' · '+attr;
+  let tex=null,uvAt=null;
+  if(img){
+    tex=new THREE.CanvasTexture(img.cv);tex.anisotropy=renderer.capabilities.getMaxAnisotropy();tex.minFilter=THREE.LinearMipmapLinearFilter;
+    const IW=img.cv.width,IH=img.cv.height;
+    uvAt=(la,lo)=>[(lon2px(lo,img.z)-img.ox)/IW,1-(lat2px(la,img.z)-img.oy)/IH];
+  }
+  return {b,elevAt,tex,uvAt,det,attr:(attr?attr+' · ':'')+DEM_ATTR,noImagery:!img,img:img?{cv:img.cv,z:img.z,ox:img.ox,oy:img.oy,W:img.cv.width,H:img.cv.height}:null};
+}
+/* kk7-Thermikkarte (thermal.kk7.ch, TMS-Kacheln, max. Zoom 12), passgenau auf das Satellitenbild gelegt */
+const MONTHS=['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
+const MONTHS_DE=['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
+async function loadKK7(T,layer,mon){
+  if(!T.img)throw new Error('geht nur zusammen mit dem Satellitenbild');
+  const I=T.img,zk=Math.min(I.z,12),f=Math.pow(2,I.z-zk),r=tileRange(T.b,zk);
+  const tryVariant=async name=>{
+    const cv=document.createElement('canvas');cv.width=I.W;cv.height=I.H;const c=cv.getContext('2d');let ok=0;const jobs=[];
+    const url=(x,y)=>'https://thermal.kk7.ch/tiles/'+name+'/'+zk+'/'+x+'/'+((1<<zk)-1-y)+'.png?src=flugspur3d';
+    // zuerst 2 Kacheln in der Mitte testen, damit eine fehlende Monatskarte schnell erkannt wird
+    const mx=(r.x0+r.x1)>>1,my=(r.y0+r.y1)>>1;let probe=0;
+    await pool([[mx,my],[Math.min(r.x1,mx+1),my]].map(([x,y])=>()=>loadImgRetry(url(x,y),2).then(()=>{probe++;})),2);
+    if(!probe)return {cv,c,ok:0};
+    for(let x=r.x0;x<=r.x1;x++)for(let y=r.y0;y<=r.y1;y++)
+      jobs.push(()=>loadImgRetry(url(x,y)).then(im=>{c.drawImage(im,x*256*f-I.ox,y*256*f-I.oy,256*f,256*f);ok++;}));
+    await pool(jobs,6);return {cv,c,ok};};
+  // zuerst die Karte des Flugmonats, sonst die Jahreskarte
+  const variants=(mon!=null?[[layer+'_'+MONTHS[mon]+'_all',MONTHS_DE[mon]]]:[]).concat([[layer+'_all_all','ganzes Jahr']]);
+  for(const [name,label] of variants){
+    const v=await tryVariant(name);if(!v.ok)continue;
+    try{v.c.getImageData(0,0,1,1);}catch(_){throw new Error('Server erlaubt die Nutzung in 3D nicht (CORS)');}
+    const tex=new THREE.CanvasTexture(v.cv);tex.anisotropy=renderer.capabilities.getMaxAnisotropy();
+    return {tex,label,cv:v.cv};
+  }
+  throw new Error('Server nicht erreichbar oder Zugriff blockiert');
+}
+
+/* ---------- Wind: Messungen von Wetterstationen (Meteostat-Archiv, stündlich) ---------- */
+const windCache=new Map(),MS='https://bulk.meteostat.net/v2/';let stationList=null;
+async function fetchMaybeGz(url){
+  const r=await fetch(url);if(!r.ok)throw new Error('HTTP '+r.status);const buf=new Uint8Array(await r.arrayBuffer());
+  if(buf[0]===0x1f&&buf[1]===0x8b){if(!window.DecompressionStream)throw new Error('Browser kann die Stationsdaten nicht entpacken');
+    return await new Response(new Blob([buf]).stream().pipeThrough(new DecompressionStream('gzip'))).text();}
+  return new TextDecoder().decode(buf);
+}
+async function loadMeteostat(f){
+  if(!stationList){try{stationList=JSON.parse(await fetchMaybeGz(MS+'stations/lite.json.gz'));}catch(e){throw new Error(e.message==='Failed to fetch'?'blocked':e.message);}}
+  let n=-90,s=90,e=-180,w=180;for(let i=0;i<f.n;i++){n=Math.max(n,f.lat[i]);s=Math.min(s,f.lat[i]);e=Math.max(e,f.lon[i]);w=Math.min(w,f.lon[i]);}
+  const pad=25000,dLat=pad/(R*D2R),dLon=pad/(R*D2R*f.cl),cLat=(n+s)/2,cLon=(e+w)/2;
+  const cand=stationList.filter(st=>{const L=st.location||{};return L.latitude<=n+dLat&&L.latitude>=s-dLat&&L.longitude<=e+dLon&&L.longitude>=w-dLon;})
+    .sort((a,b)=>Math.hypot(a.location.latitude-cLat,(a.location.longitude-cLon)*f.cl)-Math.hypot(b.location.latitude-cLat,(b.location.longitude-cLon)*f.cl)).slice(0,14);
+  if(!cand.length)return [];
+  const t0=f.t[0]-3*3600,t1=f.t[f.n-1]+3*3600,years=[...new Set([new Date(t0*1000).getUTCFullYear(),new Date(t1*1000).getUTCFullYear()])];
+  const stations=(await Promise.all(cand.map(async st=>{
+    const rows=[];
+    for(const y of years){let txt;try{txt=await fetchMaybeGz(MS+'hourly/'+y+'/'+st.id+'.csv.gz');}catch(_){continue;}
+      for(const line of txt.split('\n')){if(!line)continue;const c=line.split(',');
+        const t=Date.parse(c[0]+'T00:00:00Z')/1000+(+c[1])*3600;if(!(t>=t0&&t<=t1))continue;
+        const dir=c[7]===''?null:+c[7],spd=c[8]===''?null:+c[8],gust=c[9]===''?null:+c[9];if(spd==null)continue;rows.push({t,dir,spd,gust});}}
+    rows.sort((a,b)=>a.t-b.t);
+    const nm=st.name&&(st.name.de||st.name.en)||st.name||st.id;
+    return rows.length?{id:st.id,name:String(nm),lat:st.location.latitude,lon:st.location.longitude,elev:st.location.elevation,rows}:null;
+  }))).filter(Boolean);
+  return stations;
+}
+/* OpenWindMap / Pioupiou: viele kleine Windmesser an Fluggebieten, Archiv mit 4-Minuten-Werten */
+async function loadOWM(f){
+  const r=await fetch('https://api.pioupiou.fr/v1/live-with-meta/all');if(!r.ok)throw new Error('HTTP '+r.status);const j=await r.json();
+  let n=-90,s=90,e=-180,w=180;for(let i=0;i<f.n;i++){n=Math.max(n,f.lat[i]);s=Math.min(s,f.lat[i]);e=Math.max(e,f.lon[i]);w=Math.min(w,f.lon[i]);}
+  const dLat=25000/(R*D2R),dLon=25000/(R*D2R*f.cl),cLat=(n+s)/2,cLon=(e+w)/2;
+  const cand=(j.data||[]).filter(x=>x.location&&x.location.latitude!=null&&x.location.latitude<=n+dLat&&x.location.latitude>=s-dLat&&x.location.longitude<=e+dLon&&x.location.longitude>=w-dLon)
+    .sort((a,b)=>Math.hypot(a.location.latitude-cLat,(a.location.longitude-cLon)*f.cl)-Math.hypot(b.location.latitude-cLat,(b.location.longitude-cLon)*f.cl)).slice(0,20);
+  const iso=t=>new Date(t*1000).toISOString();
+  const res=await Promise.all(cand.map(async x=>{try{
+    const q=await fetch('https://api.pioupiou.fr/v1/archive/'+x.id+'?start='+iso(f.t[0]-1800)+'&stop='+iso(f.t[f.n-1]+1800));if(!q.ok)return null;const a=await q.json();
+    const rows=(a.data||[]).map(d=>({t:Date.parse(d[0])/1000,spd:num(d[4]),gust:num(d[5]),dir:num(d[6])})).filter(d=>d.spd!=null&&isFinite(d.t)).sort((p,q)=>p.t-q.t);
+    return rows.length?{id:'piou-'+x.id,name:String((x.meta&&x.meta.name)||('Pioupiou '+x.id)),lat:x.location.latitude,lon:x.location.longitude,elev:null,rows}:null;}catch(_){return null;}}));
+  return res.filter(Boolean);
+}
+async function loadWind(f){
+  const [a,b]=await Promise.allSettled([loadMeteostat(f),loadOWM(f)]);
+  const st=[].concat(a.status==='fulfilled'?a.value:[],b.status==='fulfilled'?b.value:[]);
+  if(!st.length){const m=(a.reason||b.reason||{}).message||'';throw new Error(m==='Failed to fetch'||m==='blocked'?'blocked':'keine Station mit Messwerten zu diesem Zeitpunkt im Umkreis von 25 km');}
+  const src=[a.status==='fulfilled'&&a.value.length?'Meteostat':null,b.status==='fulfilled'&&b.value.length?'OpenWindMap':null].filter(Boolean).join(' + ');
+  return {stations:st,src:src+' (Messungen zur Flugzeit)'};
+}
+/* Live: aktuelle 10-Minuten-Messwerte der MeteoSwiss-Stationen (Open Government Data, data.geo.admin.ch) */
+const MCH='https://data.geo.admin.ch/';let liveWind=null,livePending=null,liveTimer=0;
+function chToWGS(E,N){ // LV95 oder LV03 -> WGS84 (Näherungsformel swisstopo, Genauigkeit ~1 m)
+  if(Math.abs(E)<=180&&Math.abs(N)<=90)return [E,N];
+  if(E<2000000){E+=2000000;N+=1000000;}
+  const y=(E-2600000)/1e6,x=(N-1200000)/1e6;
+  const lam=2.6779094+4.728982*y+0.791484*y*x+0.1306*y*x*x-0.0436*y*y*y;
+  const phi=16.9023892+3.238272*x-0.270978*y*y-0.002528*x*x-0.0447*y*y*x-0.0140*x*x*x;
+  return [lam*100/36,phi*100/36];
+}
+const num=v=>{if(v==null||v===''||v==='-')return null;const n=+v;return isFinite(n)?n:null;};
+async function loadLive(){
+  const u1=MCH+'ch.meteoschweiz.messwerte-windgeschwindigkeit-kmh-10min/ch.meteoschweiz.messwerte-windgeschwindigkeit-kmh-10min_de.json';
+  const u2=MCH+'ch.meteoschweiz.messwerte-wind-boeenspitze-kmh-10min/ch.meteoschweiz.messwerte-wind-boeenspitze-kmh-10min_de.json';
+  let J,G=null;
+  try{const r=await fetch(u1,{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);J=await r.json();}
+  catch(e){throw new Error(e.message==='Failed to fetch'?'blocked':e.message);}
+  try{const r=await fetch(u2,{cache:'no-store'});if(r.ok)G=await r.json();}catch(_){}
+  const key=ft=>String(ft.id??(ft.properties||{}).station_name);
+  const gm=new Map();(G&&G.features||[]).forEach(ft=>gm.set(key(ft),num(ft.properties&&ft.properties.value)));
+  const stations=(J.features||[]).map(ft=>{const p=ft.properties||{},c=ft.geometry&&ft.geometry.coordinates;if(!c)return null;
+    const ll=chToWGS(+c[0],+c[1]),spd=num(p.value);if(spd==null)return null;
+    let dir=num(p.wind_direction);if(dir==null&&num(p.wind_direction_radian)!=null)dir=num(p.wind_direction_radian)/D2R;
+    return {id:key(ft),name:String(p.station_name||key(ft)),lat:ll[1],lon:ll[0],elev:num(p.altitude),live:{spd,dir,gust:gm.get(key(ft))??null,ts:p.reference_ts||''}};
+  }).filter(Boolean);
+  if(!stations.length)throw new Error('keine Live-Messwerte erhalten');
+  return {stations,src:'MeteoSwiss Live (10-Min.-Werte)',at:Date.now()};
+}
+function requestLive(force){
+  if(livePending)return;
+  if(liveWind&&!force&&Date.now()-liveWind.at<9*60000){buildScene(true);return;}
+  livePending=loadLive().then(W=>{liveWind=W;},err=>{windError(err.message);}).then(()=>{livePending=null;buildScene(true);});
+  clearInterval(liveTimer);liveTimer=setInterval(()=>{if(state.wind==='live')requestLive(true);},10*60000);
+}
+function liveStationsFor(f){
+  if(!liveWind)return null;
+  let n=-90,s=90,e=-180,w=180;for(let i=0;i<f.n;i++){n=Math.max(n,f.lat[i]);s=Math.min(s,f.lat[i]);e=Math.max(e,f.lon[i]);w=Math.min(w,f.lon[i]);}
+  const dLat=40000/(R*D2R),dLon=40000/(R*D2R*f.cl);
+  const st=liveWind.stations.filter(x=>x.lat<=n+dLat&&x.lat>=s-dLat&&x.lon<=e+dLon&&x.lon>=w-dLon);
+  return {stations:st,src:liveWind.src};
+}
+function requestWind(){
+  const base=state.curBase,f=state.cur;if(!base||state.wind==='off'){buildScene(true);return;}
+  const W=windCache.get(base);
+  if(W&&!(W instanceof Promise)){if(W.error)windError(W.error);buildScene(true);return;}
+  if(W)return;
+  const pr=loadWind(f).then(W=>{windCache.set(base,W);},err=>{windCache.set(base,{error:err.message});windError(err.message);})
+    .then(()=>{if(state.curBase===base)buildScene(true);});
+  windCache.set(base,pr);
+}
+function windError(m){setStatus(m==='blocked'?'Winddaten nicht erreichbar.':'Winddaten: '+m,true);}
+const WIND_RAMP=[[0,'#2f9e44'],[12,'#94d82d'],[20,'#fcc419'],[28,'#f76707'],[40,'#c92a2a']];
+function windColor(v){const r=WIND_RAMP;let i=1;while(i<r.length-1&&v>r[i][0])i++;const a=r[i-1],b=r[i],t=Math.max(0,Math.min(1,(v-a[0])/(b[0]-a[0])));
+  return new THREE.Color(a[1]).lerp(new THREE.Color(b[1]),t);}
+const COMPASS=['N','NO','O','SO','S','SW','W','NW'];
+/* Messwert zur Zeit t: zwischen zwei Stundenwerten als Vektor interpoliert; max. 2 h Abstand */
+function liveAt(st){const L=st.live,q=(L.dir??0)*D2R;return {spd:L.spd,gust:L.gust,hasDir:L.dir!=null,to:Math.atan2(-Math.sin(q),-Math.cos(q)),from:L.dir??0};}
+function stationWind(st,t){
+  const R0=st.rows;let j=0;while(j<R0.length&&R0[j].t<t)j++;
+  const a=R0[Math.max(0,j-1)],b=R0[Math.min(R0.length-1,j)];if(!a||!b)return null;
+  if(Math.min(Math.abs(a.t-t),Math.abs(b.t-t))>7200)return null;
+  const fr=b.t===a.t?0:Math.max(0,Math.min(1,(t-a.t)/(b.t-a.t)));
+  const uv=r=>{if(r.dir==null)return [0,0];const q=r.dir*D2R;return [-r.spd*Math.sin(q),-r.spd*Math.cos(q)];};
+  const A=uv(a),B=uv(b),u=A[0]+(B[0]-A[0])*fr,v=A[1]+(B[1]-A[1])*fr;
+  const spd=a.spd+(b.spd-a.spd)*fr,gust=a.gust!=null&&b.gust!=null?a.gust+(b.gust-a.gust)*fr:(a.gust??b.gust);
+  const hasDir=a.dir!=null||b.dir!=null;
+  return {spd,gust,hasDir,to:Math.atan2(u,v),from:(Math.atan2(-u,-v)/D2R+360)%360};
+}
+
+/* ---------- Farben ---------- */
+function hex(h){return [parseInt(h.slice(1,3),16)/255,parseInt(h.slice(3,5),16)/255,parseInt(h.slice(5,7),16)/255];}
+const RAMPS={
+  vario:{dom:[-4,4],title:'Steigen m/s',stops:[[-4,'#1c3fa8'],[-2,'#4c8ef0'],[-0.5,'#9fc3e6'],[0,'#c9d2d8'],[0.5,'#f7c873'],[1.5,'#f59f00'],[3,'#e8590c'],[4,'#b5174f']],ticks:[-4,-2,0,2,4]},
+  alt:{dom:null,title:'Höhe m',stops:[[0,'#3b2f80'],[.25,'#2f6db3'],[.5,'#1fa187'],[.75,'#8fd14f'],[1,'#f2d93b']]},
+  glide:{dom:[0,15],title:'Gleitzahl (grau = steigend)',stops:[[0,'#b5174f'],[3,'#e8590c'],[6,'#f2b13b'],[9,'#8fd14f'],[12,'#1fa187'],[15,'#2f6db3']],ticks:[0,3,6,9,12,15]},
+  speed:{dom:[0,70],title:'Speed km/h',stops:[[0,'#3b2f80'],[20,'#2f6db3'],[35,'#1fa187'],[50,'#f2b13b'],[70,'#e8590c']],ticks:[0,20,35,50,70]}
+};
+for(const k in RAMPS)RAMPS[k].rgb=RAMPS[k].stops.map(s=>[s[0],hex(s[1])]);
+const GREY=hex('#b4bec4');
+function ramp(key,v){
+  const r=RAMPS[key].rgb;if(!isFinite(v))return GREY;
+  if(v<=r[0][0])return r[0][1];if(v>=r[r.length-1][0])return r[r.length-1][1];
+  for(let i=1;i<r.length;i++)if(v<=r[i][0]){const f=(v-r[i-1][0])/(r[i][0]-r[i-1][0]),A=r[i-1][1],B=r[i][1];return [A[0]+(B[0]-A[0])*f,A[1]+(B[1]-A[1])*f,A[2]+(B[2]-A[2])*f];}
+  return r[r.length-1][1];
+}
+function colorAt(f,i){
+  const m=state.mode;
+  if(m==='vario')return ramp('vario',f.vario[i]);
+  if(m==='glide')return ramp('glide',f.glide[i]);
+  if(m==='speed')return ramp('speed',f.speed[i]);
+  const s=f.stats;return ramp('alt',(f.alt[i]-s.minA)/Math.max(1,s.maxA-s.minA));
+}
+const css=c=>'rgb('+Math.round(c[0]*255)+','+Math.round(c[1]*255)+','+Math.round(c[2]*255)+')';
+const tok=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+/* ---------- Formatierung ---------- */
+const fmtN=(v,d=0)=>isFinite(v)?v.toLocaleString('de-CH',{minimumFractionDigits:d,maximumFractionDigits:d}):'–';
+const fmtDur=s=>{s=Math.round(s);const h=Math.floor(s/3600),m=Math.floor(s%3600/60),x=s%60;return h?h+':'+String(m).padStart(2,'0')+' h':m+':'+String(x).padStart(2,'0')+' min';};
+function fmtTime(f,t,sec=true){const o={hour:'2-digit',minute:'2-digit'};if(sec)o.second='2-digit';if(!f.hasDate)o.timeZone='UTC';
+  return new Date(t*1000).toLocaleTimeString('de-CH',o);}
+const fmtV=v=>isFinite(v)?(v>0?'+':v<0?'−':'')+Math.abs(v).toFixed(1):'–';
+const fmtKm=m=>fmtN(m/1000,m<10000?2:1)+' km';
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+
+/* ---------- 3D ---------- */
+let renderer,scene,camera,controls,group,trackLine,curtain,marker,terrainMesh=null,markerDrop,ids=[],raycaster,labels=[],sceneCenter,sceneExt=100;
+let windObjs=[],routeMat=null,fatOutLine=null,groundLine=null,partGeo=null,partLine=null,partOut=null;
+/* Beim Abspielen nur die letzten N Minuten der Spur zeigen, angehalten den ganzen Flug */
+function updateTrail(){
+  if(!partLine||!fatLine)return;const on=state.trackOp>0,win=state.playing&&state.trailWin!==0?state.trailWin:0;
+  fatLine.visible=on&&!win;partLine.visible=on&&!!win;fatOutLine.visible=partOut.visible=false;if(groundLine)groundLine.visible=on&&!win;
+  if(!win||!on)return;const tc=curTime();if(Math.abs(tc-state.partT)<0.4)return;state.partT=tc;
+  const f=state.cur,pa=trackLine.geometry.attributes.position.array,ca=trackLine.geometry.attributes.color.array,pos=[],col=[];
+  let k0=0;if(win>0)while(k0<ids.length-1&&f.t[ids[k0]]<tc-win)k0++;
+  for(let k=k0;k<ids.length&&f.t[ids[k]]<=tc;k++){pos.push(pa[k*3],pa[k*3+1],pa[k*3+2]);col.push(ca[k*3],ca[k*3+1],ca[k*3+2]);}
+  if(marker){pos.push(marker.position.x,marker.position.y,marker.position.z);col.push(...(col.length?col.slice(-3):[1,1,1]));}
+  if(pos.length<6){pos.push(...pos.slice(0,3));col.push(...col.slice(0,3));}
+  partGeo.setPositions(pos);partGeo.setColors(col);delete partGeo._maxInstanceCount;partGeo.instanceCount=Infinity;
+}
+function applyTrackOp(){if(!fatMat)return;const o=state.trackOp;fatLine.visible=o>0;fatOutLine.visible=false;if(groundLine)groundLine.visible=o>0;state.partT=NaN;fatMat.opacity=o;fatOut.opacity=0.4*o;}
+let skyU,skyDome,envScene,pmrem,envRT=null,envKey='';
+let hemi,sun,sunSprite,terrSpan=0,terrCenter=null,kk7Mesh=null,cam2d,controls2d,fatLine,fatMat,fatOut,keyMeshes=[];
+const activeCam=()=>state.cam==='top'?cam2d:camera;
+const viewEl=$('#view'),Yax=new THREE.Vector3(0,1,0);
+function init3D(){
+  if(!window.THREE||!THREE.OrbitControls){setStatus('3D-Bibliothek konnte nicht geladen werden. Internetverbindung prüfen und Seite neu laden.',true);return false;}
+  renderer=new THREE.WebGLRenderer({antialias:true,logarithmicDepthBuffer:true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
+  renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+  viewEl.appendChild(renderer.domElement);
+  scene=new THREE.Scene();
+  camera=new THREE.PerspectiveCamera(45,1,0.03,40000);
+  controls=new THREE.OrbitControls(camera,renderer.domElement);
+  controls.enableDamping=true;controls.dampingFactor=0.22;controls.maxPolarAngle=Math.PI*0.495;controls.screenSpacePanning=false;
+  controls.rotateSpeed=0.55;controls.enableRotate=false; // Drehen übernimmt orbitAround (um den Punkt unter dem Zeiger)
+ controls.panSpeed=1;controls.enableZoom=false; // Zoom übernimmt zoomAt (zum Zeiger hin)
+  cam2d=new THREE.OrthographicCamera(-1,1,1,-1,0.5,400000);cam2d.up.set(0,0,-1);
+  controls2d=new THREE.OrbitControls(cam2d,renderer.domElement);controls2d.enableRotate=false;controls2d.enableZoom=false;controls2d.screenSpacePanning=true;
+  controls2d.mouseButtons={LEFT:THREE.MOUSE.PAN,MIDDLE:THREE.MOUSE.PAN,RIGHT:THREE.MOUSE.PAN};controls2d.touches={ONE:THREE.TOUCH.PAN,TWO:THREE.TOUCH.DOLLY_PAN};
+  controls2d.enableDamping=true;controls2d.dampingFactor=0.25;controls2d.enabled=false;
+  controls2d.addEventListener('start',()=>{state.focus=null;hideHint();userTouch();});
+  hemi=new THREE.HemisphereLight(0xffffff,0x9a9a90,0.8);scene.add(hemi);
+  sun=new THREE.DirectionalLight(0xfff4e6,0.7);scene.add(sun);scene.add(sun.target);
+  sun.shadow.mapSize.set(4096,4096);
+  sunSprite=new THREE.Sprite(new THREE.SpriteMaterial({map:sunTexture(),transparent:true,depthWrite:false,fog:false}));sunSprite.visible=false;
+  // Himmelskuppel: Verlauf Zenit–Horizont, Dunstband, Sonnenscheibe mit Glühen
+  skyU={zen:{value:new THREE.Color('#3d7fd0')},hor:{value:new THREE.Color('#d2e3ef')},gnd:{value:new THREE.Color('#8b927f')},sunDir:{value:new THREE.Vector3(0,0.7,-0.7).normalize()},sunCol:{value:new THREE.Color(1,0.93,0.8)},sunVis:{value:1}};
+  const skyMat=new THREE.ShaderMaterial({uniforms:skyU,side:THREE.BackSide,depthWrite:false,depthTest:false,fog:false,
+    vertexShader:'varying vec3 vDir;void main(){vDir=position;vec4 p=projectionMatrix*modelViewMatrix*vec4(position,1.0);p.z=p.w*0.999;gl_Position=p;}',
+    fragmentShader:['uniform vec3 zen,hor,gnd,sunDir,sunCol;uniform float sunVis;varying vec3 vDir;',
+      'void main(){vec3 d=normalize(vDir);float h=d.y;',
+      ' vec3 c=h>0.0?mix(hor,zen,pow(min(1.0,h*1.5),0.6)):mix(hor,gnd,min(1.0,-h*5.0));',
+      ' c=mix(c,hor,exp(-abs(h)*14.0)*0.45);',
+      ' float s=max(dot(d,sunDir),0.0);',
+      ' c+=sunCol*(pow(s,6.0)*0.16+pow(s,60.0)*0.35+pow(s,600.0)*0.6)*sunVis;',
+      ' c=mix(c,vec3(1.0,0.985,0.94),smoothstep(0.99955,0.9998,s)*sunVis);',
+      ' gl_FragColor=vec4(min(c,vec3(1.5)),1.0);','#include <encodings_fragment>','}'].join('\n')}); // Ausgabe im Format des Ziels (wichtig für die Spiegelungs-Map)
+  skyDome=new THREE.Mesh(new THREE.SphereGeometry(1,64,32),skyMat);skyDome.renderOrder=-1000;skyDome.frustumCulled=false;scene.add(skyDome);
+  envScene=new THREE.Scene();envScene.add(new THREE.Mesh(new THREE.SphereGeometry(10,48,24),skyMat));pmrem=new THREE.PMREMGenerator(renderer);
+  raycaster=new THREE.Raycaster();
+  new ResizeObserver(resize3D).observe(viewEl);resize3D();
+  const el=renderer.domElement;
+  let down=null,lastTap=0,lastTapXY=[0,0];
+  let rot=null;const ptrs=new Map();
+  el.addEventListener('pointerdown',e=>{ptrs.set(e.pointerId,1);down=[e.clientX,e.clientY];userTouch();
+    if(state.cam==='top'||ptrs.size>1||(e.pointerType==='mouse'&&e.button!==0)){rot=null;return;}
+    let pivot=null;if(state.cam==='free'){setRay(e.clientX,e.clientY);pivot=rayPoint();}
+    rot={id:e.pointerId,x:e.clientX,y:e.clientY,pivot};state.focus=null;hideHint();});
+  el.addEventListener('pointermove',e=>{if(!rot||rot.id!==e.pointerId||ptrs.size>1)return;
+    const dx=e.clientX-rot.x,dy=e.clientY-rot.y;rot.x=e.clientX;rot.y=e.clientY;
+    orbitAround(rot.pivot||controls.target.clone(),-dx*0.0055,dy*0.0045);userTouch();});
+  const ptrUp=e=>{ptrs.delete(e.pointerId);if(rot&&rot.id===e.pointerId)rot=null;};
+  el.addEventListener('pointerup',ptrUp);el.addEventListener('pointercancel',ptrUp);el.addEventListener('pointerleave',e=>{if(e.pointerType==='mouse')ptrUp(e);});
+  el.addEventListener('pointerup',e=>{if(!down||!trackLine)return;if(state.cam==='pov'){down=null;return;}const d=Math.hypot(e.clientX-down[0],e.clientY-down[1]);down=null;if(d>6)return;
+    setRay(e.clientX,e.clientY);
+    const now=performance.now();
+    if(now-lastTap<350&&Math.hypot(e.clientX-lastTapXY[0],e.clientY-lastTapXY[1])<30){lastTap=0;if(state.cam==='top')zoomAt(e.clientX,e.clientY,0.5);else focusRay();return;}
+    lastTap=now;lastTapXY=[e.clientX,e.clientY];
+    const hi=pickTrackScreen(e.clientX,e.clientY);if(hi!=null){stopPlay();setIdx(hi);goToIdx(hi);}});
+  el.addEventListener('dblclick',e=>e.preventDefault());
+  el.addEventListener('wheel',onWheel3D,{passive:false});
+  $('#labels').addEventListener('wheel',onWheel3D,{passive:false}); // auch über Schildern zoomen
+  // Pinch-Zoom zur Fingermitte (Verschieben mit 2 Fingern macht OrbitControls)
+  let pinch=null;
+  const tinfo=ev=>{const a=ev.touches[0],b=ev.touches[1];return {d:Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY),x:(a.clientX+b.clientX)/2,y:(a.clientY+b.clientY)/2};};
+  el.addEventListener('touchstart',e=>{if(e.touches.length===2)pinch=tinfo(e);},{passive:true});
+  el.addEventListener('touchmove',e=>{if(e.touches.length===2&&pinch){const c=tinfo(e);if(c.d>10&&pinch.d>10){userTouch();zoomAt(c.x,c.y,pinch.d/c.d);}pinch=c;}},{passive:true});
+  el.addEventListener('touchend',e=>{if(e.touches.length<2)pinch=null;},{passive:true});
+  controls.addEventListener('start',()=>{state.focus=null;state.swing=null;hideHint();userTouch();});
+  requestAnimationFrame(loop);
+  return true;
+}
+function hideHint(){$('#hint').hidden=true;}
+setTimeout(hideHint,15000); // Bedienungshinweis nach 15 s ausblenden, damit er keine Schilder verdeckt
+function onWheel3D(e){e.preventDefault();hideHint();userTouch();const k=Math.exp(Math.max(-1,Math.min(1,e.deltaY*(e.deltaMode?0.05:0.0015))));zoomAt(e.clientX,e.clientY,k);}
+/* Kamera und Drehpunkt gemeinsam um P drehen: yaw um die Senkrechte, pitch um die waagrechte Kameraachse (kein Sprung, keine Nachschwingung) */
+function orbitAround(P,yaw,pitch){
+  const cam=camera.position,tgt=controls.target,q=new THREE.Quaternion();
+  q.setFromAxisAngle(Yax,yaw);cam.sub(P).applyQuaternion(q).add(P);tgt.sub(P).applyQuaternion(q).add(P);
+  const dir=tgt.clone().sub(cam).normalize(),cur=Math.asin(Math.max(-1,Math.min(1,-dir.y)));
+  const lo=Math.min(cur,state.cam==='free'?-0.35:-1.25),a=Math.max(lo,Math.min(1.53,cur+pitch))-cur;if(Math.abs(a)<1e-6)return;
+  const right=new THREE.Vector3().crossVectors(dir,Yax).normalize();
+  q.setFromAxisAngle(right,-a);cam.sub(P).applyQuaternion(q).add(P);tgt.sub(P).applyQuaternion(q).add(P);
+}
+/* Spur antippen: nächster Spurpunkt auf dem Bildschirm (max. 22 px) */
+function pickTrackScreen(cx,cy){
+  if(!trackLine||state.trackOp<=0)return null;const r=renderer.domElement.getBoundingClientRect(),cam=activeCam(),v=new THREE.Vector3(),pa=trackLine.geometry.attributes.position.array;
+  // beim Abspielen mit Spurfenster nur den sichtbaren Teil berücksichtigen
+  const f0=state.cur,tc=curTime(),w0=state.playing&&state.trailWin!==0?state.trailWin:0;
+  let best=null,bd=22*22;
+  for(let k=0;k<ids.length;k++){if(w0&&(f0.t[ids[k]]>tc||(w0>0&&f0.t[ids[k]]<tc-w0)))continue;v.set(pa[k*3],pa[k*3+1],pa[k*3+2]).project(cam);if(v.z>1||v.z<-1)continue;
+    const x=(v.x+1)/2*r.width+r.left,y=(1-v.y)/2*r.height+r.top,d=(x-cx)*(x-cx)+(y-cy)*(y-cy);if(d<bd){bd=d;best=ids[k];}}
+  return best;
+}
+function goToIdx(i){
+  if(state.cam!=='free'||!state.cur)return;const p=new THREE.Vector3(...P(state.cur,i)),d=p.clone().sub(controls.target);
+  state.focus={t:controls.target.clone().add(d),c:camera.position.clone().add(d)};
+}
+function userTouch(){state.lastUser=performance.now();state.zoomA=null;state.tour=null;state.shot=null;}
+function sunTexture(){
+  const c=document.createElement('canvas');c.width=c.height=128;const g=c.getContext('2d'),r=g.createRadialGradient(64,64,0,64,64,64);
+  r.addColorStop(0,'rgba(255,255,245,1)');r.addColorStop(0.12,'rgba(255,250,225,1)');r.addColorStop(0.25,'rgba(255,225,150,.55)');r.addColorStop(1,'rgba(255,200,120,0)');
+  g.fillStyle=r;g.fillRect(0,0,128,128);return new THREE.CanvasTexture(c);
+}
+function resize3D(){if(!renderer)return;const w=viewEl.clientWidth,h=viewEl.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/Math.max(1,h);camera.updateProjectionMatrix();
+  if(fatMat){fatMat.resolution.set(w,h);fatOut.resolution.set(w,h);}if(routeMat)routeMat.resolution.set(w,h);frame2D();}
+function frame2D(){if(!cam2d)return;const w=viewEl.clientWidth,h=Math.max(1,viewEl.clientHeight),hh=state.h2d||50;
+  cam2d.left=-hh*w/h;cam2d.right=hh*w/h;cam2d.top=hh;cam2d.bottom=-hh;cam2d.updateProjectionMatrix();}
+const view2dWidth=()=>(cam2d.right-cam2d.left)/cam2d.zoom;
+function pickThreshold(){return state.cam==='top'?view2dWidth()/150:camera.position.distanceTo(controls.target)/80;}
+function disposeGroup(g){g.traverse(o=>{if(o.geometry)o.geometry.dispose();if(o.material){(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>m.dispose());}});}
+const yOf=(f,a)=>(a-f.ground)*state.exag*SC;
+function P(f,i){return [f.X[i]*SC,yOf(f,f.alt[i]),-f.Y[i]*SC];}
+function activeTerrain(){const T=state.curBase&&terrainCache.get(state.curBase);return (state.sat&&T&&T.elevAt)?T:null;}
+function groundYAt(x,z){const f=state.cur,T=activeTerrain();if(!f||!T)return 0;
+  const e=T.elevAt(f.lat0+(-z/SC)/(R*D2R),f.lon0+(x/SC)/(R*D2R*f.cl));return isFinite(e)?yOf(f,e):0;}
+
+/* Schirmmodell: Masse in Metern, Flugrichtung -Z, Spannweite X, Pilot (GPS-Punkt) im Ursprung */
+const WINGS={
+  red:{name:'Rot / Weiss',main:'#cf2330',le:'#f3f3f0',tip:'#1c2029',acc:'#f3f3f0',under:'#e9dcdc'},
+  blue:{name:'Blau / Cyan',main:'#1f58b8',le:'#eef2f6',tip:'#101a2c',acc:'#5ec8f2',under:'#dbe3ee'},
+  lime:{name:'Limette / Anthrazit',main:'#9bc92b',le:'#2b3037',tip:'#2b3037',acc:'#f1f3ee',under:'#e2e9d3'},
+  orange:{name:'Orange / Weiss',main:'#f06a1c',le:'#f4f2ef',tip:'#22262d',acc:'#ffd23f',under:'#efe2d8'},
+  white:{name:'Weiss / Rot',main:'#eef0f2',le:'#cf2330',tip:'#cf2330',acc:'#1c2029',under:'#e6e8ea'}
+};
+function makeGlider(key){
+  const W=WINGS[key]||WINGS.red,C=h=>new THREE.Color(h);
+  const cMain=C(W.main),cLe=C(W.le),cTip=C(W.tip),cAcc=C(W.acc),cUnder=C(W.under);
+  const g=new THREE.Group(),body=new THREE.Group();g.add(body);g.userData.body=body;
+  const CELLS=55,A=1.08,Rr=5.4,cH=7.7-5.4,c0=2.75,ct=0.6;
+  const chord=u=>ct+(c0-ct)*Math.pow(Math.max(0,1-u*u),0.55);
+  const le=u=>-0.62*chord(u)-0.25*u*u;
+  const prof=s=>{const t=0.155,yt=5*t*(0.2969*Math.sqrt(s)-0.126*s-0.3516*s*s+0.2843*s*s*s-0.1036*s*s*s*s);
+    const m=0.055,p=0.3,yc=s<p?m/(p*p)*(2*p*s-s*s):m/((1-p)*(1-p))*((1-2*p)+2*p*s-s*s);return [yc+yt,yc-0.5*yt];};
+  const pt=(u,s,top)=>{const a=u*A,c=chord(u),pr=prof(s),r=Rr+(top?pr[0]:pr[1])*c;return [r*Math.sin(a),cH+r*Math.cos(a),le(u)+s*c];};
+  const colAt=(u,s,top,cell)=>{
+    const au=Math.abs(u);let c;
+    if(!top)c=au>0.9?cTip:cUnder;
+    else if(au>0.9)c=cTip;
+    else if(s<0.13)c=cLe;
+    else if(Math.abs((au-0.42)-(s-0.55)*0.55)<0.05)c=cAcc;          // schräger Schwung
+    else if(au<0.075&&s>0.13)c=cAcc;                                  // Mittelstreifen
+    else c=cMain;
+    return [c.r,c.g,c.b];};
+  // Kappe als glattes Netz: 4 Stützstellen pro Zelle, Zellen zwischen den Rippen aufgebläht, Lufteinlässe an der Eintrittskante
+  const SUB=4,NU=CELLS*SUB,NS=24,sAt=j=>(1-Math.cos(Math.PI*j/NS))/2;
+  const surf=top=>{const pos=[],col=[],idx=[],dark=C('#141414');
+    for(let i=0;i<=NU;i++){const u=-1+2*i/NU,fr=(i%SUB)/SUB,cell=Math.floor(i/SUB);
+      for(let j=0;j<=NS;j++){const s=sAt(j),c=chord(u),bil=Math.sin(Math.PI*fr)*Math.pow(Math.sin(Math.PI*Math.min(1,s*1.15)),0.6)*c*(top?0.022:-0.012);
+        const a=u*A,pr=prof(s),r=Rr+(top?pr[0]:pr[1])*c+bil;pos.push(r*Math.sin(a),cH+r*Math.cos(a),le(u)+s*c);
+        let cc=colAt(u,s,top,cell);if(!top&&s<0.045&&fr>0.15&&fr<0.85&&Math.abs(u)<0.97)cc=[dark.r,dark.g,dark.b];
+        const rib=fr===0?0.9:1;col.push(cc[0]*rib,cc[1]*rib,cc[2]*rib);}}
+    for(let i=0;i<NU;i++)for(let j=0;j<NS;j++){const a=i*(NS+1)+j,b=a+NS+1;if(top)idx.push(a,b,a+1,b,b+1,a+1);else idx.push(a,a+1,b,b,a+1,b+1);}
+    const gg=new THREE.BufferGeometry();gg.setAttribute('position',new THREE.Float32BufferAttribute(pos,3));gg.setAttribute('color',new THREE.Float32BufferAttribute(col,3));gg.setIndex(idx);gg.computeVertexNormals();return gg;};
+  const nylon=new THREE.MeshStandardMaterial({vertexColors:true,roughness:0.42,metalness:0,side:THREE.DoubleSide,envMapIntensity:0.5});
+  body.add(new THREE.Mesh(surf(true),nylon),new THREE.Mesh(surf(false),new THREE.MeshStandardMaterial({vertexColors:true,roughness:0.6,metalness:0,side:THREE.DoubleSide,envMapIntensity:0.4})));
+  // Leinen: Tragegurte -> Stammleinen -> Galerie (A, B, C); Bremsleinen folgen jedes Bild den Händen
+  const L=[],V=(x,y,z)=>new THREE.Vector3(x,y,z),brakeTE={};
+  for(const sx of [-1,1]){
+    const riser=V(0.22*sx,0.95,0);
+    for(const s of [0.06,0.3,0.58]){
+      for(let grp=0;grp<4;grp++){const us=[];for(let k=0;k<4;k++)us.push(sx*(0.08+0.92*(grp*4+k+0.5)/16));
+        const pts=us.map(u=>V(...pt(u,s,false)));const avg=pts.reduce((m,p)=>m.add(p),V(0,0,0)).multiplyScalar(1/pts.length);
+        const mid=riser.clone().lerp(avg,0.6);L.push(riser,mid);pts.forEach(p=>L.push(mid,p));}}
+    brakeTE[sx]=[];for(let grp=0;grp<3;grp++){const g4=[];for(let k=0;k<4;k++)g4.push(V(...pt(sx*(0.3+0.7*(grp*4+k+0.5)/12),1.0,false)));brakeTE[sx].push(g4);}
+  }
+  const Lmain=[],Lgal=[];for(let q=0;q<L.length;q+=2){(L[q].y<1?Lmain:Lgal).push(L[q],L[q+1]);}
+  body.add(new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(Lmain),new THREE.LineBasicMaterial({color:0x2a2f36,transparent:true,opacity:0.85})));        // Stammleinen
+  body.add(new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(Lgal),new THREE.LineBasicMaterial({color:0xd9622b,transparent:true,opacity:0.6})));         // Galerieleinen
+  const bl=new THREE.BufferGeometry();bl.setAttribute('position',new THREE.BufferAttribute(new Float32Array(60*3),3));
+  const brakeLines=new THREE.LineSegments(bl,new THREE.LineBasicMaterial({color:0x56636d,transparent:true,opacity:0.75}));brakeLines.frustumCulled=false;body.add(brakeLines);
+  const PBR={fabric:{roughness:0.85,metalness:0},glossy:{roughness:0.35,metalness:0},metal:{roughness:0.22,metalness:1},skin:{roughness:0.65,metalness:0}};
+  const lam=(c,k)=>new THREE.MeshStandardMaterial(Object.assign({color:c,envMapIntensity:k==='metal'?1:0.45},PBR[k||'fabric']));
+  const mesh=(geo,c,x,y,z,sx=1,sy=1,sz=1)=>{const m=new THREE.Mesh(geo,lam(c));m.position.set(x,y,z);m.scale.set(sx,sy,sz);body.add(m);return m;};
+  const limb=(r,c)=>{const m=new THREE.Mesh(new THREE.CylinderGeometry(r,r*0.9,1,14),lam(c));body.add(m);return m;};
+  const setLimb=(m,a,b)=>{const d=b.clone().sub(a),len=Math.max(0.001,d.length());m.position.copy(a).add(b).multiplyScalar(0.5);m.scale.set(1,len,1);m.quaternion.setFromUnitVectors(V(0,1,0),d.multiplyScalar(1/len));};
+  const cHarn=C('#2a2f37'),cJacket=C('#34506f'),cGlove=C('#1b1f24'),cSkin=C('#d9a882');
+  for(const sx of [-1,1]){setLimb(limb(0.014,'#30363d'),V(0.2*sx,0.34,0.08),V(0.22*sx,0.95,0));}       // Tragegurte
+  mesh(new THREE.SphereGeometry(1,28,18),cHarn,0,-0.1,-0.5,0.27,0.23,0.82).material=lam(cHarn,'glossy');                         // Beinsack (Pod)
+  mesh(new THREE.BoxGeometry(0.02,0.05,0.9),C(W.main),0.262,-0.08,-0.5);mesh(new THREE.BoxGeometry(0.02,0.05,0.9),C(W.main),-0.262,-0.08,-0.5); // Zierstreifen
+  mesh(new THREE.SphereGeometry(1,16,12),cHarn,0,0.04,0.14,0.26,0.3,0.3);                           // Sitzschale
+  mesh(new THREE.BoxGeometry(0.34,0.38,0.14),C('#1f242b'),0,0.24,0.34);                             // Rückenprotektor mit Retter
+  const torsoG=new THREE.LatheGeometry([[0,0],[0.12,0.01],[0.155,0.08],[0.168,0.2],[0.158,0.33],[0.12,0.42],[0.055,0.46],[0,0.465]].map(q=>new THREE.Vector2(q[0],q[1])),20);
+  const torso=new THREE.Mesh(torsoG,lam(cJacket));torso.position.set(0,0.13,0.12);torso.rotation.x=0.32;torso.scale.set(1.05,1,0.75);body.add(torso);
+  const neck=mesh(new THREE.CylinderGeometry(0.045,0.05,0.09,10),cSkin,0,0.6,0.22);
+  for(const sx of [-1,1]){
+    setLimb(limb(0.018,'#22272d'),V(0.11*sx,0.55,0.2),V(0.2*sx,0.34,0.08));                        // Schultergurte
+    const kb=new THREE.Mesh(new THREE.TorusGeometry(0.035,0.008,8,18),lam(C('#c9ced3'),'metal'));kb.position.set(0.2*sx,0.34,0.08);kb.rotation.y=Math.PI/2;body.add(kb); // Karabiner
+    mesh(new THREE.SphereGeometry(0.062,12,10),cJacket,0.19*sx,0.53,0.22);                         // Schulter
+  }
+  mesh(new THREE.BoxGeometry(0.36,0.025,0.025),C('#22272d'),0,0.36,0.05);                           // Brustgurt
+  mesh(new THREE.SphereGeometry(1,16,12),cHarn,0,-0.13,-1.02,0.2,0.17,0.2);                         // Beinsack-Spitze
+  const head=mesh(new THREE.SphereGeometry(0.1,20,14),cSkin,0,0.67,0.24);head.material=lam(cSkin,'skin');
+  const helm=new THREE.Mesh(new THREE.SphereGeometry(0.128,28,18,0,Math.PI*2,0,Math.PI*0.62),new THREE.MeshPhysicalMaterial({color:C(W.main),roughness:0.3,metalness:0,clearcoat:1,clearcoatRoughness:0.06,envMapIntensity:0.6}));helm.position.set(0,0.69,0.25);helm.rotation.x=0.25;body.add(helm);
+  // Skibrille vorne: Rahmen, verspiegeltes Glas und Band rund um den Helm (Gesicht schaut nach -Z)
+  const visor=new THREE.Group();visor.position.set(0,0.652,0.235);visor.rotation.x=-0.08;body.add(visor);
+  const gFrame=new THREE.Mesh(new THREE.SphereGeometry(0.118,28,10,Math.PI*1.17,Math.PI*0.66,Math.PI*0.42,Math.PI*0.17),new THREE.MeshStandardMaterial({color:0x14181c,roughness:0.45,metalness:0,side:THREE.DoubleSide}));
+  const gLens=new THREE.Mesh(new THREE.SphereGeometry(0.124,28,10,Math.PI*1.21,Math.PI*0.58,Math.PI*0.435,Math.PI*0.14),new THREE.MeshStandardMaterial({color:0xff8a30,roughness:0.06,metalness:1,envMapIntensity:1.4,side:THREE.DoubleSide})); // verspiegeltes Glas
+  const gStrap=new THREE.Mesh(new THREE.TorusGeometry(0.116,0.013,6,32,Math.PI*1.32),new THREE.MeshStandardMaterial({color:0x1f2226,roughness:0.9}));gStrap.rotation.set(Math.PI/2,0,Math.PI*1.84);gStrap.position.y=0.004; // Band nur seitlich/hinten
+  visor.add(gFrame,gLens,gStrap);
+  const arm={};
+  for(const sx of [-1,1])arm[sx]={up:limb(0.048,cJacket),lo:limb(0.042,cJacket),el:mesh(new THREE.SphereGeometry(0.046,14,10),cJacket,0,0,0),hand:mesh(new THREE.SphereGeometry(0.052,14,10),cGlove,0,0,0),sh:V(0.19*sx,0.53,0.22)};
+  g.userData.pilot=[torso,head,helm,visor,neck,arm[-1].up,arm[1].up];
+  g.userData.rig={arm,brakeTE,brakeLines,setLimb,b:{'-1':0.15,'1':0.15}};
+  updateRig(g,1);
+  return g;
+}
+
+/* kk7-Thermikkarte direkt ins Satellitenbild malen (keine eigene Schicht, kann nicht durchs Gelände stechen) */
+function kk7Comp(T,which,K){
+  T.comp=T.comp||{};const key=which+'|'+state.kk7;if(T.comp[key])return T.comp[key];
+  const src=which==='base'?T.img:T.det,cv=document.createElement('canvas');cv.width=src.cv.width;cv.height=src.cv.height;const c=cv.getContext('2d');
+  c.drawImage(src.cv,0,0);c.globalAlpha=0.72;
+  if(which==='base')c.drawImage(K.cv,0,0);
+  else{const f=Math.pow(2,src.z-T.img.z);c.imageSmoothingEnabled=true;c.drawImage(K.cv,T.img.ox*f-src.ox,T.img.oy*f-src.oy,T.img.W*f,T.img.H*f);}
+  const tex=new THREE.CanvasTexture(cv);tex.anisotropy=renderer.capabilities.getMaxAnisotropy();tex.minFilter=THREE.LinearMipmapLinearFilter;
+  return T.comp[key]=tex;
+}
+function buildScene(keepView){
+  const f=state.cur;if(!f||!scene)return;
+  if(group){scene.remove(group);disposeGroup(group);}
+  group=new THREE.Group();scene.add(group);terrainMesh=null;
+  const T=activeTerrain();
+  const step=Math.max(1,Math.ceil(f.n/20000));ids=[];for(let i=0;i<f.n;i+=step)ids.push(i);if(ids[ids.length-1]!==f.n-1)ids.push(f.n-1);
+  f.gnd=new Float32Array(f.n).fill(NaN);
+  let gmin=f.stats.minA;
+  if(T){for(let i=0;i<f.n;i++){const g=T.elevAt(f.lat[i],f.lon[i]);f.gnd[i]=g;if(isFinite(g))gmin=Math.min(gmin,g);}}
+  let terr=null;
+  if(T){
+    const b=T.b,xw=(b.w-f.lon0)*D2R*R*f.cl,xe=(b.e-f.lon0)*D2R*R*f.cl,yn=(b.n-f.lat0)*D2R*R,ys=(b.s-f.lat0)*D2R*R;
+    const asp=(yn-ys)/(xe-xw),nx=Math.round(Math.min(420,Math.max(110,420/Math.max(1,asp)))),ny=Math.max(50,Math.round(nx*asp));
+    const E=new Float32Array((nx+1)*(ny+1));let emin=Infinity;
+    for(let j=0;j<=ny;j++)for(let i=0;i<=nx;i++){const X=xw+(xe-xw)*i/nx,Y=yn+(ys-yn)*j/ny;
+      const e=T.elevAt(f.lat0+Y/(R*D2R),f.lon0+X/(R*D2R*f.cl));E[j*(nx+1)+i]=e;if(isFinite(e))emin=Math.min(emin,e);}
+    gmin=Math.min(gmin,emin);terr={xw,xe,yn,ys,nx,ny,E};
+  }
+  f.ground=Math.floor((gmin-30)/100)*100;
+  terrSpan=0;terrCenter=null;scene.fog=null;kk7Mesh=null;
+  if(terr){
+    const {xw,xe,yn,ys,nx,ny,E}=terr,cnt=(nx+1)*(ny+1),pos=new Float32Array(cnt*3),uv=new Float32Array(cnt*2);
+    for(let j=0;j<=ny;j++)for(let i=0;i<=nx;i++){const k=j*(nx+1)+i,X=xw+(xe-xw)*i/nx,Y=yn+(ys-yn)*j/ny;
+      const e=isFinite(E[k])?E[k]:f.ground;pos[k*3]=X*SC;pos[k*3+1]=yOf(f,e);pos[k*3+2]=-Y*SC;
+      if(T.uvAt){const u=T.uvAt(f.lat0+Y/(R*D2R),f.lon0+X/(R*D2R*f.cl));uv[k*2]=u[0];uv[k*2+1]=u[1];}}
+    const idx=[];for(let j=0;j<ny;j++)for(let i=0;i<nx;i++){const a=j*(nx+1)+i,b2=a+1,c=a+nx+1,d=c+1;idx.push(a,c,b2,b2,c,d);}
+    const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(pos,3));g.setAttribute('uv',new THREE.BufferAttribute(uv,2));g.setIndex(idx);g.computeVertexNormals();
+    const K=state.kk7!=='off'&&T.kk7&&T.kk7[state.kk7]&&T.kk7[state.kk7].cv?T.kk7[state.kk7]:null;state.kk7Label=K?K.label:'';
+    const DARK=new THREE.Color(0.6,0.6,0.6);
+    const opt=T.tex?{map:K?kk7Comp(T,'base',K):T.tex,color:DARK}:{color:new THREE.Color('#6f7860')};
+    const mat=state.sun?new THREE.MeshLambertMaterial(opt):new THREE.MeshBasicMaterial(opt);
+    terrainMesh=new THREE.Mesh(g,mat);terrainMesh.receiveShadow=terrainMesh.castShadow=state.sun;group.add(terrainMesh);
+    if(T.det){ // Detailbild als zweite, minimal höhere Geländefläche über dem Flugbereich
+      const D=T.det,dxw=(D.b.w-f.lon0)*D2R*R*f.cl,dxe=(D.b.e-f.lon0)*D2R*R*f.cl,dyn=(D.b.n-f.lat0)*D2R*R,dys=(D.b.s-f.lat0)*D2R*R;
+      const da=(dyn-dys)/(dxe-dxw),mx=Math.round(Math.min(360,Math.max(120,360/Math.max(1,da)))),my=Math.max(60,Math.round(mx*da));
+      const dpos=new Float32Array((mx+1)*(my+1)*3),duv=new Float32Array((mx+1)*(my+1)*2),didx=[];
+      for(let j=0;j<=my;j++)for(let i=0;i<=mx;i++){const k=j*(mx+1)+i,X=dxw+(dxe-dxw)*i/mx,Y=dyn+(dys-dyn)*j/my,la=f.lat0+Y/(R*D2R),lo=f.lon0+X/(R*D2R*f.cl);
+        const e=T.elevAt(la,lo);dpos[k*3]=X*SC;dpos[k*3+1]=yOf(f,isFinite(e)?e:f.ground)+0.012;dpos[k*3+2]=-Y*SC;const u=D.uvAt(la,lo);duv[k*2]=u[0];duv[k*2+1]=u[1];}
+      for(let j=0;j<my;j++)for(let i=0;i<mx;i++){const a=j*(mx+1)+i,b2=a+1,c=a+mx+1,d=c+1;didx.push(a,c,b2,b2,c,d);}
+      const dg=new THREE.BufferGeometry();dg.setAttribute('position',new THREE.BufferAttribute(dpos,3));dg.setAttribute('uv',new THREE.BufferAttribute(duv,2));dg.setIndex(didx);dg.computeVertexNormals();
+      const dop={map:K?kk7Comp(T,'det',K):D.tex,color:DARK};const dm=new THREE.Mesh(dg,state.sun?new THREE.MeshLambertMaterial(dop):new THREE.MeshBasicMaterial(dop));dm.receiveShadow=state.sun;group.add(dm);
+    }
+    kk7Mesh=K?true:null;
+    terrSpan=Math.max(xe-xw,yn-ys)*SC;terrCenter=new THREE.Vector3((xw+xe)/2*SC,0,-(yn+ys)/2*SC);
+    scene.fog=new THREE.Fog(0xffffff,terrSpan*0.55,terrSpan*2.6);
+    const far=new THREE.Mesh(new THREE.CircleGeometry(terrSpan*12,64),new THREE.MeshLambertMaterial({color:0x58624c}));far.rotation.x=-Math.PI/2;
+    far.position.set(terrCenter?terrCenter.x:(xw+xe)/2*SC,-0.25,terrCenter?terrCenter.z:-(yn+ys)/2*SC);group.add(far); // Land bis zum Horizont
+    const sc=sun.shadow.camera,h=terrSpan*0.75;sc.left=-h;sc.right=h;sc.top=h;sc.bottom=-h;sc.near=0.5;sc.far=terrSpan*4;sc.updateProjectionMatrix();
+    sun.shadow.bias=-0.0004;sun.shadow.normalBias=terrSpan/4096*1.8;
+  }
+  const gy=i=>isFinite(f.gnd[i])?yOf(f,f.gnd[i]):0;
+  const m=ids.length,pos=new Float32Array(m*3),cpos=new Float32Array(m*6),gpos=new Float32Array(m*3);
+  let minX=1e9,maxX=-1e9,minZ=1e9,maxZ=-1e9,maxY=0;
+  ids.forEach((i,k)=>{const p=P(f,i),g=gy(i);pos.set(p,k*3);cpos.set(p,k*6);cpos.set([p[0],g,p[2]],k*6+3);gpos.set([p[0],g+0.03,p[2]],k*3);
+    minX=Math.min(minX,p[0]);maxX=Math.max(maxX,p[0]);minZ=Math.min(minZ,p[2]);maxZ=Math.max(maxZ,p[2]);maxY=Math.max(maxY,p[1]);});
+  const lg=new THREE.BufferGeometry();lg.setAttribute('position',new THREE.BufferAttribute(pos,3));
+  lg.setAttribute('color',new THREE.BufferAttribute(new Float32Array(m*3),3));
+  trackLine=new THREE.Line(lg,new THREE.LineBasicMaterial({vertexColors:true,fog:false}));trackLine.visible=false;group.add(trackLine); // nur zum Anklicken
+  const lg2=new THREE.LineGeometry();lg2.setPositions(Array.from(pos));lg2.setColors(new Array(pos.length).fill(1));
+  const vw=viewEl.clientWidth,vh=viewEl.clientHeight;
+  fatOut=new THREE.LineMaterial({color:0x0b0f12,linewidth:5.5,transparent:true,opacity:0.4*state.trackOp,fog:false,depthWrite:false});fatOut.resolution.set(vw,vh);
+  fatMat=new THREE.LineMaterial({vertexColors:true,linewidth:state.cam==='top'?3.6:3,transparent:true,opacity:state.trackOp,fog:false});
+  if(state.cam==='top')fatOut.linewidth=6.2;fatMat.resolution.set(vw,vh);
+  const lo=new THREE.Line2(lg2,fatOut);lo.renderOrder=1;group.add(lo);
+  fatLine=new THREE.Line2(lg2,fatMat);fatLine.renderOrder=2;group.add(fatLine);fatOutLine=lo;
+  partGeo=new THREE.LineGeometry();partGeo.setPositions([0,0,0,0,0,0]);partGeo.setColors([1,1,1,1,1,1]);
+  partOut=new THREE.Line2(partGeo,fatOut);partOut.renderOrder=1;partLine=new THREE.Line2(partGeo,fatMat);partLine.renderOrder=2;
+  partOut.visible=partLine.visible=false;partOut.frustumCulled=partLine.frustumCulled=false;group.add(partOut,partLine);state.partT=NaN;applyTrackOp();
+  const cg=new THREE.BufferGeometry();cg.setAttribute('position',new THREE.BufferAttribute(cpos,3));
+  cg.setAttribute('color',new THREE.BufferAttribute(new Float32Array(m*8),4));
+  const idx=[];for(let k=0;k<m-1;k++){const a=k*2,b=a+1,c=a+2,d=a+3;idx.push(a,b,c,b,d,c);}cg.setIndex(idx);
+  curtain=new THREE.Mesh(cg,new THREE.MeshBasicMaterial({vertexColors:true,transparent:true,opacity:1,side:THREE.DoubleSide,depthWrite:false,fog:false}));group.add(curtain);
+  state.lastCurtainT=NaN;
+  const sg=new THREE.BufferGeometry();sg.setAttribute('position',new THREE.BufferAttribute(gpos,3));
+  groundLine=new THREE.Line(sg,new THREE.LineBasicMaterial({color:new THREE.Color(T?'#ffffff':tok('--grid')),transparent:true,opacity:T?0.45:0.9}));group.add(groundLine);
+  const ext=Math.max(maxX-minX,maxZ-minZ);sceneExt=Math.max(ext,maxY,5);
+  if(!T){
+    const cx=Math.round((minX+maxX)/2/10)*10,cz=Math.round((minZ+maxZ)/2/10)*10,size=Math.ceil((ext+20)/10)*10;
+    const grid=new THREE.GridHelper(size,size/10,new THREE.Color(tok('--grid')),new THREE.Color(tok('--grid2')));grid.position.set(cx,0,cz);group.add(grid);
+  }
+  const pole=(i,col)=>new THREE.Vector3(...P(f,i));
+  marker=makeGlider(state.wing);group.add(marker);applyCamVisibility();
+  const dg=new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(),new THREE.Vector3()]);
+  markerDrop=new THREE.Line(dg,new THREE.LineBasicMaterial({color:new THREE.Color(tok('--accent')),fog:false}));group.add(markerDrop);
+  labels.forEach(l=>l.el.remove());labels=[];
+  const addLbl=(v,txt,cls)=>{const el=document.createElement('div');el.className='lbl'+(cls?' '+cls:'');el.textContent=txt;$('#labels').appendChild(el);labels.push({v,el});return el;};
+  if(state.showKeys){addLbl(pole(0,tok('--good')),'Start').dataset.key=0;addLbl(pole(f.n-1,tok('--bad')),'Landung').dataset.key=f.n-1;}
+  if(state.showTherm)f.thermals.forEach((th,k)=>{
+    const agl=isFinite(f.gnd[th.s])?' ('+fmtN(f.alt[th.s]-f.gnd[th.s])+')':'';
+    const a=addLbl(new THREE.Vector3(...P(f,th.s)),'↑ '+fmtN(f.alt[th.s])+agl,'thin');a.dataset.th=k;
+    a.title='Thermikeinstieg: Höhe (Höhe über Grund)';
+    const g=f.alt[th.e]-f.alt[th.s],b=addLbl(new THREE.Vector3(...P(f,th.e)),'','thout');b.dataset.th=k;
+    b.innerHTML='<span class="dir">→</span> '+fmtN(f.alt[th.e])+' ('+(g>=0?'+':'−')+fmtN(Math.abs(g))+')<div class="r2">'+mmss(th.dur)+' · Ø '+fmtV(th.climb)+'</div><div class="r3">max '+fmtV(th.maxV)+'</div>';
+    b.title='Thermikausgang: Höhe (Höhengewinn), Zeit in der Thermik, Ø-Steigen, max. Steigen';
+    const j=findIdx(f,f.t[th.e]+60);labels[labels.length-1].dirTo=new THREE.Vector3(...P(f,Math.min(f.n-1,j)));});
+  // wichtige Punkte im Flugweg
+  const st=f.stats;keyMeshes=[];
+  f.keys=[[st.maxAi,'#7048e8','▲ '+fmtN(st.maxA)+' m','Höchster Punkt'],[st.maxVi,'#e8590c','⬆ '+fmtV(st.maxV),'Stärkstes Steigen (m/s, 8 s)'],
+    [st.minVi,'#1c7ed6','⬇ '+fmtV(st.minV),'Stärkstes Sinken (m/s, 8 s)'],[st.maxSi,'#2b8a3e','» '+fmtN(st.maxS)+' km/h','Höchste Geschwindigkeit'],[st.maxDi,'#adb5bd','◎ '+fmtKm(st.maxD),'Weitester Punkt vom Start']];
+  if(state.showKeys)f.keys.forEach(([i,col,txt,desc])=>{
+    const p=new THREE.Vector3(...P(f,i));
+    const km=new THREE.Mesh(new THREE.SphereGeometry(1,16,12),new THREE.MeshBasicMaterial({color:new THREE.Color(col),fog:false}));km.position.copy(p);group.add(km);keyMeshes.push(km);
+    const el=addLbl(p,'','key');el.dataset.key=i;km.userData.key=i;el.innerHTML='<b style="color:'+col+'">●</b> '+esc(txt);el.title=desc+' – anklicken springt hierhin';
+    el.addEventListener('click',()=>{stopPlay();setIdx(i);if(state.cam==='free'){const d=p.clone().sub(controls.target);state.focus={t:controls.target.clone().add(d),c:camera.position.clone().add(d)};}
+      else if(state.cam==='top'){const d=p.clone().sub(controls2d.target);d.y=0;controls2d.target.add(d);cam2d.position.add(d);}});
+  });
+  // XC-Route
+  if(false){ // XC-Route wird nicht mehr in 3D gezeichnet
+    const B=f.stats.xc.best,seq=B.key==='free'?B.pts:[...B.pts,B.pts[0]];
+    const rp=[];seq.forEach(i=>{const q=P(f,i);rp.push(q[0],q[1],q[2]);});
+    const rg=new THREE.LineGeometry();rg.setPositions(rp);
+    routeMat=new THREE.LineMaterial({color:0xffffff,linewidth:2.4,transparent:true,opacity:0.9,dashed:true,dashSize:sceneExt*0.015,gapSize:sceneExt*0.01,fog:false});
+    routeMat.resolution.set(viewEl.clientWidth,viewEl.clientHeight);
+    const rl=new THREE.Line2(rg,routeMat);rl.computeLineDistances();rl.renderOrder=3;group.add(rl);
+    B.pts.forEach((i,k)=>{const el=addLbl(new THREE.Vector3(...P(f,i)),B.key==='free'?(k===0?'XC Start':k===B.pts.length-1?'XC Ende':'WP'+k):'WP'+(k+1),'tp');});
+  }
+  // Windstationen: gefülltes Dreieck = Mittelwind, Umriss = Böen
+  windObjs=[];const W=windCache.get(state.curBase);
+  if(state.wind!=='off'&&W&&W.stations&&W.stations.length){
+    const sh=new THREE.Shape();sh.moveTo(0,1);sh.lineTo(-0.55,-0.7);sh.lineTo(0.55,-0.7);sh.lineTo(0,1);
+    const triG=new THREE.ExtrudeGeometry(sh,{depth:0.12,bevelEnabled:false});triG.rotateX(-Math.PI/2);
+    const outG=new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(0,0,-1),new THREE.Vector3(-0.55,0,0.7),new THREE.Vector3(0.55,0,0.7)]);
+    W.stations.forEach(st=>{
+      const x=(st.lon-f.lon0)*D2R*R*f.cl*SC,z=-(st.lat-f.lat0)*D2R*R*SC;
+      const gy0=activeTerrain()?groundYAt(x,z):(isFinite(st.elev)?yOf(f,st.elev):0);
+      const mat=new THREE.MeshBasicMaterial({color:0xffffff,fog:false});
+      const tri=new THREE.Mesh(triG,mat);const gust=new THREE.LineLoop(outG,new THREE.LineBasicMaterial({color:0xffffff,fog:false}));
+      const a=new THREE.Group();a.add(tri);a.add(gust);a.position.set(x,gy0+1.6,z);group.add(a);
+      const pin=new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(x,gy0,z),new THREE.Vector3(x,gy0+1.6,z)]),new THREE.LineBasicMaterial({color:0x222222,fog:false}));group.add(pin);
+      const el=addLbl(a.position,'','wind');
+      windObjs.push({a,tri,gust,el,mat,st});
+    });
+  }
+  sceneCenter=new THREE.Vector3((minX+maxX)/2,maxY/2,(minZ+maxZ)/2);
+  const at=$('#attr');at.hidden=!T;if(T)at.textContent=T.attr+(kk7Mesh?' · Thermikkarte: thermal.kk7.ch ('+state.kk7Label+')':'')+(windObjs.length?' · Wind: '+W.src:'');
+  if(!T&&windObjs.length){at.hidden=false;at.textContent='Wind: '+W.src;}
+  colorize();
+  const q=poseNow();state.yawS=q.yaw;state.dyn={b:state.show?q.bank*1.6:0,bv:0,p:0,pv:0};placeMarker(0);
+  if(!keepView)viewReset(true);
+  updateHud();drawChartBase();drawChart();
+}
+function colorize(){
+  const f=state.cur;if(!trackLine)return;
+  const lc=trackLine.geometry.attributes.color,cc=curtain.geometry.attributes.color;
+  ids.forEach((i,k)=>{const c=colorAt(f,i);lc.array.set(c,k*3);cc.array.set(c,k*8);cc.array.set(c,k*8+4);});
+  if(fatLine)fatLine.geometry.setColors(Array.from(lc.array));
+  lc.needsUpdate=true;state.lastCurtainT=NaN;
+}
+const TRAIL=90;
+function updateCurtain(tc,fade){
+  const f=state.cur;if(!curtain)return;
+  curtain.visible=state.curtain!=='off'&&state.cam!=='top';if(!curtain.visible)return;
+  const mode=state.playing&&state.curtain==='full'?'trail':state.curtain;
+  curtain.material.opacity=mode==='full'?fade:1;
+  if(tc===state.lastCurtainT&&mode===state.lastCurtainMode)return;
+  state.lastCurtainT=tc;state.lastCurtainMode=mode;
+  const a=curtain.geometry.attributes.color.array,full=mode==='full',base=activeTerrain()?0.3:0.22;
+  for(let k=0;k<ids.length;k++){const dt=tc-f.t[ids[k]];
+    const v=full?base:(dt>=0&&dt<=TRAIL?0.42*(1-dt/TRAIL):0);a[k*8+3]=v;a[k*8+7]=v;}
+  curtain.geometry.attributes.color.needsUpdate=true;
+}
+function curTime(){const f=state.cur;return state.playing?state.simT:f.t[state.idx];}
+function poseNow(){
+  const f=state.cur;let i=state.idx,fr=0;
+  if(state.playing){const j=findIdx(f,state.simT);if(j>0&&f.t[j]>state.simT){i=j-1;fr=(state.simT-f.t[i])/(f.t[j]-f.t[i]);}else i=j;}
+  const a=P(f,i);if(fr>0){const b=P(f,i+1);for(let k=0;k<3;k++)a[k]+=(b[k]-a[k])*fr;}
+  const gi=fr>0.5?i+1:i;
+  return {p:a,g:isFinite(f.gnd[gi])?yOf(f,f.gnd[gi]):0,yaw:f.yaw[gi],bank:f.bank[gi],dvar:f.dvar[gi],acc:f.acc[gi]};
+}
+/* Arme: Innenbremse wird in der Kurve gezogen (2-Gelenk-Kinematik), Bremsleinen laufen von der Hand zur Hinterkante */
+const _v1=new THREE.Vector3(),_v2=new THREE.Vector3();
+function updateRig(g,dt){
+  const rig=g.userData.rig;if(!rig)return;
+  const bk=state.show?state.dyn.b:0,arr=rig.brakeLines.geometry.attributes.position.array;
+  for(const sx of [-1,1]){
+    const inner=(bk>0&&sx>0)||(bk<0&&sx<0);
+    const want=0.15+(inner?Math.min(1,Math.abs(bk)/0.5)*0.75:0)+(state.motion&&!inner&&Math.abs(bk)>0.15?0.05:0);
+    rig.b[sx]+=(want-rig.b[sx])*Math.min(1,dt*3);
+    const b=rig.b[sx],A=rig.arm[sx],S=A.sh;
+    const hand=new THREE.Vector3(0.26*sx,0.86,0.02).lerp(new THREE.Vector3(0.31*sx,0.22,0.26),b);
+    const L1=0.29,L2=0.29,d=hand.clone().sub(S),len=Math.min(d.length(),L1+L2-0.005);d.normalize();
+    const a=(L1*L1-L2*L2+len*len)/(2*len),h=Math.sqrt(Math.max(0,L1*L1-a*a));
+    const bend=new THREE.Vector3(0.7*sx,-0.4,0.6);bend.sub(d.clone().multiplyScalar(bend.dot(d))).normalize();
+    const E=S.clone().addScaledVector(d,a).addScaledVector(bend,h),H=S.clone().addScaledVector(d,len);
+    rig.setLimb(A.up,S,E);rig.setLimb(A.lo,E,H);A.hand.position.copy(H);A.el.position.copy(E);
+    let o=(sx<0?0:30)*3;
+    for(const grp of rig.brakeTE[sx]){
+      _v1.set(0,0,0);grp.forEach(p=>_v1.add(p));_v1.multiplyScalar(1/grp.length);const mid=H.clone().lerp(_v1,0.55);
+      arr.set([H.x,H.y,H.z,mid.x,mid.y,mid.z],o);o+=6;
+      for(const p of grp){arr.set([mid.x,mid.y,mid.z,p.x,p.y,p.z],o);o+=6;}
+    }
+  }
+  rig.brakeLines.geometry.attributes.position.needsUpdate=true;
+}
+/* Pendeldynamik: Querlage und Nicken folgen den Zielwerten wie ein gedämpftes Pendel (Echtzeit) */
+function placeMarker(dt){
+  const f=state.cur;if(!f||!marker)return;
+  const q=poseNow();marker.position.set(...q.p);
+  let dy=q.yaw-state.yawS;while(dy>Math.PI)dy-=2*Math.PI;while(dy<-Math.PI)dy+=2*Math.PI;
+  state.yawS+=dy*(dt?Math.min(1,dt*8):1);
+  const G=state.show?1.6:0,D=state.dyn;
+  const tb=G?q.bank*G:0;
+  const slow=state.playing?Math.min(1,40/state.mult):0;
+  const tp=G?Math.max(-0.5,Math.min(0.5,(0.16*q.dvar-0.12*q.acc)*G*slow)):0;
+  if(!dt){D.b=tb;D.p=tp;D.bv=D.pv=0;}
+  else{const n=Math.ceil(dt/0.016),h=dt/n,wb=2*Math.PI/1.5,zb=0.45,wp=2*Math.PI/1.9,zp=0.22;
+    for(let s=0;s<n;s++){D.bv+=(wb*wb*(tb-D.b)-2*zb*wb*D.bv)*h;D.b+=D.bv*h;D.pv+=(wp*wp*(tp-D.p)-2*zp*wp*D.pv)*h;D.p+=D.pv*h;}}
+  marker.rotation.set(0,state.yawS,0);
+  marker.userData.body.rotation.set(D.p,0,-D.b,'XZY');
+  updateRig(marker,dt||0.016);
+  const a=markerDrop.geometry.attributes.position;a.setXYZ(0,q.p[0],q.g,q.p[2]);a.setXYZ(1,q.p[0],q.p[1],q.p[2]);a.needsUpdate=true;
+}
+/* Sonnenstand (vereinfachter Algorithmus, Genauigkeit ca. 1°) */
+function sunPos(tSec,lat,lon){
+  const d=tSec/86400+2440587.5-2451545.0,g=(357.529+0.98560028*d)*D2R,q=280.459+0.98564736*d;
+  const L=(q+1.915*Math.sin(g)+0.020*Math.sin(2*g))*D2R,e=(23.439-0.00000036*d)*D2R;
+  const ra=Math.atan2(Math.cos(e)*Math.sin(L),Math.cos(L)),dec=Math.asin(Math.sin(e)*Math.sin(L));
+  const gmst=((18.697374558+24.06570982441908*d)%24+24)%24,H=(gmst*15+lon)*D2R-ra,la=lat*D2R;
+  const el=Math.asin(Math.sin(la)*Math.sin(dec)+Math.cos(la)*Math.cos(dec)*Math.cos(H));
+  const az=Math.atan2(-Math.cos(dec)*Math.sin(H),Math.sin(dec)*Math.cos(la)-Math.cos(dec)*Math.sin(la)*Math.cos(H));
+  return {az,el};
+}
+const skyDay=new THREE.Color('#8db8e0'),skyLow=new THREE.Color('#f0b47e'),skyNight=new THREE.Color('#141d2b'),tmpC=new THREE.Color(),tmpC2=new THREE.Color();
+function updateSun(){
+  const f=state.cur,center=terrCenter||sceneCenter||new THREE.Vector3();
+  const span=terrSpan||sceneExt*2;
+  if(!state.sun){
+    sun.intensity=0.6;hemi.intensity=0.85;sun.color.set('#ffffff');sun.castShadow=false;sunSprite.visible=false;
+    sun.position.copy(center).add(new THREE.Vector3(-0.4,1,0.3).multiplyScalar(span));sun.target.position.copy(center);
+    skyU.zen.value.set('#3d7fd0');skyU.hor.value.set('#d2e3ef');skyU.gnd.value.set('#8b927f');skyU.sunVis.value=0;
+    scene.background=skyU.hor.value.clone();if(scene.fog)scene.fog.color.copy(skyU.hor.value);
+    return {el:null};
+  }
+  const t=curTime()+(f.hasDate?0:Date.UTC(2026,5,21)/1000);
+  const {az,el}=sunPos(t,f.lat0,f.lon0);
+  const dir=new THREE.Vector3(Math.sin(az)*Math.cos(el),Math.sin(el),-Math.cos(az)*Math.cos(el));
+  const se=Math.sin(el);
+  // Himmel
+  // Himmelsfarben nach Sonnenhöhe: Tag, tiefe Sonne, Nacht
+  const day=Math.max(0,Math.min(1,(el-0.03)/0.25)),night=Math.max(0,Math.min(1,(-el+0.02)/0.15));
+  skyU.zen.value.set('#4a6fa5').lerp(new THREE.Color('#3a7bd0'),day).lerp(new THREE.Color('#0b1322'),night);
+  skyU.hor.value.set('#f0b27c').lerp(new THREE.Color('#d3e4f0'),day).lerp(new THREE.Color('#1b2636'),night);
+  skyU.gnd.value.set('#7b7466').lerp(new THREE.Color('#8b927f'),day).lerp(new THREE.Color('#141a22'),night);
+  skyU.sunDir.value.copy(dir);skyU.sunVis.value=el>-0.06?1:0;skyU.sunCol.value.set('#ff9a50').lerp(new THREE.Color('#fff0d8'),day);
+  if(!scene.background||!scene.background.isColor)scene.background=new THREE.Color();scene.background.copy(skyU.hor.value);if(scene.fog)scene.fog.color.copy(skyU.hor.value);
+  // Licht
+  sun.intensity=el>0?0.3+0.85*Math.min(1,se*2.5):0;
+  sun.color.copy(tmpC2.set('#ffb070').lerp(new THREE.Color('#fff7ea'),Math.min(1,Math.max(0,se*3))));
+  hemi.intensity=el>-0.1?0.3+0.27*Math.min(1,Math.max(0,se*3)):0.2; // weniger Umgebungslicht = deutlichere Schatten
+  sun.position.copy(center).addScaledVector(dir,span*1.5);sun.target.position.copy(center);
+  sun.castShadow=!!terrainMesh&&el>0.03;
+
+  return {el,az};
+}
+function setRay(cx,cy){const r=renderer.domElement.getBoundingClientRect();raycaster.setFromCamera(new THREE.Vector2((cx-r.left)/r.width*2-1,-(cy-r.top)/r.height*2+1),activeCam());}
+function rayPoint(){
+  const objs=[];if(terrainMesh)objs.push(terrainMesh);if(trackLine)objs.push(trackLine);
+  raycaster.params.Line.threshold=pickThreshold();
+  const hit=raycaster.intersectObjects(objs)[0];if(hit)return hit.point.clone();
+  const v=new THREE.Vector3();if(raycaster.ray.intersectPlane(new THREE.Plane(Yax,0),v))return v;return null;
+}
+function focusRay(){
+  const pt=rayPoint();if(!pt)return;setCam('free');hideHint();
+  const off=camera.position.clone().sub(controls.target).multiplyScalar(0.6);
+  state.focus={t:pt.clone(),c:pt.clone().add(off)};
+}
+/* Zoom zum Zeiger: Kamera (und im freien Modus auch der Drehpunkt) bewegen sich auf den Punkt unter dem Zeiger zu */
+function zoomAt(cx,cy,k){
+  if(!trackLine)return;state.focus=null;
+  if(state.cam==='top'){
+    const g2=(x,y)=>{const r=renderer.domElement.getBoundingClientRect(),v=new THREE.Vector3((x-r.left)/r.width*2-1,-(y-r.top)/r.height*2+1,0).unproject(cam2d);v.y=0;return v;};
+    const before=g2(cx,cy);cam2d.zoom=Math.max(0.05,Math.min(500,cam2d.zoom/k));cam2d.updateProjectionMatrix();
+    const d=before.sub(g2(cx,cy));cam2d.position.add(d);controls2d.target.add(d);return;}
+  if(state.cam==='pov'){state.fov.pov=Math.max(30,Math.min(100,state.fov.pov*Math.pow(k,0.6)));camera.fov=state.fov.pov;camera.updateProjectionMatrix();return;}
+  if(state.cam==='follow'){const A=(state.fc&&state.fc.anchor)||controls.target,off=camera.position.clone().sub(A),d=Math.max(0.25,Math.min(sceneExt*3,off.length()*k));camera.position.copy(A).add(off.setLength(d));state.shot=null;return;}
+  if(state.cam==='insta'){const off=camera.position.clone().sub(controls.target),d=Math.max(0.008,Math.min(0.08,off.length()*k));camera.position.copy(controls.target).add(off.setLength(d));return;}
+  setRay(cx,cy);let p=rayPoint();
+  const cam=camera.position,tgt=controls.target;
+  if(!p)p=cam.clone().addScaledVector(raycaster.ray.direction,cam.distanceTo(tgt));
+  const nc=p.clone().add(cam.clone().sub(p).multiplyScalar(k));
+  if(state.cam==='follow'){const d=nc.distanceTo(tgt);if(k<1&&d<0.15)return;if(d>sceneExt*3)return;cam.copy(nc);}
+  else{const nt=p.clone().add(tgt.clone().sub(p).multiplyScalar(k)),d=nc.distanceTo(nt);if(k<1&&d<0.05)return;if(d>Math.max(sceneExt,terrSpan)*4)return;cam.copy(nc);tgt.copy(nt);}
+}
+function viewReset(instant){
+  if(!sceneCenter)return;setCam('free');state.focus=null;
+  const d=sceneExt*(instant?0.85:1.05),c=new THREE.Vector3(sceneCenter.x+d*0.3,sceneCenter.y+d*0.5,sceneCenter.z+d*0.8);
+  if(instant){controls.target.copy(sceneCenter);camera.position.copy(c);controls.update();}
+  else{state.focus={t:sceneCenter.clone(),c};state.tour={done:0};} // danach langsame 360°-Drehung um den Flug
+}
+function viewTop(){
+  if(!sceneCenter)return;setCam('free');state.focus=null;
+  state.focus={t:new THREE.Vector3(sceneCenter.x,0,sceneCenter.z),c:new THREE.Vector3(sceneCenter.x,sceneExt*1.15,sceneCenter.z+0.01)};
+}
+function applyCamVisibility(){
+  if(!marker)return;const pov=state.cam==='pov';
+  marker.visible=state.show;(marker.userData.pilot||[]).forEach(o=>o.visible=!pov);
+  if(markerDrop)markerDrop.visible=!pov&&state.cam!=='insta';
+}
+function headPoint(local){marker.updateMatrixWorld(true);return marker.userData.body.localToWorld(local.clone());}
+function setCam(m){
+  const prev=state.cam;state.tour=null;state.north=null;state.cam=m;state.focus=null;state.swing=null;
+  document.querySelectorAll('#camSeg button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.v===m));
+  camera.fov=m==='pov'?state.fov.pov:m==='insta'?state.fov.insta:45;camera.near=(m==='pov'||m==='insta')?0.0015:0.03;camera.updateProjectionMatrix();
+  controls.enabled=m!=='pov'&&m!=='top';controls2d.enabled=m==='top';$('#hud').hidden=m==='pov';$('#vario').hidden=m!=='pov';$('#scalebar').hidden=m!=='top';
+  if(fatMat){fatMat.linewidth=m==='top'?3.6:3;fatOut.linewidth=m==='top'?6.2:5.5;}
+  if(m==='top'&&prev!=='top'&&sceneCenter){const c=sceneCenter;state.h2d=sceneExt*0.62;cam2d.zoom=1;frame2D();
+    controls2d.target.set(c.x,0,c.z);cam2d.position.set(c.x,6000,c.z);controls2d.update();}
+  applyCamVisibility();
+  if(!marker)return;const y=state.yawS;
+  if(m==='follow'){
+    controls.target.copy(marker.position);state.fc=null;state.shot=null;
+    camera.position.copy(marker.position).add(new THREE.Vector3(Math.sin(y)*6,1.2,Math.cos(y)*6));
+    state.nextSwing=performance.now()+10000;state.nextZoom=performance.now()+14000;state.zoomA=null;
+  }else if(m==='insta'){
+    // Kamera an einem Stab vor dem Piloten, schräg seitlich, Blick zurück auf Pilot und Schirm
+    marker.scale.setScalar(SC);const h=headPoint(new THREE.Vector3(0,1.8,0)),az=y+Math.PI-0.55;
+    controls.target.copy(h);camera.position.copy(h).add(new THREE.Vector3(Math.sin(az)*0.03,-0.016,Math.cos(az)*0.03));
+  }else if(m==='pov'){state.povLook={y:0,p:0};}
+  else if(m==='free'&&(prev==='pov'||prev==='insta')){
+    const off=new THREE.Vector3(Math.sin(y)*1.5,0.6,Math.cos(y)*1.5);controls.target.copy(marker.position);camera.position.copy(marker.position).add(off);
+  }
+  if(m!=='pov'&&m!=='top')controls.update();
+  if(state.cur)showThermCard();
+}
+const smooth=x=>x<=0?0:x>=1?1:x*x*(3-2*x);
+function wrapA(a){while(a>Math.PI)a-=2*Math.PI;while(a<-Math.PI)a+=2*Math.PI;return a;}
+/* Flugrichtung über die letzten 25 s (beim Kreisen fast keine Verschiebung -> null) */
+function driftYaw(win){
+  const f=state.cur,t=curTime(),j=findIdx(f,t-(win||25)),i=findIdx(f,t);
+  const dx=f.X[i]-f.X[j],dy=f.Y[i]-f.Y[j];if(Math.hypot(dx,dy)<120)return null;
+  return Math.atan2(dx,dy);  // gleiche Konvention wie yaw (Blick nach -Z = Norden bei 0)
+}
+/* Kameraeinstellungen für die Auto-Kamera: im Gleiten mit Blick nach vorne, in der Thermik ruhig von aussen */
+const SHOTS={
+  // Gleiten: hinter dem Schirm, Blickpunkt voraus -> Blick Richtung Horizont; nie näher als ca. 600 m
+  gl:[{n:'hinten',rel:1,az:0,el:0.1,dist:6,lead:5},{n:'hinten-hoch',rel:1,az:0.35,el:0.24,dist:10,lead:6},
+      {n:'hinten-weit',rel:1,az:-0.45,el:0.15,dist:15,lead:8},{n:'seitlich',rel:1,az:1.2,el:0.14,dist:9,lead:3},
+      {n:'weit',rel:1,az:-1,el:0.26,dist:20,lead:7},{n:'sehr-weit',rel:1,az:0.8,el:0.32,dist:28,lead:8}],
+  // Thermik: von aussen, kreist dabei um den Schlauch (eine Runde ca. 35–60 s)
+  th:[{n:'aussen',rel:0,daz:0,el:0.25,dist:8,spin:0.18},{n:'weit',rel:0,daz:0.6,el:0.32,dist:14,spin:0.15},{n:'sehr-weit',rel:0,daz:-0.5,el:0.3,dist:22,spin:0.12},
+      {n:'flach',rel:0,daz:-0.4,el:0.12,dist:10,spin:0.18},{n:'oben',rel:0,daz:0.2,el:0.8,dist:13,spin:0.15},{n:'riesig',rel:0,daz:0.9,el:0.4,dist:30,spin:0.1}]};
+/* kritisch gedämpfte Feder (wie SmoothDamp): weich, ohne Überschwingen */
+function sdamp(cur,target,vel,key,T,dt){const o=2/T,x=o*dt,e=1/(1+x+0.48*x*x+0.235*x*x*x),ch=cur-target,tmp=(vel[key]+o*ch)*dt;vel[key]=(vel[key]-o*tmp)*e;return target+(ch+tmp)*e;}
+function sdampV(cur,target,vel,T,dt){cur.x=sdamp(cur.x,target.x,vel,'x',T,dt);cur.y=sdamp(cur.y,target.y,vel,'y',T,dt);cur.z=sdamp(cur.z,target.z,vel,'z',T,dt);return cur;}
+function pickShot(phase,off,now){
+  if(phase==='th'){state.thSpinDir=state.thSpinDir||(Math.random()<0.5?-1:1);}
+  const curD=off.length(),hd=driftYaw(60),curAz=Math.atan2(off.x,off.z);
+  let list=SHOTS[phase].filter(x=>!state.shot||x.n!==state.shot.n||state.shot.phase!==phase);
+  const big=list.filter(x=>{const dz=Math.max(x.dist,curD)/Math.max(0.1,Math.min(x.dist,curD));
+    const wa=x.rel?(hd!==null?-hd+x.az:curAz):curAz+x.daz;return dz>1.6||Math.abs(wrapA(wa-curAz))>0.7;});
+  if(big.length)list=big;
+  const S=Object.assign({},list[Math.floor(Math.random()*list.length)]);
+  if(!S.rel)S.az=Math.atan2(off.x,off.z)+S.daz;
+  if(phase==='th')S.spin=Math.abs(S.spin)*state.thSpinDir;   // in einer Thermik immer gleiche Kreisrichtung, nie Stillstand       // in der Thermik feste Richtung, damit sich nichts dreht
+  if(S.n==='seitlich'&&Math.random()<0.5)S.az=-S.az;
+  if(S.n.startsWith('seitlich')&&Math.random()<0.5)S.az=-S.az;
+  S.phase=phase;S.until=now+6000+Math.random()*4000;if(phase!=='th')state.thSpinDir=0;return S;
+}
+function updateCamera(dt){
+  const now=performance.now(),idle=now-state.lastUser>4000; // Auto-Kamera übernimmt 4 s nach eigener Bedienung wieder
+  if(state.cam==='follow'){
+    // Weiche Kameraführung: Anker (Kameraposition), Blickpunkt und Kameraeinstellung folgen gedämpften Federn.
+    // In der Thermik schaut die Kamera auf die Schlauchmitte statt jedem Kreis zu folgen; der Pilot bleibt im Bild.
+    const f=state.cur,i=state.idx,inTh=f.thermals.some(x=>i>=x.s&&i<=x.e);
+    const C=state.fc||(state.fc={anchor:marker.position.clone(),av:new THREE.Vector3(),look:marker.position.clone(),lv:new THREE.Vector3(),sph:null,sv:{d:0,el:0,az:0},lead:new THREE.Vector3(),ldv:new THREE.Vector3()});
+    let off=camera.position.clone().sub(C.anchor);
+    const leadWant=new THREE.Vector3();
+    if(state.autoCam&&idle){
+      const phase=inTh?'th':'gl';
+      if(!state.shot||now>state.shot.until||state.shot.phase!==phase)state.shot=pickShot(phase,off,now);
+      const S=state.shot,hd=driftYaw(60);
+      if(S.spin)S.az+=S.spin*dt;
+      const az=S.rel&&hd!==null?-hd+S.az:S.az;
+      const ol=Math.max(1e-6,off.length());
+      if(!C.sph)C.sph={d:ol,el:Math.asin(Math.max(-1,Math.min(1,off.y/ol))),az:Math.atan2(off.x,off.z)};
+      const colH=inTh?Math.abs(yOf(f,f.alt[(f.thermals.find(x=>i>=x.s&&i<=x.e)||{e:i}).e])-yOf(f,f.alt[(f.thermals.find(x=>i>=x.s&&i<=x.e)||{s:i}).s])):0;
+      const T=inTh?{d:4,el:4,az:3.2}:{d:4.5,el:4.5,az:6.5};   // im Gleiten Richtung sehr träge -> keine kleinen Links-rechts-Schwenks
+      C.sph.d=sdamp(C.sph.d,Math.max(S.dist,colH*2.4),C.sv,'d',T.d,dt);   // Abstand so, dass Ein- und Ausstieg ins Bild passen
+      C.sph.el=sdamp(C.sph.el,S.el,C.sv,'el',T.el,dt);
+      C.sph.az=sdamp(C.sph.az,C.sph.az+wrapA(az-C.sph.az),C.sv,'az',T.az,dt);
+      const P0=C.sph;off.set(Math.sin(P0.az)*Math.cos(P0.el),Math.sin(P0.el),Math.cos(P0.az)*Math.cos(P0.el)).multiplyScalar(P0.d);
+      if(!inTh&&S.lead&&hd!==null)leadWant.set(-Math.sin(-hd),0,-Math.cos(-hd)).multiplyScalar(S.lead);
+    }else C.sph=null;
+    sdampV(C.lead,leadWant,C.ldv,3,dt);
+    sdampV(C.anchor,marker.position,C.av,inTh?6:1.6,dt);
+    const curT=inTh?f.thermals.find(x=>i>=x.s&&i<=x.e):null;
+    const lookWant=inTh?C.anchor.clone().lerp(marker.position,0.3):marker.position.clone().add(C.lead);
+    if(curT){const midY=yOf(f,(f.alt[curT.s]+f.alt[curT.e])/2);lookWant.y=lookWant.y*0.5+midY*0.5;}
+    sdampV(C.look,lookWant,C.lv,inTh?2.8:1.1,dt);
+    controls.target.copy(C.look);
+    camera.position.copy(C.anchor).add(off);
+  }else if(state.cam==='insta'){
+    // am Piloten befestigt, Ausrichtung bleibt im Raum fest; leichte Eigenbewegung wie an einem Stab
+    const off=camera.position.clone().sub(controls.target),t=now/1000,t0=t-dt;
+    off.y+=0.0006*(Math.sin(t*0.41)-Math.sin(t0*0.41));                         // leichtes Wippen am Stab
+    if(state.autoCam&&idle){ // zufällige, sehr langsame Drehung
+      if(now>state.nextInsta){state.nextInsta=now+15000+Math.random()*15000;state.instaWant=(Math.random()*2-1)*0.05;}
+      state.instaRate+=(state.instaWant-state.instaRate)*Math.min(1,dt*0.3);off.applyAxisAngle(Yax,state.instaRate*dt);
+    }else state.instaRate=0;
+    const D=state.dyn;off.y+=0.0006*(D.bv*dt);
+    const h=headPoint(new THREE.Vector3(0,1.8,0));controls.target.copy(h);camera.position.copy(h).add(off);
+  }else if(state.cam==='pov'){
+    const L=state.povLook;if(now-state.lastUser>2500){const k=Math.min(1,dt*0.6);L.y-=L.y*k;L.p-=L.p*k;}
+    camera.position.copy(headPoint(new THREE.Vector3(0,0.7,0.1)));
+    const D=state.dyn;camera.quaternion.setFromEuler(new THREE.Euler(-0.14+L.p+D.p*0.4,state.yawS+L.y,-D.b*0.55,'YXZ'));
+  }
+}
+let lastTs=0;
+function loop(ts){
+  const dt=lastTs?Math.min(0.1,(ts-lastTs)/1000):0;lastTs=ts;
+  const f=state.cur;
+  if(f&&state.playing){
+    state.simT+=dt*state.mult;
+    if(state.simT>=f.t[f.n-1]){state.simT=f.t[f.n-1];stopPlay();}
+    setIdx(findIdx(f,state.simT),{fromPlay:true});
+  }
+  if(f&&marker){
+    placeMarker(dt||0.016);
+    const cd=camera.position.distanceTo(marker.position),close=state.cam==='pov'||state.cam==='insta',top=state.cam==='top';
+    marker.scale.setScalar(close?SC:top?Math.max(SC,view2dWidth()*0.03/11):Math.max(SC,cd*0.05/11));
+    const ks=top?view2dWidth()*0.0045:null;keyMeshes.forEach(k=>{k.visible=!state.playing||performance.now()<(state.keyUntil[k.userData.key]||0);});keyMeshes.forEach(k=>k.scale.setScalar(ks||Math.max(0.02,activeCam().position.distanceTo(k.position)*0.009)));
+    updateCamera(dt||0.016);
+    updateCurtain(curTime(),Math.min(1,Math.max(0.05,camera.position.distanceTo(marker.position)/(sceneExt*0.5))));
+  }
+  if(state.tour&&state.cam==='free'){const T0=state.tour;T0.t=(T0.t||0)+(dt||0.016);
+    const ease=Math.max(0.03,smooth(Math.min(1,T0.t/3))*smooth(Math.min(1,(2*Math.PI-T0.done)/1.1)));
+    const st=(dt||0.016)*2*Math.PI/25*ease;orbitAround(sceneCenter,st,0);
+    if(state.focus)state.focus.c.sub(sceneCenter).applyAxisAngle(Yax,st).add(sceneCenter);state.tour.done+=st;if(state.tour.done>=2*Math.PI)state.tour=null;}
+  if(state.focus){const k=1-Math.exp(-(dt||0.016)*2.2);controls.target.lerp(state.focus.t,k);camera.position.lerp(state.focus.c,k);
+    if(controls.target.distanceTo(state.focus.t)<0.005&&camera.position.distanceTo(state.focus.c)<0.01)state.focus=null;}
+  if(state.cam==='top'){
+    // beim Abspielen den Schirm im Bild halten
+    if(f&&marker&&state.playing&&performance.now()-state.lastUser>3000){const v=marker.position.clone().project(cam2d);
+      if(Math.abs(v.x)>0.7||Math.abs(v.y)>0.7){const d=marker.position.clone().sub(controls2d.target);d.y=0;d.multiplyScalar(Math.min(1,(dt||0.016)*1.5));controls2d.target.add(d);cam2d.position.add(d);}}
+    controls2d.update();updateScaleBar();
+  }else if(controls&&state.cam!=='pov')controls.update();
+  if(f&&terrainMesh&&state.cam!=='pov'&&state.cam!=='top'){const gyc=groundYAt(camera.position.x,camera.position.z)+0.08;if(camera.position.y<gyc)camera.position.y=gyc;}
+  if(renderer&&f){updateSun();
+    if(scene.fog){if(state.cam==='top'){scene.fog.near=1e7;scene.fog.far=2e7;}else{scene.fog.near=terrSpan*0.55;scene.fog.far=terrSpan*2.6;}}
+    if(state.cam==='top')sunSprite.visible=false;
+    updateTrail();updateSky();updateCompass(dt||0.016);renderer.render(scene,activeCam());updateLabels();}
+  requestAnimationFrame(loop);
+}
+function updatePilotTag(){
+  const tag=$('#pilotTag');if(state.show||!marker||!state.cur){tag.hidden=true;return;}
+  const v=marker.position.clone().project(activeCam());if(v.z>1||Math.abs(v.x)>1.1||Math.abs(v.y)>1.1){tag.hidden=true;return;}
+  tag.hidden=false;tag.style.left=((v.x+1)/2*viewEl.clientWidth)+'px';tag.style.top=((1-v.y)/2*viewEl.clientHeight)+'px';
+  $('#ptAlt').textContent=fmtN(state.cur.alt[state.idx])+' m';
+}
+function updateLabels(){
+  updatePilotTag();
+  const w=viewEl.clientWidth,h=viewEl.clientHeight,v=new THREE.Vector3();
+  const cam=activeCam(),now=performance.now(),f=state.cur;
+  let gx=null;if(marker&&marker.visible!==false){const gp=marker.position.clone().project(cam);if(gp.z<1)gx=(gp.x+1)/2*w;}
+  // welche Thermik zeigen: aktuelle (bis 8 s nach Ausstieg) oder die nächste, wenn sie in 3 s (Echtzeit) beginnt
+  if(f&&f.thermals.length){let k=state.curTh;
+    if(k<0&&state.playing){const t=state.simT,nx=f.thermals.findIndex(x=>f.t[x.s]>t);if(nx>=0&&f.t[f.thermals[nx].s]-t<=3*state.mult)k=nx;}
+    if(k>=0){if(!state.thVis||state.thVis.k!==k){state.thVis={k,until:now+8000};labels.forEach(l=>{if(l.el.dataset.th!==undefined&&+l.el.dataset.th===k){l.el.classList.remove('pop');void l.el.offsetWidth;l.el.classList.add('pop');}});}
+      state.thVis.until=Math.max(state.thVis.until,now+8000);}}
+  const TV=state.thVis;
+  for(const l of labels){
+    if(l.el.dataset.th!==undefined&&!(TV&&+l.el.dataset.th===TV.k&&now<TV.until)){l.el.hidden=true;continue;}
+    if(l.el.dataset.key!==undefined&&state.playing&&!(now<(state.keyUntil[l.el.dataset.key]||0))){l.el.hidden=true;continue;}
+    if(l.dirTo){const a=l.v.clone().project(cam),b=l.dirTo.clone().project(cam),sp=l.el.querySelector('.dir');const d=b.x>=a.x?'→':'←';if(sp&&sp.textContent!==d)sp.textContent=d;}if(l.el.classList.contains('wind')){const o=windObjs.find(o=>o.el===l.el);if(o&&o.hide){l.el.hidden=true;continue;}}v.copy(l.v).project(cam);
+    if(v.z>1||(l.el.dataset.th===undefined&&(v.x<-1.1||v.x>1.1||v.y<-1.1||v.y>1.1))){l.el.hidden=true;continue;}
+    let px=(v.x+1)/2*w,py=(1-v.y)/2*h;
+    const side=l.el.dataset.th!==undefined||l.el.dataset.key!==undefined;
+    if(side&&(l.el.hidden||l._left===undefined)){ // Seite nur beim Erscheinen festlegen, danach bleibt das Schild ruhig stehen
+      let left=gx!==null?px<gx:px>w*0.6;
+      if(gx!==null&&Math.abs(px-gx)<40)left=gx>w/2;
+      if(px>w-230)left=true;if(px<230)left=false;
+      l._left=left;l.el.classList.toggle('lft',left);
+    }
+    if(side){ // im Bild halten
+      if(l.el.dataset.th!==undefined&&state.cam!=='top'){px=Math.max(24,Math.min(w-24,px));py=Math.max(150,Math.min(h-150,py));}
+    }
+    l.el.hidden=false;l.el.style.setProperty('--x',px.toFixed(1)+'px');l.el.style.setProperty('--y',py.toFixed(1)+'px');}
+}
+function liveTime(ts){const s=String(ts);let d=new Date(s);
+  if(isNaN(d)){const m=s.match(/^(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})/);if(m)d=new Date(Date.UTC(+m[1],+m[2]-1,+m[3],+m[4],+m[5]));}
+  return isNaN(d)?s:d.toLocaleTimeString('de-CH',{hour:'2-digit',minute:'2-digit'});}
+function updateWind(){
+  if(!windObjs.length)return;const t=curTime(),cam=activeCam(),top=state.cam==='top';
+  windObjs.forEach(o=>{const w=stationWind(o.st,t);
+    if(!w){o.a.visible=false;o.hide=true;return;}o.hide=false;o.a.visible=true;
+    // kleine Pfeile mit nahezu fester Bildschirmgrösse
+    const base=(top?view2dWidth()*0.0055:cam.position.distanceTo(o.a.position)*0.011)*state.windSize;
+    const k=sp=>0.55+Math.min(sp,60)/30;
+    o.tri.scale.setScalar(base*k(w.spd));o.a.rotation.set(0,-w.to,0);
+    o.gust.visible=w.gust!=null&&w.gust>w.spd*1.1;if(o.gust.visible)o.gust.scale.setScalar(base*k(w.gust));
+    o.mat.color.copy(windColor(w.spd));o.gust.material.color.copy(windColor(w.gust||w.spd));o.tri.visible=w.hasDir||w.spd<1;
+    o.el.textContent=Math.round(w.spd)+(w.gust!=null?'/'+Math.round(w.gust):'');
+    o.el.title=o.st.name+': Mittelwind '+Math.round(w.spd)+' km/h'+(w.gust!=null?', Böen '+Math.round(w.gust)+' km/h':'')+' (gemessen zur Flugzeit)';});
+}
+function updateSky(){
+  if(!skyDome)return;const top=state.cam==='top';skyDome.visible=!top;
+  const cam=activeCam();skyDome.position.copy(cam.position);skyDome.scale.setScalar(50);
+  // Umgebungsspiegelung neu rendern, wenn sich der Himmel spürbar ändert
+  const key=skyU.sunDir.value.toArray().map(v=>v.toFixed(2)).join()+skyU.hor.value.getHexString();
+  if(key!==envKey){envKey=key;if(envRT)envRT.dispose();envRT=pmrem.fromScene(envScene,0.03);scene.environment=envRT.texture;}
+}
+let compDeg=NaN;
+function updateCompass(dt){
+  let b=0;if(state.cam!=='top'){const d=controls.target.clone().sub(camera.position);if(state.cam==='free'||Math.hypot(d.x,d.z)>1e-6)b=Math.atan2(d.x,-d.z);}
+  if(state.north){const st=state.north.left*Math.min(1,dt*3);orbitAround(controls.target.clone(),st,0);state.north.left-=st;if(Math.abs(state.north.left)<0.002)state.north=null;}
+  const deg=Math.round(-b/D2R);if(deg!==compDeg){compDeg=deg;$('#compRose').setAttribute('transform','rotate('+deg+' 20 20)');}
+}
+function updateScaleBar(){
+  const wu=view2dWidth(),pxPerKm=viewEl.clientWidth/wu*10;let km=[0.1,0.2,0.5,1,2,5,10,20,50].find(k=>k*pxPerKm>=70)||50;
+  $('#sbBar').style.width=Math.round(km*pxPerKm)+'px';$('#sbTxt').textContent=km<1?Math.round(km*1000)+' m':km+' km';
+}
+function setTerrainNote(msg,err){const n=$('#tnote');n.hidden=!msg;n.textContent=msg||'';n.classList.toggle('err',!!err);}
+function requestTerrain(){
+  const base=state.curBase,f=state.cur;if(!base||!state.sat)return setTerrainNote('');
+  const T=terrainCache.get(base);
+  if(T&&!(T instanceof Promise)){showTerrainResult(T);if(state.kk7!=='off')requestKK7();return;}
+  setTerrainNote('Satellitenbild und Gelände werden geladen …');
+  terrainFor(base,f).then(T=>{if(state.curBase!==base)return;showTerrainResult(T);if(T.elevAt&&state.sat){buildScene(true);requestKK7();}});
+}
+function requestKK7(){
+  const base=state.curBase,T=base&&terrainCache.get(base),layer=state.kk7;
+  if(layer==='off'||!T||!T.elevAt){buildScene(true);return;}
+  T.kk7=T.kk7||{};
+  if(T.kk7[layer]){if(T.kk7[layer].error)setTerrainNote('kk7 Thermikkarte nicht verfügbar: '+T.kk7[layer].error,true);buildScene(true);return;}
+  setTerrainNote('kk7 Thermikkarte wird geladen …');
+  const f0=state.cur,mon=f0&&f0.hasDate?new Date(f0.t[0]*1000).getUTCMonth():null;
+  loadKK7(T,layer,mon).then(K=>{T.kk7[layer]=K;setTerrainNote('');},err=>{
+      if(!T.kk7retry){T.kk7retry=1;delete T.kk7[layer];setTerrainNote('kk7 Thermikkarte: neuer Versuch …');setTimeout(()=>{if(state.curBase===base)requestKK7();},4000);return;}
+      T.kk7[layer]={error:err.message};setTerrainNote('kk7 Thermikkarte nicht verfügbar: '+err.message,true);})
+    .then(()=>{if(state.curBase===base&&state.kk7===layer)buildScene(true);});
+}
+function showTerrainResult(T){
+  if(T.error)setTerrainNote(T.error==='blocked'?(IN_CLAUDE?'Kartendienste nicht erreichbar. In der claude.ai-Ansicht sind externe Karten gesperrt: Seite über ihre eigene Webadresse öffnen.':'Kartendienste nicht erreichbar. Internetverbindung prüfen und Seite neu laden.'):'Gelände konnte nicht geladen werden ('+T.error+').',true);
+  else if(T.noImagery)setTerrainNote('Satellitenbild nicht verfügbar, nur Gelände.',true);
+  else setTerrainNote('');
+}
+
+/* ---------- Auswahl / Zeit ---------- */
+function findIdx(f,t){let lo=0,hi=f.n-1;while(lo<hi){const m=(lo+hi)>>1;if(f.t[m]<t)lo=m+1;else hi=m;}return lo;}
+function setIdx(i,o={}){
+  const f=state.cur;if(!f)return;const prev=state.idx;state.idx=Math.max(0,Math.min(f.n-1,i));
+  if(state.playing&&f.keys){const now=performance.now(),a=Math.min(prev,state.idx),b=Math.max(prev,state.idx);
+    [[0],[f.n-1]].concat(f.keys).forEach(([k])=>{if(k>a&&k<=b){state.keyUntil[k]=now+10000;
+      labels.forEach(l=>{if(l.el.dataset.key!==undefined&&+l.el.dataset.key===k){l.el.classList.remove('pop');void l.el.offsetWidth;l.el.classList.add('pop');}});
+      if(state.cam==='follow'&&state.autoCam&&now-state.lastUser>8000){const inTh=f.thermals.some(x=>state.idx>=x.s&&state.idx<=x.e);
+        state.shot={n:'info',rel:inTh?0:1,az:inTh?(state.shot?state.shot.az:0):0.75,el:0.2,dist:6,lead:0,spin:inTh?0.06:0,phase:inTh?'th':'gl',until:now+8000};}}});}
+  if(!o.fromPlay)state.simT=f.t[state.idx];
+  if(state.hl&&(state.idx<state.hl.s||state.idx>state.hl.e))state.hl=null;
+  updateHud();drawChart();markCurrent();
+}
+/* Thermik-Karte beim Einflug: Einstieg, Ausstieg mit Höhengewinn, Ø-Steigen und Dauer */
+function showThermCard(){
+  const c=$('#thCard');c.hidden=true; // ersetzt durch kleine 3D-Schilder am Ein- und Ausstieg
+  return;
+  const f=state.cur,k=state.curTh,th=k>=0?f.thermals[k]:null;
+  if(!th||!state.showTherm||state.cam==='top'){c.hidden=true;return;}
+  const g=f.alt[th.e]-f.alt[th.s];
+  c.innerHTML='<div class="t1">Thermik '+(k+1)+' von '+f.thermals.length+'</div>'+
+    '<div class="t2">↗ '+fmtN(f.alt[th.e])+' m <small>('+(g>=0?'+':'−')+fmtN(Math.abs(g))+' m)</small></div>'+
+    '<div class="t3">Einstieg '+fmtN(f.alt[th.s])+' m · Ø '+fmtV(th.climb)+' m/s · '+fmtDur(th.dur)+'</div>';
+  c.title='Ausstiegshöhe (Höhengewinn), Einstiegshöhe, durchschnittliches Steigen und Zeit in dieser Thermik';
+  c.hidden=false;c.style.animation='none';void c.offsetWidth;c.style.animation='';
+}
+/* aktuelle Thermik/Gleitphase in den Tabellen markieren */
+function markCurrent(){
+  const f=state.cur,i=state.idx;
+  const set=(sel,list,key)=>{const k=list.findIndex(x=>i>=x.s&&i<=x.e);if(k===state[key])return;state[key]=k;
+    const rows=document.querySelectorAll(sel+' tbody tr');rows.forEach((r,j)=>r.classList.toggle('cur',j===k));
+    const row=rows[k];if(row){const w=row.closest('.twrap');if(row.offsetTop<w.scrollTop+20||row.offsetTop>w.scrollTop+w.clientHeight-30)w.scrollTop=row.offsetTop-w.clientHeight/2;}};
+  const prevTh=state.curTh;set('#thermTbl',f.thermals,'curTh');if(state.curTh!==prevTh)showThermCard();
+  const inTh=state.curTh>=0;set('#glideTbl',inTh?[]:f.glides,'curGl');
+}
+function updateHud(){
+  const f=state.cur,i=state.idx;if(!f)return;
+  $('#h-time').textContent=fmtTime(f,f.t[i]);
+  $('#h-alt').textContent=fmtN(f.alt[i])+' m';
+  const v=f.vario[i],hv=$('#h-var');hv.textContent=fmtV(v)+' m/s';
+  hv.style.color=Math.abs(v)<0.3?'':css(ramp('vario',v>0?Math.max(v,1.5):Math.min(v,-2)));
+  $('#h-spd').textContent=fmtN(f.speed[i])+' km/h';
+  const th=f.thermals.find(x=>i>=x.s&&i<=x.e);let integ=null,src='';
+  if(th&&f.t[i]-f.t[th.s]>=5){integ=(f.alt[i]-f.alt[th.s])/(f.t[i]-f.t[th.s]);src=' Thermik';}
+  else if(v>0.3){const j=findIdx(f,f.t[i]-30);if(f.t[i]-f.t[j]>5){integ=(f.alt[i]-f.alt[j])/(f.t[i]-f.t[j]);src=' 30 s';}}
+  const lk=$('#h-ld-k'),lv=$('#h-ld');
+  if(th||(integ!=null&&v>0.3)){lk.textContent='Integriert';lk.title='Durchschnittliches Steigen seit Beginn der Thermik, sonst über die letzten 30 s.';
+    lv.textContent=integ!=null?fmtV(integ)+' m/s':'–';lv.style.color=integ>0.3?css(ramp('vario',Math.max(integ,1.5))):'';}
+  else{lk.textContent='Gleitzahl';lk.title='Strecke über Grund geteilt durch Höhenverlust, über 30 s.';lv.style.color='';
+    lv.textContent=isFinite(f.glide[i])?(f.glide[i]>=60?'> 60':fmtN(f.glide[i],1)):'–';}
+  $('#h-agl').textContent=f.gnd&&isFinite(f.gnd[i])?fmtN(f.alt[i]-f.gnd[i])+' m':'–';
+  $('#tnow').textContent=fmtTime(f,f.t[i]);
+  if(state.cam==='pov')updateVario();
+}
+function updateVario(){
+  const f=state.cur,i=state.idx,v=f.vario[i],c=css(ramp('vario',v));
+  const ang=Math.max(-5,Math.min(5,v))/5*90*D2R,nx=100+70*Math.sin(ang),ny=100-70*Math.cos(ang);
+  const nd=$('#vNeedle');nd.setAttribute('x2',nx.toFixed(1));nd.setAttribute('y2',ny.toFixed(1));
+  const ex=100+80*Math.sin(ang),ey=100-80*Math.cos(ang);
+  $('#vArc').setAttribute('d',Math.abs(v)<0.05?'':'M100 20 A80 80 0 0 '+(v>0?1:0)+' '+ex.toFixed(1)+' '+ey.toFixed(1));$('#vArc').setAttribute('stroke',c);
+  const vb=$('#v-var');vb.textContent=fmtV(v);vb.style.color=Math.abs(v)<0.3?'#e8f0f3':c;
+  $('#v-alt').textContent=fmtN(f.alt[i])+' m';
+  $('#v-agl').textContent=f.gnd&&isFinite(f.gnd[i])?fmtN(f.alt[i]-f.gnd[i])+' m':'–';
+  $('#v-spd').textContent=fmtN(f.speed[i])+' km/h';
+  $('#v-ld').textContent=isFinite(f.glide[i])?fmtN(f.glide[i],1):'–';
+  const j=findIdx(f,f.t[i]-30),dt=f.t[i]-f.t[j];$('#v-avg').textContent=dt>5?fmtV((f.alt[i]-f.alt[j])/dt):'–';
+  $('#v-time').textContent=fmtTime(f,f.t[i],false);
+}
+(function vTicks(){const g=$('#vTicks'),l=$('#vTickLbl');let h='',t='';
+  for(let v=-5;v<=5;v++){const a=v/5*90*D2R,r1=v%5===0?66:70,x1=100+r1*Math.sin(a),y1=100-r1*Math.cos(a),x2=100+74*Math.sin(a),y2=100-74*Math.cos(a);
+    h+='<line x1="'+x1.toFixed(1)+'" y1="'+y1.toFixed(1)+'" x2="'+x2.toFixed(1)+'" y2="'+y2.toFixed(1)+'"/>';
+    if(v%5===0||v===0||Math.abs(v)===2){const xt=100+56*Math.sin(a),yt=100-56*Math.cos(a)+3;t+='<text x="'+xt.toFixed(1)+'" y="'+yt.toFixed(1)+'">'+(v>0?'+':'')+v+'</text>';}}
+  g.innerHTML=h;l.innerHTML=t;})();
+function startPlay(){const f=state.cur;if(!f)return;if(state.idx>=f.n-1)setIdx(0);state.simT=f.t[state.idx];state.playing=true;
+  $('#playBtn').setAttribute('aria-label','Pause');$('#playIcon').innerHTML='<path d="M2 1h3.5v12H2zM8.5 1H12v12H8.5z"/>';}
+function stopPlay(){state.playing=false;$('#playBtn').setAttribute('aria-label','Abspielen');$('#playIcon').innerHTML='<path d="M2 1 L13 7 L2 13 Z"/>';}
+
+
+/* ---------- Kennzahlen + Tabellen ---------- */
+const XCTIP={free:'Grösste Distanz von einem Startpunkt über bis zu 3 Wendepunkte zu einem Endpunkt der Spur; Faktor 1,0.',flat:'Grösstes geschlossenes Dreieck (Lücke ≤ 20 %), Lücke wird abgezogen; Faktor 1,2.',fai:'Dreieck, bei dem jeder Schenkel mind. 28 % des Umfangs misst; Faktor 1,4.'};
+const mmss=s=>{s=Math.round(s);return Math.floor(s/60)+':'+String(s%60).padStart(2,'0');};
+function renderStats(){
+  state.curTh=state.curGl=-2;
+  const f=state.cur,s=f.stats;
+  const dateStr=f.hasDate?new Date(s.t0*1000).toLocaleDateString('de-CH',{weekday:'short',day:'2-digit',month:'2-digit',year:'numeric'}):'Datum unbekannt';
+  const tip=t=>t?' title="'+esc(t)+'"':'';
+  const g=(title,rows)=>'<div class="sgroup"><h3>'+title+'</h3><dl>'+rows.map(r=>'<dt'+(r[2]?' class="best"':'')+tip(r[3])+'>'+r[0]+'</dt><dd'+(r[2]?' class="best"':'')+tip(r[3])+'>'+r[1]+'</dd>').join('')+'</dl></div>';
+  const xc=s.xc,xcRows=xc.opts.map(o=>[o.name+' ×'+o.f.toFixed(1),o.d>0?fmtKm(o.d)+' · '+fmtN(o.pts_,1)+' P':(o.key==='free'?'–':'nicht geschlossen'),o===xc.best&&o.d>0,XCTIP[o.key]]);
+  xcRows.push(['XC-Ø-Speed',fmtN(xc.best.d/s.dur*3.6,1)+' km/h',false,'Distanz der besten Wertung ('+xc.best.name+') geteilt durch die gesamte Flugzeit.']);
+  $('#stats').innerHTML='<div class="meta"><div class="ttl">'+esc(f.label||f.name)+'</div><div class="sub">'+dateStr+
+    (f.pilot?' · '+esc(f.pilot):'')+(f.glider?' · '+esc(f.glider):'')+'</div>'+(f.sample?'<span class="tag">Beispiel, synthetisch</span>':'')+'</div>'+
+    g('Flug',[['Flugzeit',fmtDur(s.dur),0,'Zeit vom Abflug bis zur Landung; Bodenzeit davor und danach ist abgeschnitten.'],
+      ['Start – Landung',fmtTime(f,s.t0,false)+'–'+fmtTime(f,s.t1,false),0,'Uhrzeit von Abflug und Landung (Ortszeit des Browsers).'],
+      ['Starthöhe',fmtN(s.startAlt)+' m',0,'Höhe beim Abflug ('+(s.useG?'GPS':'Baro')+'-Höhe).'],
+      ['Max. Höhe',fmtN(s.maxA)+' m',0,'Höchster Punkt des Flugs; in der Spur violett markiert.'],
+      ['Landehöhe',fmtN(s.landAlt)+' m',0,'Höhe am Landeplatz.'],
+      ['Höhengewinn kumuliert',fmtN(s.cum)+' m',0,'Summe aller Höhengewinne über den ganzen Flug, über 10 s geglättet.']])+
+    g('XC-Wertung (XContest-Logik)',xcRows)+
+    g('Steigen',[['Max. / Min. (8 s)',fmtV(s.maxV)+' / '+fmtV(s.minV),0,'Stärkstes Steigen und Sinken, jeweils über 8 s gemittelt.'],
+      ['Thermiken',s.nTherm,0,'Anzahl Kreisphasen mit Höhengewinn.'],
+      ['Ø in Thermik',fmtV(s.avgClimb)+' m/s',0,'Gesamter Höhengewinn in Thermiken geteilt durch die Zeit darin.'],
+      ['Beste Thermik Ø',fmtV(s.bestClimb)+' m/s',1,'Höchstes durchschnittliches Steigen einer einzelnen Thermik.'],
+      ['Kreisanteil',fmtN(s.circPct)+' %',0,'Anteil der Flugzeit, die in Kreisphasen verbracht wurde.']])+
+    g('Gleiten',[['Ø Gleitzahl',fmtN(s.avgLD,1),0,'Strecke über Grund geteilt durch Höhenverlust, über alle Gleitphasen; inklusive Wind.'],
+      ['Beste Gleitphase',fmtN(s.bestLD,1),1,'Höchste Gleitzahl einer einzelnen Gleitphase (mind. 60 s).']]);
+  const bestOf=(arr,fn,dir)=>{let bi=-1,bv=-Infinity;arr.forEach((x,i)=>{const v=fn(x)*dir;if(isFinite(v)&&v>bv){bv=v;bi=i;}});return bi;};
+  const B=(k,i)=>k===i?' class="best"':'';
+  const TB={dur:bestOf(f.thermals,x=>x.dur,1),gain:bestOf(f.thermals,x=>x.gain,1),climb:bestOf(f.thermals,x=>x.climb,1),maxV:bestOf(f.thermals,x=>x.maxV,1),top:bestOf(f.thermals,x=>x.top,1),exit:bestOf(f.thermals,x=>f.alt[x.e],1)};
+  const GB={dur:bestOf(f.glides,x=>x.dur,1),dist:bestOf(f.glides,x=>x.dist,1),ld:bestOf(f.glides,x=>x.ld,1),sink:bestOf(f.glides,x=>x.sink,-1),spd:bestOf(f.glides,x=>x.spd,1)};
+  const tt=$('#thermTbl');
+  tt.innerHTML=!f.thermals.length?'<tr><td class="empty">Keine Kreisphasen erkannt.</td></tr>':
+    '<thead><tr><th>#</th><th title="Uhrzeit des Einflugs">Beginn</th><th title="Dauer der Kreisphase">Dauer</th><th title="Höhengewinn vom Ein- bis zum Ausflug">Gewinn</th><th title="Durchschnittliches Steigen in dieser Thermik">Ø m/s</th><th title="Stärkstes Steigen (8 s) in dieser Thermik">Max</th><th title="Höhe beim Verlassen der Thermik">Ausstieg</th><th title="Drehrichtung: L = links, R = rechts, L+R = mit Richtungswechsel">Dreh</th></tr></thead><tbody>'+
+    f.thermals.map((th,k)=>'<tr tabindex="0" data-i="'+th.s+'" data-e="'+th.e+'"><td><span class="chip" style="background:'+css(ramp('vario',th.climb))+'"></span>'+(k+1)+'</td><td>'+fmtTime(f,f.t[th.s],false)+'</td><td'+B(k,TB.dur)+'>'+fmtDur(th.dur)+'</td><td'+B(k,TB.gain)+'>'+(th.gain>=0?'+':'−')+fmtN(Math.abs(th.gain))+' m</td><td'+B(k,TB.climb)+'>'+fmtV(th.climb)+'</td><td'+B(k,TB.maxV)+'>'+fmtV(th.maxV)+'</td><td'+B(k,TB.exit)+'>'+fmtN(f.alt[th.e])+' m</td><td>'+th.dir+'</td></tr>').join('')+'</tbody>';
+  const gt=$('#glideTbl');
+  gt.innerHTML=!f.glides.length?'<tr><td class="empty">Keine Gleitphasen über 60 s erkannt.</td></tr>':
+    '<thead><tr><th>#</th><th title="Uhrzeit des Beginns">Beginn</th><th title="Dauer der Gleitphase">Dauer</th><th title="Strecke über Grund">Strecke</th><th title="Höhenverlust">Verlust</th><th title="Gleitzahl: Strecke / Höhenverlust (inkl. Wind)">GZ</th><th title="Durchschnittliches Sinken">Sinken</th><th title="Durchschnittliche Geschwindigkeit über Grund">km/h</th></tr></thead><tbody>'+
+    f.glides.map((gl,k)=>'<tr tabindex="0" data-i="'+gl.s+'" data-e="'+gl.e+'"><td><span class="chip" style="background:'+css(ramp('glide',gl.ld))+'"></span>'+(k+1)+'</td><td>'+fmtTime(f,f.t[gl.s],false)+'</td><td'+B(k,GB.dur)+'>'+fmtDur(gl.dur)+'</td><td'+B(k,GB.dist)+'>'+fmtKm(gl.dist)+'</td><td>'+fmtN(gl.loss)+' m</td><td'+B(k,GB.ld)+'>'+fmtN(gl.ld,1)+'</td><td'+B(k,GB.sink)+'>'+fmtV(-gl.sink)+'</td><td'+B(k,GB.spd)+'>'+fmtN(gl.spd)+'</td></tr>').join('')+'</tbody>';
+}
+['#thermTbl','#glideTbl'].forEach(sel=>{const el=$(sel);
+  const go=e=>{const tr=e.target.closest('tr[data-i]');if(!tr)return;stopPlay();setIdx(+tr.dataset.i);state.hl={s:+tr.dataset.i,e:+tr.dataset.e};drawChart();
+    if(marker&&state.cam==='free'){const p=new THREE.Vector3(...P(state.cur,state.idx)),d=p.sub(controls.target);state.focus={t:controls.target.clone().add(d),c:camera.position.clone().add(d)};}
+    $('#stage').scrollIntoView({behavior:'smooth'});};
+  el.addEventListener('click',go);el.addEventListener('keydown',e=>{if(e.key==='Enter')go(e);});});
+
+/* ---------- Legende ---------- */
+function niceStep(raw){const p=Math.pow(10,Math.floor(Math.log10(raw)));const r=raw/p;return (r<1.5?1:r<3?2:r<7?5:10)*p;}
+function drawLegend(){
+  const cv=$('#legend'),dpr=window.devicePixelRatio||1,w=cv.clientWidth,h=cv.clientHeight;if(!w)return;cv.width=w*dpr;cv.height=h*dpr;
+  const c=cv.getContext('2d');c.setTransform(dpr,0,0,dpr,0,0);c.clearRect(0,0,w,h);
+  const key=state.mode,rp=RAMPS[key];$('#legendTitle').textContent=rp.title;
+  let lo,hi,ticks;
+  if(key==='alt'&&state.cur){lo=state.cur.stats.minA;hi=state.cur.stats.maxA;const st=niceStep((hi-lo)/3||100);ticks=[];for(let v=Math.ceil(lo/st)*st;v<=hi;v+=st)ticks.push(v);}
+  else{lo=rp.dom[0];hi=rp.dom[1];ticks=rp.ticks;}
+  const bw=w-8;for(let x=0;x<bw;x++){const v=lo+(hi-lo)*x/(bw-1);c.fillStyle=css(key==='alt'?ramp('alt',(v-lo)/Math.max(1,hi-lo)):ramp(key,v));c.fillRect(4+x,0,1.5,9);}
+  c.fillStyle=tok('--muted');c.font='10px '+tok('--f-data');c.textAlign='center';c.textBaseline='top';
+  ticks.forEach(v=>{const x=4+(v-lo)/(hi-lo||1)*(bw-1);c.fillRect(x-0.5,9,1,3);c.fillText(key==='vario'&&v>0?'+'+v:String(v),Math.min(w-12,Math.max(10,x)),13);});
+}
+
+/* ---------- Höhenprofil (zugleich Zeitleiste) ---------- */
+const chart=$('#chart'),cctx=chart.getContext('2d');let off=null,CL=null,hoverX=null,dragging=false;
+function drawChartBase(){
+  const f=state.cur;if(!f)return;
+  const dpr=window.devicePixelRatio||1,w=chart.clientWidth,h=chart.clientHeight;if(!w)return;
+  chart.width=w*dpr;chart.height=h*dpr;off=document.createElement('canvas');off.width=w*dpr;off.height=h*dpr;
+  const c=off.getContext('2d');c.setTransform(dpr,0,0,dpr,0,0);
+  const L=44,Rm=4,T=3,B=13,ah=h-T-B;
+  const [t0,t1]=chartRange(),X=t=>L+(t-t0)/(t1-t0)*(w-L-Rm);
+  const hasG=f.gnd&&f.gnd.some(isFinite),iA=Math.max(0,findIdx(f,t0)-1),iB=Math.min(f.n-1,findIdx(f,t1)+1);
+  let lo=1e9,hi=-1e9;for(let i=iA;i<=iB;i++){lo=Math.min(lo,f.alt[i]);hi=Math.max(hi,f.alt[i]);if(hasG&&isFinite(f.gnd[i]))lo=Math.min(lo,f.gnd[i]);}
+  const st=niceStep((hi-lo)/Math.max(2,Math.floor(ah/38))||100);const a0=Math.floor(lo/st)*st,a1=Math.ceil(hi/st)*st||a0+st;
+  const A=v=>T+ah-(v-a0)/(a1-a0)*ah;
+  CL={L,Rm,T,ah,X,A,t0,t1,w,h,bottom:T+ah};
+  const muted=tok('--muted'),line=tok('--line'),fdata=tok('--f-data');
+  c.save();c.beginPath();c.rect(L,0,w-L-Rm,h);c.clip();
+  c.restore();
+  c.font='600 10px '+fdata;c.fillStyle='#fff';c.strokeStyle='rgba(255,255,255,.7)';c.lineWidth=1;c.textAlign='right';c.textBaseline='middle';c.shadowColor='rgba(0,0,0,.9)';c.shadowBlur=3;
+  for(let v=a0;v<=a1+0.1;v+=st){const y=Math.round(A(v))+.5;c.fillText(fmtN(v),L-4,Math.min(Math.max(y,T+5),T+ah-4));}
+  const span=t1-t0,cand=[300,600,900,1800,3600,7200];const ts=cand.find(s=>span/s<=(w<600?4:10))||7200;
+  c.textAlign='center';c.textBaseline='top';
+  const tz=f.hasDate?-new Date(t0*1000).getTimezoneOffset()*60:0;
+  for(let t=Math.ceil((t0+tz)/ts)*ts-tz;t<=t1;t+=ts){const x=Math.round(X(t))+.5;c.beginPath();c.moveTo(x,T+ah);c.lineTo(x,T+ah+2);c.stroke();c.fillText(fmtTime(f,t,false),x,T+ah+2);}
+  const k=Math.max(1,Math.floor((iB-iA)/(w*2)));
+  c.save();c.beginPath();c.rect(L,0,w-L-Rm,h);c.clip();
+  c.shadowBlur=0;c.lineJoin='round';c.lineCap='round';
+  c.beginPath();for(let i=iA;i<=iB;i+=k){const x=X(f.t[i]),y=A(f.alt[i]);i===iA?c.moveTo(x,y):c.lineTo(x,y);}c.strokeStyle='rgba(0,0,0,.55)';c.lineWidth=4.5;c.stroke(); // dunkle Kontur für Lesbarkeit
+  c.lineWidth=2.4;
+  for(let i=iA;i+k<=iB;i+=k){const j=Math.min(f.n-1,i+k);c.strokeStyle=css(colorAt(f,i));c.beginPath();c.moveTo(X(f.t[i]),A(f.alt[i]));c.lineTo(X(f.t[j]),A(f.alt[j]));c.stroke();}
+  if(state.showKeys)(f.keys||[]).forEach(([i,col])=>{c.fillStyle=col;c.strokeStyle=tok('--panel');c.lineWidth=1.5;c.beginPath();c.arc(X(f.t[i]),A(f.alt[i]),4,0,Math.PI*2);c.fill();c.stroke();});
+  c.restore();
+}
+/* sichtbarer Zeitbereich des Profils (gezoomt oder ganzer Flug) */
+function chartRange(){const f=state.cur,F0=f.t[0],F1=f.t[f.n-1];if(!state.cv)return [F0,F1];
+  let [a,b]=state.cv;const sp=Math.min(F1-F0,Math.max(120,b-a));if(a<F0){a=F0;}if(a+sp>F1)a=F1-sp;b=a+sp;state.cv=[a,b];return [a,b];}
+function chartZoom(k,tc){const f=state.cur;if(!f)return;const [a,b]=chartRange(),F=f.t[f.n-1]-f.t[0];tc=tc??(a+b)/2;
+  const sp=Math.max(120,Math.min(F,(b-a)*k));if(sp>=F){state.cv=null;}else{const fr=(tc-a)/(b-a);state.cv=[tc-fr*sp,tc-fr*sp+sp];}drawChartBase();drawChart();}
+function chartPan(dt){if(!state.cv)return;state.cv=[state.cv[0]+dt,state.cv[1]+dt];drawChartBase();drawChart();}
+function drawChart(){
+  if(!off||!CL||!state.cur)return;const f=state.cur,dpr=window.devicePixelRatio||1;
+  cctx.setTransform(1,0,0,1,0,0);cctx.clearRect(0,0,chart.width,chart.height);cctx.drawImage(off,0,0);
+  cctx.setTransform(dpr,0,0,dpr,0,0);
+  const fg=tok('--fg'),panel=tok('--panel'),line=tok('--line');
+  if(state.cv&&state.playing){const t=f.t[state.idx],[a,b]=state.cv;if(t>b||t<a){const sp=b-a;state.cv=[t-sp*0.2,t+sp*0.8];drawChartBase();}}
+  const x=Math.round(CL.X(f.t[state.idx]))+.5;
+  cctx.save();cctx.beginPath();cctx.rect(CL.L,0,CL.w-CL.L-CL.Rm,CL.h);cctx.clip();
+  if(state.hl){const x0=CL.X(f.t[state.hl.s]),x1=CL.X(f.t[state.hl.e]);cctx.fillStyle=tok('--accent');cctx.globalAlpha=0.22;cctx.fillRect(x0,CL.T,x1-x0,CL.bottom-CL.T);cctx.globalAlpha=0.9;
+    cctx.fillRect(x0,CL.T,1.5,CL.bottom-CL.T);cctx.fillRect(x1-1.5,CL.T,1.5,CL.bottom-CL.T);cctx.globalAlpha=1;}
+  cctx.strokeStyle=tok('--accent');cctx.lineWidth=1.5;cctx.beginPath();cctx.moveTo(x,CL.T);cctx.lineTo(x,CL.bottom);cctx.stroke();
+  cctx.fillStyle=tok('--accent');cctx.beginPath();cctx.arc(x,CL.A(f.alt[state.idx]),4,0,Math.PI*2);cctx.fill();
+  cctx.strokeStyle=panel;cctx.lineWidth=1.5;cctx.stroke();
+  if(hoverX!=null&&!dragging){
+    const t=CL.t0+(hoverX-CL.L)/(CL.w-CL.L-CL.Rm)*(CL.t1-CL.t0),i=findIdx(f,t),hx=Math.round(CL.X(f.t[i]))+.5;
+    cctx.strokeStyle=fg;cctx.globalAlpha=.5;cctx.setLineDash([3,3]);cctx.lineWidth=1;cctx.beginPath();cctx.moveTo(hx,CL.T);cctx.lineTo(hx,CL.bottom);cctx.stroke();cctx.setLineDash([]);cctx.globalAlpha=1;
+    const txt=fmtTime(f,f.t[i],false)+'  '+fmtN(f.alt[i])+' m  '+fmtV(f.vario[i])+' m/s'+(f.gnd&&isFinite(f.gnd[i])?'  Grund +'+fmtN(f.alt[i]-f.gnd[i])+' m':'');
+    cctx.font='11px '+tok('--f-data');const bw=cctx.measureText(txt).width+12,bh=17;
+    let bx=hx+8;if(bx+bw>CL.w-2)bx=hx-8-bw;
+    cctx.fillStyle=panel;cctx.strokeStyle=line;cctx.fillRect(bx,CL.T,bw,bh);cctx.strokeRect(bx+.5,CL.T+.5,bw-1,bh-1);
+    cctx.fillStyle=fg;cctx.textAlign='left';cctx.textBaseline='middle';cctx.fillText(txt,bx+6,CL.T+bh/2+1);
+  }
+  cctx.restore();
+}
+function chartT(e){const r=chart.getBoundingClientRect(),x=e.clientX-r.left;return {x,ok:CL&&x>=CL.L&&x<=CL.w-CL.Rm};}
+function chartSet(x){const t=CL.t0+(x-CL.L)/(CL.w-CL.L-CL.Rm)*(CL.t1-CL.t0);if(state.playing)stopPlay();setIdx(findIdx(state.cur,t));}
+const cPtr=new Map();let cPinch=null;
+chart.addEventListener('wheel',e=>{if(!state.cur||!CL)return;e.preventDefault();const r=chart.getBoundingClientRect(),x=e.clientX-r.left;
+  const tc=CL.t0+(x-CL.L)/(CL.w-CL.L-CL.Rm)*(CL.t1-CL.t0);
+  if(Math.abs(e.deltaX)>Math.abs(e.deltaY))chartPan(e.deltaX/(CL.w)*(CL.t1-CL.t0));else chartZoom(Math.exp(e.deltaY*0.0018),tc);},{passive:false});
+$('#czIn').addEventListener('click',()=>chartZoom(0.5,state.cur&&state.cur.t[state.idx]));
+$('#czOut').addEventListener('click',()=>chartZoom(2));
+$('#czAll').addEventListener('click',()=>{state.cv=null;drawChartBase();drawChart();});
+chart.addEventListener('pointerdown',e=>{cPtr.set(e.pointerId,e.clientX);if(cPtr.size===2){dragging=false;const xs=[...cPtr.values()];cPinch={d:Math.abs(xs[0]-xs[1]),m:(xs[0]+xs[1])/2};return;}},true);
+chart.addEventListener('pointermove',e=>{if(!cPtr.has(e.pointerId))return;cPtr.set(e.pointerId,e.clientX);
+  if(cPtr.size===2&&cPinch){const xs=[...cPtr.values()],d=Math.abs(xs[0]-xs[1]);if(d>20&&cPinch.d>20){const r=chart.getBoundingClientRect(),x=cPinch.m-r.left;
+    chartZoom(cPinch.d/d,CL.t0+(x-CL.L)/(CL.w-CL.L-CL.Rm)*(CL.t1-CL.t0));}cPinch.d=d;e.stopImmediatePropagation();}},true);
+['pointerup','pointercancel','pointerleave'].forEach(ev=>chart.addEventListener(ev,e=>{cPtr.delete(e.pointerId);if(cPtr.size<2)cPinch=null;},true));
+chart.addEventListener('pointerdown',e=>{if(!state.cur||!CL||cPtr.size>1)return;const p=chartT(e);if(!p.ok)return;dragging=true;try{chart.setPointerCapture(e.pointerId);}catch(_){}chartSet(Math.max(CL.L,Math.min(CL.w-CL.Rm,p.x)));});
+chart.addEventListener('pointermove',e=>{if(!state.cur||!CL)return;const p=chartT(e);
+  if(dragging){chartSet(Math.max(CL.L,Math.min(CL.w-CL.Rm,p.x)));return;}
+  if(e.pointerType==='mouse'){hoverX=p.ok?p.x:null;drawChart();}});
+const endDrag=()=>{const was=dragging;dragging=false;drawChart();if(was&&state.cur&&!state.playing)startPlay();}; // Klick ins Profil: dort weiterfliegen
+chart.addEventListener('pointerup',endDrag);chart.addEventListener('pointercancel',endDrag);
+chart.addEventListener('pointerleave',()=>{hoverX=null;if(!dragging)drawChart();});
+new ResizeObserver(()=>{drawChartBase();drawChart();drawLegend();}).observe(chart);
+
+
+/* ---------- Laden ---------- */
+let statusTimer=0;
+function setStatus(msg,err){const s=$('#status');s.innerHTML=msg;s.title=s.textContent;s.classList.toggle('err',!!err);s.hidden=!msg;
+  clearTimeout(statusTimer);if(msg&&!err)statusTimer=setTimeout(()=>{s.hidden=true;},9000);}
+function refreshSelect(){
+  const sel=$('#flightSel');sel.innerHTML=state.flights.map((f,k)=>'<option value="'+k+'">'+esc(f.label||f.name)+'</option>').join('');
+  sel.value=state.flights.indexOf(state.curBase);
+}
+function selectFlight(base,keepView){
+  state.curBase=base;stopPlay();
+  state.cur=analyze(base,state.altSrc);state.cur.label=base.label;state.cur.sample=base.sample;
+  if(!keepView)state.idx=0;state.idx=Math.min(state.idx,state.cur.n-1);
+  renderStats();buildScene(keepView);drawLegend();setIdx(state.idx);refreshSelect();requestTerrain();if(state.wind!=='off')requestWind();
+}
+async function loadFiles(files){
+  const list=[...files];
+  if(!list.length)return;
+  setStatus('Lese '+list.length+' Datei'+(list.length>1?'en':'')+' …');
+  const ok=[],bad=[];
+  for(const file of list){try{const fl=parseAny(await readText(file),file.name||'Datei');
+    fl.label=(fl.hasDate?new Date(fl.raw[0].t*1000).toLocaleDateString('de-CH')+' · ':'')+(file.name||'Datei').replace(/\.(igc|gpx)$/i,'')+(fl.gpx?' (GPX)':'');ok.push(fl);}
+    catch(err){bad.push(err.message);}}
+  state.flights=state.flights.filter(f=>!f.sample);
+  ok.sort((a,b)=>a.raw[0].t-b.raw[0].t);state.flights.push(...ok);
+  if(ok.length)selectFlight(ok[ok.length-1]);
+  setStatus((ok.length?'<b>'+ok.length+'</b> '+(ok.length>1?'Flüge':'Flug')+' geladen.':'')+(bad.length?' Fehler: '+esc(bad.join('; ')):''),!ok.length);
+}
+$('#file').addEventListener('change',e=>{loadFiles(e.target.files);e.target.value='';});
+$('#flightSel').addEventListener('change',e=>{const f=state.flights[+e.target.value];if(f)selectFlight(f);});
+let dragN=0;const drop=$('#drop');
+window.addEventListener('dragenter',e=>{e.preventDefault();dragN++;drop.hidden=false;});
+window.addEventListener('dragleave',()=>{dragN=Math.max(0,dragN-1);if(!dragN)drop.hidden=true;});
+window.addEventListener('dragover',e=>e.preventDefault());
+window.addEventListener('drop',e=>{e.preventDefault();dragN=0;drop.hidden=true;if(e.dataTransfer&&e.dataTransfer.files.length)loadFiles(e.dataTransfer.files);});
+
+/* ---------- Bedienelemente ---------- */
+function bindSeg(id,get,set){
+  const root=$(id),sync=()=>root.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.v)===String(get())));
+  root.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{set(b.dataset.v);sync();}));sync();return sync;
+}
+bindSeg('#camSeg',()=>state.cam,v=>setCam(v));
+bindSeg('#setSun',()=>state.sun?'1':'0',v=>{state.sun=v==='1';buildScene(true);});
+bindSeg('#setCurtain',()=>state.curtain,v=>{state.curtain=v;state.lastCurtainT=NaN;});
+bindSeg('#setInfo',()=>state.showKeys?'1':'0',v=>{state.showKeys=state.showTherm=v==='1';buildScene(true);drawChartBase();drawChart();showThermCard();});
+bindSeg('#trailSeg',()=>String(state.trailWin),v=>{state.trailWin=+v;state.partT=NaN;});
+bindSeg('#setAuto',()=>state.autoCam?'1':'0',v=>{state.autoCam=v==='1';state.shot=null;});
+bindSeg('#setTrack',()=>String(state.trackOp),v=>{state.trackOp=+v;applyTrackOp();});
+bindSeg('#setShow',()=>state.show?'1':'0',v=>{state.show=v==='1';applyCamVisibility();updatePilotTag();});
+bindSeg('#setKK7',()=>state.kk7,v=>{state.kk7=v;if(v==='off'){setTerrainNote('');buildScene(true);}else if(!state.sat){setTerrainNote('Die Thermikkarte braucht die Satellitenkarte (Einstellung „Karte“).',true);}else requestKK7();});
+$('#fsBtn').addEventListener('click',()=>{const st=$('#stage'),d=document;
+  const on=d.fullscreenElement||d.webkitFullscreenElement;
+  try{if(on)(d.exitFullscreen||d.webkitExitFullscreen).call(d);else{const r=(st.requestFullscreen||st.webkitRequestFullscreen);const pr=r&&r.call(st);if(pr&&pr.catch)pr.catch(()=>setStatus('Vollbild wird hier nicht unterstützt. Die Ansicht füllt den Bildschirm trotzdem.',true));if(!r)setStatus('Vollbild wird in diesem Browser nicht unterstützt.',true);}}catch(_){}});
+['fullscreenchange','webkitfullscreenchange'].forEach(ev=>document.addEventListener(ev,()=>{const on=!!(document.fullscreenElement||document.webkitFullscreenElement);$('#fsBtn').setAttribute('aria-pressed',on);$('#fsBtn').querySelector('.lg').textContent=on?'Vollbild beenden':'Vollbild';}));
+// Vollbild nur anbieten, wo der Browser es kann (iPhone kann es nicht)
+if(!(document.fullscreenEnabled||document.webkitFullscreenEnabled))$('#fsBtn').hidden=true;
+$('#detailBtn').addEventListener('click',()=>$('#below').scrollIntoView({behavior:'smooth'}));
+$('#setColor').innerHTML=Object.entries(WINGS).map(([k,w])=>'<option value="'+k+'">'+w.name+'</option>').join('');
+$('#setColor').addEventListener('change',e=>{state.wing=e.target.value;buildScene(true);});
+$('#setBtn').addEventListener('click',()=>{const p=$('#settings'),open=p.hidden;p.hidden=!open;$('#setBtn').setAttribute('aria-expanded',open);});
+document.addEventListener('pointerdown',e=>{const p=$('#settings');if(!p.hidden&&!p.contains(e.target)&&e.target!==$('#setBtn')){p.hidden=true;$('#setBtn').setAttribute('aria-expanded','false');}});
+$('#playBtn').addEventListener('click',()=>state.playing?stopPlay():startPlay());
+$('#speedSel').addEventListener('change',e=>{state.mult=+e.target.value;});
+$('#altSrc').addEventListener('change',e=>{state.altSrc=e.target.value;if(state.curBase)selectFlight(state.curBase,true);});
+$('#vReset').addEventListener('click',()=>viewReset());
+$('#compass').addEventListener('click',()=>{if(state.cam==='top')return;state.tour=null;const d=controls.target.clone().sub(camera.position);state.north={left:wrapA(Math.atan2(d.x,-d.z))};});
+/* Höhenprofil: Griffleiste ziehen ändert die Höhe */
+(function(){const g=$('#grip');let y0=null,h0=0;
+  const setH=h=>{const max=Math.max(90,$('#stage').clientHeight*0.55);h=Math.round(Math.max(40,Math.min(max,h)));chart.style.height=h+'px';try{localStorage.setItem('fs3d-chartH',h);}catch(_){}};
+  try{const v=+localStorage.getItem('fs3d-chartH');if(v>=40)chart.style.height=v+'px';}catch(_){}
+  g.addEventListener('pointerdown',e=>{y0=e.clientY;h0=chart.clientHeight;try{g.setPointerCapture(e.pointerId);}catch(_){}e.preventDefault();});
+  g.addEventListener('pointermove',e=>{if(y0!=null)setH(h0+(y0-e.clientY));});
+  const end=()=>{y0=null;};g.addEventListener('pointerup',end);g.addEventListener('pointercancel',end);
+  g.addEventListener('keydown',e=>{if(e.key==='ArrowUp'){setH(chart.clientHeight+20);e.preventDefault();}else if(e.key==='ArrowDown'){setH(chart.clientHeight-20);e.preventDefault();}});})();
+window.addEventListener('keydown',e=>{
+  if(!state.cur||/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName))return;
+  if(e.key===' '){e.preventDefault();state.playing?stopPlay():startPlay();}
+  else if(e.key==='ArrowRight'){stopPlay();setIdx(findIdx(state.cur,state.cur.t[state.idx]+(e.shiftKey?60:5)));}
+  else if(e.key==='ArrowLeft'){stopPlay();setIdx(findIdx(state.cur,state.cur.t[state.idx]-(e.shiftKey?60:5)));}
+  else if(e.key==='Escape'){$('#settings').hidden=true;$('#setBtn').setAttribute('aria-expanded','false');}
+});
+const retheme=()=>{if(state.cur){buildScene(true);drawLegend();}};
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',retheme);
+new MutationObserver(retheme).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+
+
+/* ---------- Beispielflug (synthetisch, über Grindelwald) ---------- */
+function makeSampleIGC(){
+  let seed=7;const rnd=()=>{seed=(seed*16807)%2147483647;return seed/2147483647;};const nz=()=>rnd()+rnd()+rnd()-1.5;
+  const lat0=46.6605,lon0=8.0560,cl=Math.cos(lat0*D2R);
+  let x=0,y=0,z=2200,hdg=250*D2R,t=10*3600+20*60;
+  const wx=-0.8,wy=0.9;const out=['AXXXBEISPIEL','HFDTE140626','HFPLTPILOTINCHARGE:Beispiel','HFGTYGLIDERTYPE:Beispielschirm'];
+  const pad=(v,l)=>String(Math.max(0,Math.round(v))).padStart(l,'0');
+  const rec=()=>{const lat=lat0+y/R/D2R,lon=lon0+x/(R*cl)/D2R;
+    const la=Math.round((lat-Math.floor(lat))*60000),lo=Math.round((lon-Math.floor(lon))*60000);
+    const hh=Math.floor(t/3600),mm=Math.floor(t%3600/60),ss=t%60;
+    out.push('B'+pad(hh,2)+pad(mm,2)+pad(ss,2)+pad(Math.floor(lat),2)+pad(la,5)+'N'+pad(Math.floor(lon),3)+pad(lo,5)+'EA'+pad(z-18+nz()*2,5)+pad(z+nz()*1.5,5));};
+  const ground=s=>{for(let i=0;i<s;i++){t++;rec();}};
+  const glide=(s,course,sink,v)=>{for(let i=0;i<s;i++){let d=course*D2R-hdg;while(d>Math.PI)d-=2*Math.PI;while(d<-Math.PI)d+=2*Math.PI;hdg+=d*0.05+nz()*0.02;
+    const vv=v+nz()*0.6;x+=vv*Math.sin(hdg)+wx;y+=vv*Math.cos(hdg)+wy;z+=-(sink+nz()*0.35+0.4*Math.sin(i/23));t++;rec();}};
+  const therm=(s,climb,dir)=>{const om=dir*(13.5+rnd()*3)*D2R;for(let i=0;i<s;i++){const rp=Math.min(1,i/25)*(i>s-20?(s-i)/20:1);
+    hdg+=om*(0.8+0.4*rnd());x+=8.6*Math.sin(hdg)+wx;y+=8.6*Math.cos(hdg)+wy;z+=-1.1+(climb+1.1)*rp+Math.sin(hdg)*0.9+nz()*0.5;t++;rec();}};
+  ground(45);
+  glide(100,250,1.15,9.5);therm(300,2.1,1);
+  glide(240,265,1.3,10.5);therm(380,2.6,-1);
+  glide(300,240,1.2,11);therm(240,1.4,1);
+  glide(280,60,1.25,10.8);therm(330,2.3,1);
+  glide(260,75,1.1,10.2);therm(200,0.9,-1);
+  glide(420,140,1.3,11);
+  while(z>1050)glide(1,180,1.4,9.5);
+  for(let i=0;i<40;i++){t++;rec();}
+  return out.join('\r\n');
+}
+
+/* ---------- Start ---------- */
+if(init3D()){
+  const s=parseIGC(makeSampleIGC(),'beispielflug.igc');s.sample=true;s.label='Beispielflug (synthetisch)';
+  state.flights.push(s);selectFlight(s);
+  setStatus('Synthetischer Beispielflug geladen. Eigene IGC- oder GPX-Dateien über „IGC / GPX laden“ oder per Drag &amp; Drop.');
+}
+})();
+</script>
